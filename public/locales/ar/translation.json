@@ -1,0 +1,177 @@
+{
+  "navbar": {
+    "navlinks": {
+      "home": "الرئيسية",
+      "products": "المنتجات",
+      "cart": "السلة",
+      "aboutUs": "معلومات عنا",
+      "contactUs": "اتصل بنا"
+    },
+    "theme": "الثيم",
+    "language": "اللغة",
+    "signOut": "تسجيل الخروج",
+    "signin": "تسجيل الدخول"
+  },
+  "footer": {
+    "resources": {
+      "title": "الموارد",
+      "flowbite": "فلو بايت",
+      "tailwindCSS": "تيلويند CSS",
+      "nextJS": "نكس تي إس"
+    },
+    "follow": {
+      "title": "تابعنا",
+      "github": "جيت هب",
+      "discord": "ديسكورد"
+    },
+    "legal": {
+      "title": "قانوني",
+      "privacyPolicy": "سياسة الخصوصية",
+      "termsAndConditions": "الشروط والأحكام"
+    }
+  },
+  "home": {
+    "heroSection": {
+      "title": {
+        "line1": "مجموعة ملابس جديدة",
+        "line2": "أحدث صيحات 2023"
+      },
+      "description": {
+        "line1": "لوريم إيبسوم هو نص شكلي يستخدم في صناعة الطباعة.",
+        "line2": "نص آخر لوصف الفقرة والمحتوى."
+      }
+    },
+    "shopNowBtn": "تسوق الآن",
+    "feature": "منتجات مميزة",
+    "latest": "أحدث المنتجات",
+    "latestOptions": {
+      "newArrival": "وصول جديد",
+      "mens": "للرجال",
+      "womens": "للنساء",
+      "special": "إصدار خاص"
+    },
+    "uniqueSection": {
+      "title": "ميزات فريدة لعشاق الموضة",
+      "list": {
+        "pointer1": "مجموعات مبنية على الثيمات",
+        "pointer2": "تشكيلة واسعة من المنتجات المخصصة.",
+        "pointer3": "أنواع متعددة من التصاميم النصية والنقش.",
+        "pointer4": "ميزة المحاكاة لتجربة المنتج على صورة المستخدم."
+      }
+    },
+    "newsLetter": "اشترك في النشرة الإخبارية لدينا للحصول على أحدث التحديثات",
+    "subscribe": "اشترك الآن"
+  },
+  "products": {
+    "view": "عرض",
+    "listView": "عرض قائمة المنتجات",
+    "gridView": "عرض شبكة المنتجات"
+  },
+  "productDetails": {
+    "tags": "العلامات",
+    "category": "الفئة",
+    "size": "الحجم",
+    "share": "شارك",
+    "add2Cart": "أضف إلى السلة",
+    "buy": "اشتر الآن",
+    "desc": "وصف المنتج"
+  },
+  "cart": {
+    "tableHeads": {
+      "product": "المنتج",
+      "price": "السعر",
+      "quantity": "الكمية",
+      "total": "الإجمالي"
+    },
+    "size": "XL",
+    "clearCart": "إفراغ السلة",
+    "pricingSection": {
+      "carTotals": "إجمالي السلة",
+      "subTotal": "الإجمالي الفرعي",
+      "delivery": "التوصيل",
+      "taxesCharges": "الضرائب والرسوم",
+      "total": "الإجمالي"
+    },
+    "empty": {
+      "title": "أوه! سلتك فارغة.",
+      "subText": "حان الوقت لملئها بمنتجات رائعة!",
+      "shopNow": "تسوق الآن"
+    },
+    "proceed": "المتابعة للدفع"
+  },
+  "contactUs": {
+    "infoAboutUs": {
+      "title": "معلومات عنا",
+      "description": "لوريم إيبسوم هو نص شكلي يستخدم في صناعة الطباعة."
+    },
+    "contactWay": {
+      "title": "طرق التواصل",
+      "tel": "الهاتف",
+      "email": "البريد الإلكتروني",
+      "supportForm": "نموذج الدعم",
+      "supportTime": "دعم متوفر على مدار 24 ساعة",
+      "shipping": "شحن قياسي معقول لجميع الطلبات."
+    },
+    "getInTouch": {
+      "title": "ابقَ على تواصل",
+      "description": "بدلاً من ذلك، يمكنك ملء النموذج الموجود على هذه الصفحة، وسنرد عليك في أقرب وقت ممكن.",
+      "namePlaceholder": "اسمك*",
+      "emailPlaceholder": "بريدك الإلكتروني*",
+      "subjectPlaceholder": "الموضوع*",
+      "messagePlaceholder": "اكتب رسالتك*",
+      "sendMail": "أرسل البريد"
+    }
+  },
+  "aboutUs": {
+    "title": "تعرف على أعمالنا التجارية،",
+    "description": "بدأت CustomWearCreations برؤية بسيطة، حيث يمكن تصميم أي قطعة ملابس بسهولة عبر منصتنا.",
+    "contactBtn": "اتصل بنا"
+  },
+  "orderComplete": {
+    "title": "تم تقديم طلبك بنجاح!",
+    "description": {
+      "line1": "شكراً لطلبك! يتم الآن معالجة طلبك وسيتم الانتهاء منه خلال 3 إلى 6 ساعات.",
+      "line2": "ستتلقى تأكيدًا عبر البريد الإلكتروني بمجرد اكتمال طلبك."
+    },
+    "button": "تابع التسوق"
+  },
+  "logIn": {
+    "title": "تسجيل الدخول",
+    "subText": "يرجى تسجيل الدخول باستخدام تفاصيل حسابك.",
+    "emailPlaceholder": "أدخل بريدك الإلكتروني",
+    "passwordPlaceholder": "أدخل كلمة المرور",
+    "signIn": "تسجيل الدخول",
+    "createOne": "ليس لديك حساب؟ أنشئ حساباً"
+  },
+  "signUp": {
+    "title": "التسجيل",
+    "subText": "يرجى ملء البيانات المطلوبة أدناه.",
+    "namePlaceholder": "أدخل اسمك الكامل",
+    "emailPlaceholder": "أدخل بريدك الإلكتروني",
+    "passwordPlaceholder": "أدخل كلمة المرور",
+    "rePasswordPlaceholder": "أعد إدخال كلمة المرور",
+    "next": "التالي",
+    "register": "سجل",
+    "alreadyHave": "هل لديك حساب؟ تسجيل الدخول"
+  },
+  "cwcOffer": {
+    "title": "ما الذي يقدمه CWC!",
+    "Fast Delivery": {
+      "title": "توصيل سريع",
+      "description": "لوريم إيبسوم هو نص شكلي يستخدم في صناعة الطباعة."
+    },
+    "Customization": {
+      "title": "تخصيص",
+      "description": "لوريم إيبسوم هو نص شكلي يستخدم في صناعة الطباعة."
+    },
+    "Premium Quality": {
+      "title": "جودة ممتازة",
+      "description": "لوريم إيبسوم هو نص شكلي يستخدم في صناعة الطباعة."
+    },
+    "24/7 Support": {
+      "title": "دعم 24/7",
+      "description": "لوريم إيبسوم هو نص شكلي يستخدم في صناعة الطباعة."
+    }
+  },
+  "noImg": "لا توجد صورة"
+}

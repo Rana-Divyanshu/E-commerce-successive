@@ -11,7 +11,7 @@ function Settings({ settingOptionRef, dropdownState, setDropdownState, dir }) {
   const langOptions = [
     { symbol: "en", language: "English", text: "English" },
     { symbol: "hi", language: "Hindi", text: "हिन्दी" },
-    { symbol: "ur", language: "Urdu", text: "اردو" },
+    { symbol: "ar", language: "Arabic", text: "عربي" },
   ];
 
   // Toggle dropdown states

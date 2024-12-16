@@ -8,6 +8,7 @@ import { BsInstagram, BsTwitter } from "react-icons/bs";
 import { MdFacebook } from "react-icons/md";
 import ProductsGrid from "../../../components/ProductsGrid";
 import DynamicImage from "../../../components/DynamicImage";
+import { useTranslation } from "react-i18next";
 
 const getRandomItems = (data, count) => {
   const shuffled = [...data].sort(() => 0.5 - Math.random());
@@ -15,6 +16,8 @@ const getRandomItems = (data, count) => {
 };
 
 const ProductDetails = () => {
+  const { t } = useTranslation();
+  const detailsT = t("productDetails");
   const searchParams = useSearchParams();
   const { appData, dispatch } = useContext(AppContext);
   const randomItems = getRandomItems(data, 4);
@@ -131,7 +134,7 @@ const ProductDetails = () => {
                 </div>
               </div>
               <div className="product-details-category text-themeBlue font-semibold flex items-center gap-2">
-                <p>Tags</p>
+                <p>{detailsT.tags}</p>
                 {appData?.eachProductDetail?.tags?.map((list) => {
                   return (
                     <li className="text-gray font-medium list-none" key={list}>
@@ -141,13 +144,13 @@ const ProductDetails = () => {
                 })}
               </div>
               <div className="product-details-category text-themeBlue font-semibold flex items-center gap-2">
-                <p>Category:</p>
+                <p>{detailsT.category}:</p>
                 <span className="text-gray font-medium">
                   {appData?.eachProductDetail?.category}
                 </span>
               </div>
               <div className="product-details-size text-themeBlue font-semibold flex items-center gap-2">
-                <p>Size:</p>
+                <p>{detailsT.size}:</p>
                 <ul className="size-blocks list-none flex items-center gap-4 ms-2">
                   {sizes &&
                     sizes?.map((size) => {
@@ -170,7 +173,7 @@ const ProductDetails = () => {
                 </ul>
               </div>
               <div className="product-details-share text-themeBlue font-semibold flex items-center gap-2">
-                <p>Share:</p>
+                <p>{detailsT.share}:</p>
                 <div className="share-icons flex items-center gap-2 text-secondary font-semibold">
                   <div className="share-icon-div h-[25px] w-[25px] flex items-center justify-center rounded-full shadow shadow-[rgba(213,213,219,0.5)] cursor-pointer">
                     <BsInstagram className="w-[85%] hover:text-themeBlue" />
@@ -188,7 +191,7 @@ const ProductDetails = () => {
                   className="w-fit px-6 py-2 border text-themeBlue bg-transparent border-themeBlue dark:text-white dark:border-white rounded-md text-sm"
                   onClick={() => adding()}
                 >
-                  Add to Cart
+                  {detailsT.add2Cart}
                 </button>
                 <button
                   className="bg-themeBlue hover:bg-btnHover text-white w-fit px-6 py-2 rounded-md flex items-center justify-center ease-linear duration-200"
@@ -196,7 +199,7 @@ const ProductDetails = () => {
                     router.push("/order-complete");
                   }}
                 >
-                  Buy Now
+                  {detailsT.buy}
                 </button>
               </div>
             </div>
@@ -206,7 +209,7 @@ const ProductDetails = () => {
       {Object?.values(appData?.eachProductDetail)?.length !== 0 ? (
         <section className="product-desc-section py-[7rem] px-[15%] bg-bannertBG text-white flex flex-col items-start gap-8">
           <div className="product-desc-section-head text-lg underline underline-offset-8">
-            Description
+            {detailsT.desc}
           </div>
           <div className="product-desc-section-content flex flex-col items-start gap-4">
             <div className="product-desc-section-content-text text-sm text-[#e3e3e3]">

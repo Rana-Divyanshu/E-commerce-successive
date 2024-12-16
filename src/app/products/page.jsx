@@ -6,8 +6,12 @@ import { data } from "../../utils/data";
 import { AppContext } from "../../context/AppContext";
 import ProductsGrid from "../../components/ProductsGrid";
 import ProductsList from "../../components/ProductsList";
+import { useTranslation } from "react-i18next";
 
 const Home = () => {
+  const { t } = useTranslation();
+  const productT = t("products");
+
   const { appData, dispatch } = useContext(AppContext);
 
   const getgrid = () => {
@@ -97,10 +101,12 @@ const Home = () => {
     <div className="shoplist-page py-[4rem] px-[15%]">
       <div className="filter-view-div relative w-full flex items-center justify-between">
         <p className="text-3xl text-themeBlue font-semibold dark:text-white">
-          Products {appData?.productsView} view
+          {appData?.productsView === "list"
+            ? productT.listView
+            : appData?.productsView === "grid" && productT.gridView}
         </p>
         <div className="view-div flex items-center gap-3 text-themeBlue">
-          <p>View:</p>
+          <p>{productT.view}:</p>
           <button
             className={`border-none outline-none ${
               appData?.productsView === "list"

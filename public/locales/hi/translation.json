@@ -1,14 +1,16 @@
 {
   "navbar": {
     "navlinks": {
-      "products": "उत्पादों",
+      "home": "मुख्य पृष्ठ",
+      "products": "उत्पाद",
       "cart": "कार्ट",
       "aboutUs": "हमारे बारे में",
-      "register": "रजिस्टर करें"
+      "contactUs": "संपर्क करें"
     },
     "theme": "थीम",
     "language": "भाषा",
-    "signOut": "साइन आउट"
+    "signOut": "साइन आउट",
+    "signin": "साइन इन"
   },
   "footer": {
     "resources": {
@@ -28,6 +30,148 @@
       "termsAndConditions": "नियम और शर्तें"
     }
   },
-  "welcome": "स्वागत है दोस्तों",
-  "description": "यह एक बहुभाषी वेबसाइट है।"
+  "home": {
+    "heroSection": {
+      "title": {
+        "line1": "नया कपड़ों का संग्रह",
+        "line2": "2023 के ट्रेंड्स"
+      },
+      "description": {
+        "line1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "line2": "Magna in est adipiscing in phasellus non in justo."
+      }
+    },
+    "shopNowBtn": "अभी खरीदें",
+    "feature": "विशेष उत्पाद",
+    "latest": "नवीनतम उत्पाद",
+    "latestOptions": {
+      "newArrival": "नया आगमन",
+      "mens": "पुरुषों के लिए",
+      "womens": "महिलाओं के लिए",
+      "special": "विशेष संस्करण"
+    },
+    "uniqueSection": {
+      "title": "फैशन प्रेमियों के लिए अनोखी विशेषताएं",
+      "list": {
+        "pointer1": "थीम आधारित संग्रह",
+        "pointer2": "अनुकूलित उत्पादों की विविधता।",
+        "pointer3": "पैटर्न और टेक्स्ट प्रिंट डिज़ाइन के विभिन्न प्रकार।",
+        "pointer4": "आजमाने का फीचर जो उपयोगकर्ता को अपलोड की गई छवि पर मर्च को आज़माने की अनुमति देता है।"
+      }
+    },
+    "newsLetter": "हमारे न्यूज़लेटर की सदस्यता लेकर नवीनतम अपडेट प्राप्त करें",
+    "subscribe": "सदस्यता लें"
+  },
+  "products": {
+    "view": "देखें",
+    "listView": "उत्पाद सूची दृश्य",
+    "gridView": "उत्पाद ग्रिड दृश्य"
+  },
+  "productDetails": {
+    "tags": "टैग्स",
+    "category": "श्रेणी",
+    "size": "आकार",
+    "share": "साझा करें",
+    "add2Cart": "कार्ट में जोड़ें",
+    "buy": "अभी खरीदें",
+    "desc": "उत्पाद विवरण"
+  },
+  "cart": {
+    "tableHeads": {
+      "product": "उत्पाद",
+      "price": "मूल्य",
+      "quantity": "मात्रा",
+      "total": "कुल"
+    },
+    "size": "XL",
+    "clearCart": "कार्ट साफ करें",
+    "pricingSection": {
+      "carTotals": "कार्ट कुल",
+      "subTotal": "उप-कुल",
+      "delivery": "डिलीवरी",
+      "taxesCharges": "कर और शुल्क",
+      "total": "कुल"
+    },
+    "empty": {
+      "title": "ओह! आपका कार्ट खाली है।",
+      "subText": "इसे शानदार चीज़ों से भरने का समय है!",
+      "shopNow": "अभी खरीदें"
+    },
+    "proceed": "चेकआउट के लिए आगे बढ़ें"
+  },
+  "contactUs": {
+    "infoAboutUs": {
+      "title": "हमारे बारे में जानकारी",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Massapurus gravida."
+    },
+    "contactWay": {
+      "title": "संपर्क के तरीके",
+      "tel": "फोन",
+      "email": "ईमेल",
+      "supportForm": "समर्थन फ़ॉर्म",
+      "supportTime": "24 घंटे उपलब्ध",
+      "shipping": "सभी ऑर्डर्स पर उचित मानक शिपिंग।"
+    },
+    "getInTouch": {
+      "title": "संपर्क करें",
+      "description": "आप वैकल्पिक रूप से इस पृष्ठ पर फ़ॉर्म भर सकते हैं और हम जल्द से जल्द आपको उत्तर देंगे।",
+      "namePlaceholder": "आपका नाम*",
+      "emailPlaceholder": "आपका ईमेल*",
+      "subjectPlaceholder": "विषय*",
+      "messagePlaceholder": "अपना संदेश लिखें*",
+      "sendMail": "मेल भेजें"
+    }
+  },
+  "aboutUs": {
+    "title": "हमारे ईकॉमर्स व्यवसाय के बारे में जानें,",
+    "description": "कस्टमवेयरक्रिएशन्स का उद्देश्य लोगों को उनके वांछित फैशनेबल उत्पाद उपलब्ध कराना है।",
+    "contactBtn": "संपर्क करें"
+  },
+  "orderComplete": {
+    "title": "आपका ऑर्डर सफलतापूर्वक रखा गया है!",
+    "description": {
+      "line1": "आपका ऑर्डर संसाधित हो रहा है और 3 से 6 घंटे के भीतर पूरा हो जाएगा।",
+      "line2": "ऑर्डर पूरा होने के बाद आपको ईमेल द्वारा सूचित किया जाएगा।"
+    },
+    "button": "खरीदारी जारी रखें"
+  },
+  "logIn": {
+    "title": "लॉग इन करें",
+    "subText": "कृपया नीचे दिए गए विवरण का उपयोग करके लॉग इन करें।",
+    "emailPlaceholder": "अपना ईमेल दर्ज करें",
+    "passwordPlaceholder": "अपना पासवर्ड दर्ज करें",
+    "signIn": "साइन इन करें",
+    "createOne": "खाता नहीं है? खाता बनाएं"
+  },
+  "signUp": {
+    "title": "रजिस्टर करें",
+    "subText": "कृपया नीचे पूछे गए विवरण भरें।",
+    "namePlaceholder": "अपना पूरा नाम दर्ज करें",
+    "emailPlaceholder": "अपना ईमेल आईडी दर्ज करें",
+    "passwordPlaceholder": "अपना पासवर्ड दर्ज करें",
+    "rePasswordPlaceholder": "पासवर्ड पुनः दर्ज करें",
+    "next": "आगे बढ़ें",
+    "register": "रजिस्टर करें",
+    "alreadyHave": "पहले से ही खाता है? लॉग इन करें"
+  },
+  "cwcOffer": {
+    "title": "CWC क्या प्रदान करता है!",
+    "Fast Delivery": {
+      "title": "तेजी से डिलीवरी",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Massapurus gravida."
+    },
+    "Customization": {
+      "title": "अनुकूलन",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Massapurus gravida."
+    },
+    "Premium Quality": {
+      "title": "प्रीमियम गुणवत्ता",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Massapurus gravida."
+    },
+    "24/7 Support": {
+      "title": "24/7 समर्थन",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Massapurus gravida."
+    }
+  },
+  "noImg": "कोई छवि नहीं"
 }

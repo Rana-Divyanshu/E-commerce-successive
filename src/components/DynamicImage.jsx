@@ -1,11 +1,14 @@
+"use client";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 
 function DynamicImage({ title }) {
   // cx: "71f309b51f20c41d9", // Replace with your CX
   //   key: "AIzaSyAn9COvNpjrA4TY2YbGDNpqhO1xMVJ1UwA", // Replace with your API key
   const [imageUrl, setImageUrl] = useState("");
   const [loading, setLoading] = useState(false);
+  const { t } = useTranslation();
 
   const fetchImage = async () => {
     try {
@@ -31,7 +34,7 @@ function DynamicImage({ title }) {
   };
 
   useEffect(() => {
-    //   fetchImage();
+    // fetchImage();
   }, []);
 
   return loading ? (
@@ -47,7 +50,7 @@ function DynamicImage({ title }) {
     />
   ) : (
     <div className="h-full w-full flex items-center justify-center outline-dashed outline-1">
-      <p className="font-normal">No Image</p>
+      <p className="font-normal">{t("noImg")}</p>
     </div>
   );
 }

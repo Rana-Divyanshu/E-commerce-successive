@@ -5,41 +5,33 @@ import customizationImg from "../assets/img/cwc-offers/customization.png";
 import qualityImg from "../assets/img/cwc-offers/quality.png";
 import supportImg from "../assets/img/cwc-offers/support.png";
 
-function CwcOffers() {
+function CwcOffers({ cwcOffer }) {
   return (
     <section className="cwc-offers py-[7rem] px-[15%]">
       <div className="cwc-offer-content flex flex-col items-center gap-8">
         <h1 className="offer-head text-[2rem] font-medium text-text-themeBlue">
-          What CWC Offer !
+          {cwcOffer?.title}
         </h1>
         <div className="offer-cards grid gap-4 grid-cols-4 w-full">
           <OfferCard
             img={deliveryImg}
-            title={"Fast Delivery"}
-            description={
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Massapurus gravida."
-            }
+            title={cwcOffer?.["Fast Delivery"].title}
+            description={cwcOffer?.["Fast Delivery"].description}
           />
           <OfferCard
             img={customizationImg}
-            title={"Customization"}
-            description={
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Massapurus gravida."
-            }
+            title={cwcOffer?.["Customization"].title}
+            description={cwcOffer?.["Customization"].description}
           />
           <OfferCard
             img={qualityImg}
-            title={"Premium Quality"}
-            description={
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Massapurus gravida."
-            }
+            title={cwcOffer?.["Premium Quality"].title}
+            description={cwcOffer?.["Premium Quality"].description}
           />
           <OfferCard
             img={supportImg}
-            title={"24/7 Support"}
-            description={
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Massapurus gravida."
-            }
+            title={cwcOffer?.["24/7 Support"].title}
+            description={cwcOffer?.["24/7 Support"].description}
           />
         </div>
       </div>

@@ -7,6 +7,7 @@ import { appWithTranslation } from "next-i18next"; // Use appWithTranslation
 import { useTranslation } from "react-i18next";
 import AppContextProvider from "../context/AppContext";
 import WindowWidthUpdater from "../components/WindowWidthUpdater";
+import { SessionProvider } from "next-auth/react";
 import i18next from "./i18n"; // Assuming your i18n setup is correct
 import "./globals.css";
 
@@ -54,12 +55,14 @@ function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} antialiased h-screen w-screen overflow-y-auto overflow-x-hidden bg-[#ffffff] dark:bg-[#171717]`}
       >
         <AppContextProvider>
-          <Navbar dir={dir} />
-          <main className="w-full min-h-[calc(100%_-_70px)] pt-[70px] max-w-[1920px] mx-auto">
-            {children}
-          </main>
-          <Footer />
-          <WindowWidthUpdater />
+          <SessionProvider>
+            <Navbar dir={dir} />
+            <main className="w-full min-h-[calc(100%_-_70px)] pt-[70px] max-w-[1920px] mx-auto">
+              {children}
+            </main>
+            <Footer />
+            <WindowWidthUpdater />
+          </SessionProvider>
         </AppContextProvider>
       </body>
     </html>

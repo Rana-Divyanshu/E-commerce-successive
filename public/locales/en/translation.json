@@ -30,6 +30,148 @@
       "termsAndConditions": "Terms & Conditions"
     }
   },
-  "welcome": "Welcome Guys",
-  "description": "This is a multilingual website."
+  "home": {
+    "heroSection": {
+      "title": {
+        "line1": "New Clothing Collection",
+        "line2": "Trends in 2023"
+      },
+      "description": {
+        "line1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "line2": "Magna in est adipiscing in phasellus non in justo."
+      }
+    },
+    "shopNowBtn": "Shop Now",
+    "feature": "Featured Products",
+    "latest": "Latest Products",
+    "latestOptions": {
+      "newArrival": "New Arrival",
+      "mens": "Men's",
+      "womens": "Women's",
+      "special": "Special Edition"
+    },
+    "uniqueSection": {
+      "title": "Unique Features For Fashion Addicts",
+      "list": {
+        "pointer1": "Theme based Collections",
+        "pointer2": "Seamless Variety of Customized products.",
+        "pointer3": "Multiple types of pattern & text print designs.",
+        "pointer4": "Try out featurethat allows the user to try the merch on his/her image uploaded as per the instructions."
+      }
+    },
+    "newsLetter": "Get Latest Update By Subscribe 0ur Newsletter",
+    "subscribe": "Subscribe"
+  },
+  "products": {
+    "view": "View",
+    "listView": "Products list view",
+    "gridView": "Products grid view"
+  },
+  "productDetails": {
+    "tags": "Tags",
+    "category": "Category",
+    "size": "Size",
+    "share": "Share",
+    "add2Cart": "Add to Cart",
+    "buy": "Buy Now",
+    "desc": "Product Description"
+  },
+  "cart": {
+    "tableHeads": {
+      "product": "Product",
+      "price": "Price",
+      "quantity": "Quantity",
+      "total": "Total"
+    },
+    "size": "XL",
+    "clearCart": "Clear Cart",
+    "pricingSection": {
+      "carTotals": "Cart Totals",
+      "subTotal": "Sub-Total",
+      "delivery": "Delivery",
+      "taxesCharges": "Taxes & Charges",
+      "total": "Total"
+    },
+    "empty": {
+      "title": "Oops! Your cart's feeling lonely.",
+      "subText": "Time to fill it up with awesome finds!",
+      "shopNow": "Shop Now"
+    },
+    "proceed": "Proceed to Checkout"
+  },
+  "contactUs": {
+    "infoAboutUs": {
+      "title": "Information About Us",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Massapurus gravida."
+    },
+    "contactWay": {
+      "title": "Contact Way",
+      "tel": "Tel",
+      "email": "E-Mail",
+      "supportForm": "Sipport Forum",
+      "supportTime": "For over 24hr",
+      "shipping": "Reasonable Standard shipping on all orders."
+    },
+    "getInTouch": {
+      "title": "Get In Touch",
+      "description": "Alternatively, you can also fill out the contact form on this page with your name, email, subject and message and we will respond to you as soon as possible.",
+      "namePlaceholder": "Your Name*",
+      "emailPlaceholder": "Your Email*",
+      "subjectPlaceholder": "Subject*",
+      "messagePlaceholder": "Type your Message*",
+      "sendMail": "Send Mail"
+    }
+  },
+  "aboutUs": {
+    "title": "Know About Our Ecomerce Business,",
+    "description": "CustomWearCreations began with a simple vision where any cloth design can be implied on our platform with its unique functionality to help people get the fashionable products they desire.",
+    "contactBtn": "Contact Us"
+  },
+  "orderComplete": {
+    "title": "Your Order Is Placed!",
+    "description": {
+      "line1": "Thank you for placing your order! Your order is currently being processed and will be completed within 3 to 6 hours.",
+      "line2": "You will receive an email confirmation once your order has been completed."
+    },
+    "button": "Continue Shopping"
+  },
+  "logIn": {
+    "title": "Login",
+    "subText": "Please login using account detail bellow.",
+    "emailPlaceholder": "Enter your email",
+    "passwordPlaceholder": "Enter your password",
+    "signIn": "Sign In",
+    "createOne": "Don’t have an Account ? Create account"
+  },
+  "signUp": {
+    "title": "Register",
+    "subText": "Please fill the details asked below.",
+    "namePlaceholder": "Enter Your Full Name",
+    "emailPlaceholder": "Enter your email id",
+    "passwordPlaceholder": "Enter your password",
+    "rePasswordPlaceholder": "Re-Enter your password",
+    "next": "Next",
+    "register": "Register",
+    "alreadyHave": "Already have an account? Login"
+  },
+  "cwcOffer": {
+    "title": "What CWC Offer !",
+    "Fast Delivery": {
+      "title": "Fast Delivery",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Massapurus gravida."
+    },
+    "Customization": {
+      "title": "Customization",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Massapurus gravida."
+    },
+    "Premium Quality": {
+      "title": "Premium Quality",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Massapurus gravida."
+    },
+    "24/7 Support": {
+      "title": "24/7 Support",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Massapurus gravida."
+    }
+  },
+  "noImg": "No Image"
 }

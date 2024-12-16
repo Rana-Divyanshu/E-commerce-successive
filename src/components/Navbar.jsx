@@ -132,40 +132,37 @@ export const Navbar = ({ dir }) => {
         )}
         <ul className="py-2">
           <li>
-            <a
-              href="#"
-              className="block px-4 py-2 text- text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
-            >
+            <div className="block px-4 py-2 text- text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">
               {appData?.user ? (
-                // <Link href="/auth/signup">
-                <button
-                  className="inline-flex items-center gap-2"
-                  onClick={() => {
-                    logoutUser();
-                  }}
-                >
-                  {signOutText.signOut}
-                  <span>
-                    <PiSignOutBold />
-                  </span>
-                </button>
+                <Link href="/auth/signup">
+                  <button
+                    className="inline-flex items-center gap-2"
+                    // onClick={() => {
+                    //   logoutUser();
+                    // }}
+                  >
+                    {signOutText.signOut}
+                    <span>
+                      <PiSignOutBold />
+                    </span>
+                  </button>
+                </Link>
               ) : (
-                // </Link>
-                // <Link href="/auth/login">
-                <button
-                  className="inline-flex items-center gap-2"
-                  onClick={() => {
-                    loginUser();
-                  }}
-                >
-                  {signOutText.signin}
-                  <span>
-                    <PiSignInBold />
-                  </span>
-                </button>
-                // </Link>
+                <Link href="/auth/login">
+                  <button
+                    className="inline-flex items-center gap-2"
+                    // onClick={() => {
+                    //   loginUser();
+                    // }}
+                  >
+                    {signOutText.signin}
+                    <span>
+                      <PiSignInBold />
+                    </span>
+                  </button>
+                </Link>
               )}
-            </a>
+            </div>
           </li>
         </ul>
       </div>
