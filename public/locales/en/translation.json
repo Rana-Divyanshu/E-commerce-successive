@@ -1,0 +1,35 @@
+{
+  "navbar": {
+    "navlinks": {
+      "home": "Home",
+      "products": "Products",
+      "cart": "Cart",
+      "aboutUs": "About Us",
+      "contactUs": "Contact Us"
+    },
+    "theme": "Theme",
+    "language": "Language",
+    "signOut": "Sign out",
+    "signin": "Sign in"
+  },
+  "footer": {
+    "resources": {
+      "title": "Resources",
+      "flowbite": "Flowbite",
+      "tailwindCSS": "Tailwind CSS",
+      "nextJS": "NextJS"
+    },
+    "follow": {
+      "title": "Follow us",
+      "github": "Github",
+      "discord": "Discord"
+    },
+    "legal": {
+      "title": "Legal",
+      "privacyPolicy": "Privacy Policy",
+      "termsAndConditions": "Terms & Conditions"
+    }
+  },
+  "welcome": "Welcome Guys",
+  "description": "This is a multilingual website."
+}

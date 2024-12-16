@@ -1,0 +1,21 @@
+{
+  "users": [
+    { "id": 1, "email": "user1@example.com", "password": "password1" },
+    { "id": 2, "email": "user2@example.com", "password": "password2" },
+    { "id": 2, "email": "user@example.com", "password": "qwertyuiop" }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": "Product 1",
+      "price": 100,
+      "description": "This is Product 1"
+    },
+    {
+      "id": 2,
+      "name": "Product 2",
+      "price": 200,
+      "description": "This is Product 2"
+    }
+  ]
+}

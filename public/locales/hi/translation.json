@@ -1,0 +1,33 @@
+{
+  "navbar": {
+    "navlinks": {
+      "products": "उत्पादों",
+      "cart": "कार्ट",
+      "aboutUs": "हमारे बारे में",
+      "register": "रजिस्टर करें"
+    },
+    "theme": "थीम",
+    "language": "भाषा",
+    "signOut": "साइन आउट"
+  },
+  "footer": {
+    "resources": {
+      "title": "संसाधन",
+      "flowbite": "फ्लोबाइट",
+      "tailwindCSS": "टेलविंड सीएसएस",
+      "nextJS": "नेक्स्टजेएस"
+    },
+    "follow": {
+      "title": "हमारा अनुसरण करें",
+      "github": "गिटहब",
+      "discord": "डिस्कॉर्ड"
+    },
+    "legal": {
+      "title": "कानूनी",
+      "privacyPolicy": "गोपनीयता नीति",
+      "termsAndConditions": "नियम और शर्तें"
+    }
+  },
+  "welcome": "स्वागत है दोस्तों",
+  "description": "यह एक बहुभाषी वेबसाइट है।"
+}
