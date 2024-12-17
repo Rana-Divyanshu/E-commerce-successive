@@ -8,13 +8,12 @@ import featureBannerImg from "../assets/img/feature-banner.png";
 import CwcOffers from "../components/CwcOffers";
 import ProductsGrid from "../components/ProductsGrid";
 import { AppContext } from "../context/AppContext";
-import { data } from "../utils/data";
 
 const Home = () => {
   const { t } = useTranslation();
   const home = t("home");
   const heroSec = t("home.heroSection");
-  const latestOptions = t("latestOptions");
+  const latestOptions = t("home.latestOptions");
   const uniqueSec = t("home.uniqueSection");
   const cwcOffer = t("cwcOffer");
 
@@ -26,21 +25,21 @@ const Home = () => {
   const [latestFilter, setLatestFilter] = useState("latest");
 
   const getfeatured = () => {
-    const temp = data?.filter((elem) => {
+    const temp = appData?.productData?.filter((elem) => {
       return elem?.tags?.includes("featured");
     });
     setFeatured(temp);
   };
   const getlatest = () => {
     setLatestFilter("new");
-    const temp = data?.filter((elem) => {
+    const temp = appData?.productData?.filter((elem) => {
       return elem?.tags?.includes("latest");
     });
     setLatest(temp);
   };
   const getmens = () => {
     setLatestFilter("men");
-    const temp = data?.filter((elem) => {
+    const temp = appData?.productData?.filter((elem) => {
       return (
         elem?.tags?.includes("latest") && elem?.category == "Men's Clothing"
       );
@@ -49,7 +48,7 @@ const Home = () => {
   };
   const getwomen = () => {
     setLatestFilter("women");
-    const temp = data?.filter((elem) => {
+    const temp = appData?.productData?.filter((elem) => {
       return (
         elem?.tags?.includes("latest") && elem?.category == "Women's Clothing"
       );
@@ -58,7 +57,7 @@ const Home = () => {
   };
   const getspecial = () => {
     setLatestFilter("special");
-    const temp = data?.filter((elem) => {
+    const temp = appData?.productData?.filter((elem) => {
       return (
         elem?.tags?.includes("latest") && elem?.category == "Special Edition"
       );
@@ -68,7 +67,7 @@ const Home = () => {
   useEffect(() => {
     getfeatured();
     getlatest();
-  }, []);
+  }, [appData?.productData]);
 
   return (
     <div className="homepage">
@@ -95,7 +94,7 @@ const Home = () => {
               {heroSec?.description?.line2}
             </p>
             <Link href="/products">
-              <button className="bg-themeBlue hover:bg-btnHover text-white w-fit px-6 py-2 rounded-md flex items-center justify-center ease-linear duration-200">
+              <button className="bg-themeBlue hover:bg-btnHover text-white dark:bg-slate-400 w-fit px-6 py-2 rounded-md flex items-center justify-center ease-linear duration-200">
                 {home?.shopNowBtn}
               </button>
             </Link>
@@ -116,7 +115,7 @@ const Home = () => {
 
       {/* feature-products */}
       <section className="feature-products flex flex-col gap-4 py-[7rem] px-[15%]">
-        <div className="feature-products-title  text-themeBlue font-medium text-[2rem] text-center w-full">
+        <div className="feature-products-title  text-themeBlue dark:text-white font-medium text-4xl text-center w-full">
           {home?.feature}
         </div>
         <ProductsGrid data={featured} />
@@ -124,56 +123,56 @@ const Home = () => {
 
       {/* latest-products */}
       <section className="latest-products flex flex-col gap-4 py-[7rem] px-[15%]">
-        <h1 className="latest-products-title text-themeBlue font-medium text-[2rem] text-center w-full">
+        <h1 className="latest-products-title text-themeBlue dark:text-white font-medium text-4xl text-center w-full">
           {home?.latest}
         </h1>
         <div className="latest-products-filter w-1/3 flex items-center justify-between self-center">
           <button
-            className={` hover:text-themeBlue hover:underline underline-offset-4 ease-in duration-100 ${
+            className={`hover:underline underline-offset-4 ease-in duration-100 ${
               latestFilter === "new"
-                ? "text-themeBlue underline"
-                : "text-[#abbce1]"
+                ? "text-themBlue dark:text-white underline "
+                : "text-secText dark:text-gray-400 hover:underline"
             }`}
             onClick={() => getlatest()}
           >
-            {latest.newArrival}
+            {latestOptions.newArrival}
           </button>
           <button
-            className={` hover:text-themeBlue hover:underline underline-offset-4 ease-in duration-100 ${
+            className={`hover:underline underline-offset-4 ease-in duration-100 ${
               latestFilter === "men"
-                ? "text-themeBlue underline"
-                : "text-[#abbce1]"
+                ? "text-themBlue dark:text-white underline "
+                : "text-secText dark:text-gray-400 hover:underline"
             }`}
             onClick={() => getmens()}
           >
-            {latest.mens}
+            {latestOptions.mens}
           </button>
           <button
-            className={` hover:text-themeBlue hover:underline underline-offset-4 ease-in duration-100 ${
+            className={`hover:underline underline-offset-4 ease-in duration-100 ${
               latestFilter === "women"
-                ? "text-themeBlue underline"
-                : "text-[#abbce1]"
+                ? "text-themBlue dark:text-white underline "
+                : "text-secText dark:text-gray-400 hover:underline"
             }`}
             onClick={() => getwomen()}
           >
-            {latest.womens}
+            {latestOptions.womens}
           </button>
           <button
-            className={` hover:text-themeBlue hover:underline underline-offset-4 ease-in duration-100 ${
+            className={`hover:underline underline-offset-4 ease-in duration-100 ${
               latestFilter === "special"
-                ? "text-themeBlue underline"
-                : "text-[#abbce1]"
+                ? "text-themBlue dark:text-white underline "
+                : "text-secText dark:text-gray-400 hover:underline"
             }`}
             onClick={() => getspecial()}
           >
-            {latest.speial}
+            {latestOptions.special}
           </button>
         </div>
         <ProductsGrid data={latest} />
       </section>
 
       {/* features */}
-      <section className="features flex items-center bg-bannertBG py-[3rem] text-bg-dark-text">
+      <section className="features flex items-center bg-bannertBG py-12 text-bg-dark-text">
         <div className="features-left w-[45%] flex flex-col justify-center items-center">
           <Image
             src={featureBannerImg}
@@ -182,7 +181,7 @@ const Home = () => {
           />
         </div>
         <div className="features-right w-[50%] flex flex-col gap-4 text-[#e3e3e3] ">
-          <h1 className="features-title text-[2.5rem] font-medium">
+          <h1 className="features-title text-4xl font-medium dark:text-white">
             {uniqueSec.title}
           </h1>
           <div className="feature-point flex gap-2 items-center text-[14px]">
@@ -210,7 +209,7 @@ const Home = () => {
             </div>
           </div>
           <Link href="/products">
-            <button className="bg-themeBlue hover:bg-btnHover text-white w-fit px-6 py-2 rounded-md flex items-center justify-center ease-linear duration-200">
+            <button className="bg-themeBlue hover:bg-btnHover text-white dark:bg-slate-400 w-fit px-6 py-2 rounded-md flex items-center justify-center ease-linear duration-200">
               {home?.shopNowBtn}
             </button>
           </Link>
@@ -230,7 +229,7 @@ const Home = () => {
         <h1 className="w-2/5 text-center text-4xl text-white">
           {home?.newsLetter}
         </h1>
-        <button className="bg-themeBlue hover:bg-btnHover text-white w-fit px-6 py-2 rounded-md flex items-center justify-center ease-linear duration-200">
+        <button className="bg-themeBlue hover:bg-btnHover text-white dark:bg-slate-400 w-fit px-6 py-2 rounded-md flex items-center justify-center ease-linear duration-200">
           {home?.subscribe}
         </button>
       </section>

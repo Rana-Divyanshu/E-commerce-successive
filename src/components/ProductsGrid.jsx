@@ -12,7 +12,7 @@ const ProductsGrid = ({ data, addToCart, hideCart }) => {
         data?.map((elem) => {
           return (
             <div
-              className="product-card pointer rounded-[7px] shadow-lg flex flex-col h-full relative cursor-pointer hover:scale-[1.01] ease-linear duration-200"
+              className="product-card pointer rounded-[7px] shadow-lg flex flex-col h-full relative cursor-pointer hover:scale-[1.01] ease-linear duration-200 dark:shadow dark:shadow-white"
               onClick={() =>
                 router.push(`/products/product-details?id=${elem?.id}`)
               }
@@ -29,7 +29,7 @@ const ProductsGrid = ({ data, addToCart, hideCart }) => {
                   <BsCart3 />
                 </button>
               )}
-              <div className="grid-card-img bg-[#f6f7fb] flex items-center justify-center">
+              <div className="grid-card-img bg-[#f6f7fb] dark:bg-slate-300 flex items-center justify-center">
                 <div className="h-72"></div>
                 {/* <Image
                   src={elem?.primaryImage}
@@ -39,10 +39,10 @@ const ProductsGrid = ({ data, addToCart, hideCart }) => {
                 <DynamicImage title={elem?.title} />
               </div>
               <div className="grid-product-details flex flex-col items-center py-[2rem] gap-[10px] text-center">
-                <div className="grid-product-title text-gray font-heading text-[18px] w-[75%]">
+                <div className="grid-product-title text-gray dark:text-slate-200 font-heading text-lg w-[75%]">
                   {elem?.title}
                 </div>
-                <div className="grid-product-price text-primary text-[14px] font-semibold">
+                <div className="grid-product-price text-themeBlue dark:text-white text-base font-semibold">
                   ₹{elem?.price}
                 </div>
               </div>

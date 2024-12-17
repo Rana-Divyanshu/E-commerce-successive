@@ -14,27 +14,27 @@ function ContactUs() {
     <>
       <section className="contactus-row flex gap-[6rem] px-[15%] py-[3rem]">
         <div className="contact-us-col flex flex-col gap-[1rem] w-1/2">
-          <div className="contact-us-title font-medium text-[1.75rem] text-themeBlue">
+          <div className="contact-us-title font-medium text-[1.75rem] text-themeBlue dark:text-white">
             {infoAboutUsT.title}
           </div>
-          <div className="contact-us-content text-gray">
+          <div className="contact-us-content text-gray dark:text-slate-200">
             {infoAboutUsT.description}
           </div>
           <div className="color-dots-row flex items-center gap-[0.5rem] mt-[1rem]">
-            <div className="color-dots dot-1 h-[18px] w-[18px] rounded-full bg-themeBlue"></div>
+            <div className="color-dots dot-1 h-[18px] w-[18px] rounded-full bg-themeBlue dark:bg-indigo-200"></div>
             <div className="color-dots dot-4 h-[18px] w-[18px] rounded-full bg-[#819fde]"></div>
             <div className="color-dots dot-2 h-[18px] w-[18px] rounded-full bg-secondary"></div>
             <div className="color-dots dot-3 h-[18px] w-[18px] rounded-full bg-[#58586e]"></div>
           </div>
         </div>
         <div className="contact-us-col flex flex-col gap-[1rem] w-1/2">
-          <div className="contact-us-title font-medium text-[1.75rem] text-themeBlue">
+          <div className="contact-us-title font-medium text-[1.75rem] text-themeBlue dark:text-white">
             {contactWayT.title}
           </div>
-          <div className="contact-us-content text-gray">
+          <div className="contact-us-content text-gray dark:text-slate-200">
             <div className="contact-us-content-row flex mb-[2rem]">
               <div className="contact-us-content-col flex items-center gap-[0.75rem] w-1/2">
-                <div className="contact-us-content-col-dot dot-1  bg-themeBlue h-[30px] w-[30px] rounded-full"></div>
+                <div className="contact-us-content-col-dot dot-1  bg-themeBlue dark:bg-indigo-200 h-[30px] w-[30px] rounded-full"></div>
                 <div className="contact-us-content-col-text w-[80%] text-[14px]">
                   <p>{contactWayT.tel} : 9414-207-871</p>
                   <p>{contactWayT.email}: shop@store.com</p>
@@ -70,11 +70,11 @@ function ContactUs() {
       </section>
       <section className="contactus-row flex gap-[6rem] px-[15%] py-[3rem]">
         <div className="getintouch-form-div w-1/2 flex flex-col gap-[1rem]  ">
-          <div className="contact-us-title font-medium text-[1.75rem] text-themeBlue">
+          <div className="contact-us-title font-medium text-[1.75rem] text-themeBlue dark:text-white">
             {getInTouchT.title}
           </div>
 
-          <div className="contact-us-content text-gray">
+          <div className="contact-us-content text-gray dark:text-slate-200">
             {getInTouchT.description}
           </div>
           <div className="contact-us-form flex flex-col items-start gap-[1.5rem]">
@@ -113,7 +113,7 @@ function ContactUs() {
               />
             </div>
             <div className="form-row flex w-full gap-[1.25rem]">
-              <button className="bg-themeBlue hover:bg-btnHover text-white w-fit px-6 py-2 rounded-md flex items-center justify-center ease-linear duration-200">
+              <button className="bg-themeBlue hover:bg-btnHover text-white dark:bg-slate-400 w-fit px-6 py-2 rounded-md flex items-center justify-center ease-linear duration-200">
                 {getInTouchT.sendMail}
               </button>
             </div>

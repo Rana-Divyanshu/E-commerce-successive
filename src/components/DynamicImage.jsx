@@ -49,7 +49,7 @@ function DynamicImage({ title }) {
       crossOrigin="anonymous"
     />
   ) : (
-    <div className="h-full w-full flex items-center justify-center outline-dashed outline-1">
+    <div className="h-full w-full flex items-center justify-center outline-dashed outline-1 dark:text-black">
       <p className="font-normal">{t("noImg")}</p>
     </div>
   );

@@ -40,7 +40,7 @@ const SignUp = () => {
               <p className="forgot-pass pointer">&nbsp;</p>
             </div>
             <button
-              className="cursor-pointer bg-themeBlue hover:bg-btnHover text-white w-fit px-6 py-2 rounded-md flex items-center justify-center ease-linear duration-200"
+              className="cursor-pointer bg-themeBlue hover:bg-btnHover text-white dark:bg-slate-400 w-fit px-6 py-2 rounded-md flex items-center justify-center ease-linear duration-200"
               onClick={() => movetopass()}
             >
               {signUpT.next} <HiArrowNarrowRight className="next-arrow" />
@@ -63,7 +63,7 @@ const SignUp = () => {
               />
               <p className="forgot-pass pointer">&nbsp;</p>
             </div>
-            <button className="cursor-pointer bg-themeBlue hover:bg-btnHover text-white w-fit px-6 py-2 rounded-md flex items-center justify-center ease-linear duration-200">
+            <button className="cursor-pointer bg-themeBlue hover:bg-btnHover text-white dark:bg-slate-400 w-fit px-6 py-2 rounded-md flex items-center justify-center ease-linear duration-200">
               {signUpT.register}
             </button>
           </div>

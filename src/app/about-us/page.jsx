@@ -24,14 +24,14 @@ const AboutUs = () => {
           />
         </div>
         <div className="aboutus-right w-1/2 flex flex-col gap-4">
-          <div className="aboutus-title text-4xl text-themeBlue">
+          <div className="aboutus-title text-4xl text-themeBlue dark:text-white">
             {aboutUsT.title}
           </div>
-          <div className="aboutus-content text-gray">
+          <div className="aboutus-content text-gray dark:text-slate-200">
             {aboutUsT.description}
           </div>
           <button
-            className="bg-themeBlue hover:bg-btnHover text-white w-fit px-6 py-2 rounded-md flex items-center justify-center ease-linear duration-200"
+            className="bg-themeBlue hover:bg-btnHover text-white dark:bg-slate-400 w-fit px-6 py-2 rounded-md flex items-center justify-center ease-linear duration-200"
             onClick={() => router.push("/contact-us")}
           >
             {aboutUsT.contactBtn}

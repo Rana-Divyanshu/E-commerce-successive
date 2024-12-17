@@ -12,8 +12,10 @@ export default function Footer() {
   const follow = t("footer.follow");
   const legal = t("footer.legal");
 
+  //  ? "text-primaryText dark:text-white underline underline-offset-4"
+  //     : "text-secText dark:text-gray-400"
   return (
-    <footer className="bg-footerBG dark:bg-gray-900">
+    <footer className="bg-footerBG dark:bg-[#081733] dark:border-t dark:bordet-white">
       <div className="w-full p-4 py-6 lg:py-8">
         <div className="md:flex md:justify-between md:px-20">
           <Image src={Logo} alt="Logo" className="w-[170px] h-auto" priority />
@@ -23,7 +25,7 @@ export default function Footer() {
                 {resource.title}
               </h2>
               <ul className="flex flex-col gap-4 text-gray-500 dark:text-gray-400 font-medium">
-                <li>
+                <li className="text-secText dark:text-gray-400 hover:text-[#0d134e] hover:dark:text-white">
                   <Link
                     href="https://flowbite.com/"
                     className="hover:underline"
@@ -31,7 +33,7 @@ export default function Footer() {
                     {resource.flowbite}
                   </Link>
                 </li>
-                <li>
+                <li className="text-secText dark:text-gray-400 hover:text-[#0d134e] hover:dark:text-white">
                   <Link
                     href="https://tailwindcss.com/"
                     className="hover:underline"
@@ -39,7 +41,7 @@ export default function Footer() {
                     {resource.tailwindCSS}
                   </Link>
                 </li>
-                <li>
+                <li className="text-secText dark:text-gray-400 hover:text-[#0d134e] hover:dark:text-white">
                   <Link href="https://nextjs.org/" className="hover:underline">
                     {resource.nextJS}
                   </Link>
@@ -51,7 +53,7 @@ export default function Footer() {
                 {follow.title}
               </h2>
               <ul className="flex flex-col gap-4 text-gray-500 dark:text-gray-400 font-medium">
-                <li>
+                <li className="text-secText dark:text-gray-400 hover:text-[#0d134e] hover:dark:text-white">
                   <Link
                     href="https://github.com/themesberg/flowbite"
                     className="hover:underline"
@@ -59,7 +61,7 @@ export default function Footer() {
                     {follow.github}
                   </Link>
                 </li>
-                <li>
+                <li className="text-secText dark:text-gray-400 hover:text-[#0d134e] hover:dark:text-white">
                   <Link
                     href="https://discord.gg/4eeurUVvTy"
                     className="hover:underline"
@@ -74,12 +76,12 @@ export default function Footer() {
                 {legal.title}
               </h2>
               <ul className="flex flex-col gap-4 text-gray-500 dark:text-gray-400 font-medium">
-                <li>
+                <li className="text-secText dark:text-gray-400 hover:text-[#0d134e] hover:dark:text-white">
                   <Link href="#" className="hover:underline">
                     {legal.privacyPolicy}
                   </Link>
                 </li>
-                <li>
+                <li className="text-secText dark:text-gray-400 hover:text-[#0d134e] hover:dark:text-white">
                   <Link href="#" className="hover:underline">
                     {legal.termsAndConditions}
                   </Link>
@@ -91,7 +93,7 @@ export default function Footer() {
         <hr className="my-6 border-gray-200 dark:border-gray-700 lg:my-8" />
         <div className="sm:flex sm:items-center sm:justify-between md:px-20">
           <span
-            className="text-sm text-gray-500 sm:text-center dark:text-gray-400"
+            className="text-sm text-gray sm:text-center dark:text-white"
             dir="ltr"
           >
             © 2024 cwc. All Rights Reserved.

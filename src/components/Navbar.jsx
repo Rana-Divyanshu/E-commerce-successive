@@ -50,10 +50,10 @@ export const Navbar = ({ dir }) => {
         <li className="min-h-full flex items-center text-lg">
           <Link
             href="/"
-            className={`w-full md:w-fit block py-2 px-3 ${
+            className={`w-full md:w-fit block py-2 px-3 underline-offset-4 ${
               pathname === "/"
-                ? "text-primaryText dark:text-white underline underline-offset-4"
-                : "text-secText "
+                ? "text-primaryText dark:text-white underline "
+                : "text-secText dark:text-gray-400 hover:underline"
             }`}
           >
             {nav.home}
@@ -62,34 +62,22 @@ export const Navbar = ({ dir }) => {
         <li className="min-h-full flex items-center text-lg">
           <Link
             href="/products"
-            className={`w-full md:w-fit block py-2 px-3 ${
+            className={`w-full md:w-fit block py-2 px-3 underline-offset-4 ${
               pathname.includes("products")
-                ? "text-primaryText dark:text-white underline underline-offset-4"
-                : "text-secText "
+                ? "text-primaryText dark:text-white underline "
+                : "text-secText dark:text-gray-400 hover:underline"
             }`}
           >
             {nav.products}
           </Link>
         </li>
-        {/* <li className="min-h-full flex items-center text-lg">
-          <Link
-            href="/cart"
-            className={`w-full md:w-fit block py-2 px-3 ${
-              pathname === "/cart"
-                ? "text-primaryText dark:text-white underline underline-offset-4"
-                : "text-secText "
-            }`}
-          >
-            {nav.cart}
-          </Link>
-        </li> */}
         <li className="min-h-full flex items-center text-lg">
           <Link
             href="/about-us"
-            className={`w-full md:w-fit block py-2 px-3 ${
+            className={`w-full md:w-fit block py-2 px-3 underline-offset-4 ${
               pathname === "/about-us"
-                ? "text-primaryText dark:text-white underline underline-offset-4"
-                : "text-secText "
+                ? "text-primaryText dark:text-white underline "
+                : "text-secText dark:text-gray-400 hover:underline"
             }`}
           >
             {nav.aboutUs}
@@ -98,10 +86,10 @@ export const Navbar = ({ dir }) => {
         <li className="min-h-full flex items-center text-lg">
           <Link
             href="/contact-us"
-            className={`w-full md:w-fit block py-2 px-3 ${
+            className={`w-full md:w-fit block py-2 px-3 underline-offset-4 ${
               pathname === "/contact-us"
-                ? "text-primaryText dark:text-white underline underline-offset-4"
-                : "text-secText "
+                ? "text-primaryText dark:text-white underline "
+                : "text-secText dark:text-gray-400 hover:underline"
             }`}
           >
             {nav.contactUs}
@@ -116,51 +104,49 @@ export const Navbar = ({ dir }) => {
       <div
         id="user-popover"
         ref={userPopoverRef}
-        className={`z-50 absolute top-8 w-fit min-w-40 my-4 text-base list-none bg-white divide-y divide-gray-100 dark:bg-gray-700 dark:divide-gray-600  rounded-lg shadow border border-slate-100 ${
+        className={`z-50 absolute top-8 w-fit min-w-40 my-4 text-base list-none bg-white dark:bg-gray-800 divide-y divide-gray-100 dark:divide-gray-700 rounded-lg shadow dark:shadow-gray-600 border border-slate-100 dark:border-gray-600 ${
           dir === "rtl" ? "left-[40px]" : " right-9"
         }`}
       >
         {appData?.user && (
           <div className="px-4 py-3">
-            <p className="block text-sm text-gray-900 dark:text-white">
-              {appData?.user?.name}
-            </p>
+            <p className="block text-sm text-gray-900">{appData?.user?.name}</p>
             <p className="block text-sm text-gray-500 truncate dark:text-gray-400">
-              {appData?.user?.email}{" "}
+              {appData?.user?.email}
             </p>
           </div>
         )}
         <ul className="py-2">
           <li>
-            <div className="block px-4 py-2 text- text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">
+            <div className="block px-4 py-2 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">
               {appData?.user ? (
-                <Link href="/auth/signup">
-                  <button
-                    className="inline-flex items-center gap-2"
-                    // onClick={() => {
-                    //   logoutUser();
-                    // }}
-                  >
-                    {signOutText.signOut}
-                    <span>
-                      <PiSignOutBold />
-                    </span>
-                  </button>
-                </Link>
+                // <Link href="/auth/signup">
+                <button
+                  className="inline-flex items-center gap-2"
+                  onClick={() => {
+                    logoutUser();
+                  }}
+                >
+                  {signOutText.signOut}
+                  <span>
+                    <PiSignOutBold />
+                  </span>
+                </button>
               ) : (
-                <Link href="/auth/login">
-                  <button
-                    className="inline-flex items-center gap-2"
-                    // onClick={() => {
-                    //   loginUser();
-                    // }}
-                  >
-                    {signOutText.signin}
-                    <span>
-                      <PiSignInBold />
-                    </span>
-                  </button>
-                </Link>
+                // </Link>
+                // <Link href="/auth/login">
+                <button
+                  className="inline-flex items-center gap-2"
+                  onClick={() => {
+                    loginUser();
+                  }}
+                >
+                  {signOutText.signin}
+                  <span>
+                    <PiSignInBold />
+                  </span>
+                </button>
+                // </Link>
               )}
             </div>
           </li>
@@ -202,7 +188,7 @@ export const Navbar = ({ dir }) => {
 
   return (
     <nav
-      className={`fixed z-50 w-full h-[70px] flex items-center justify-between py-4 shadow  dark:shadow-white bg-white dark:bg-[#081733] ${
+      className={`fixed z-50 w-full h-[70px] flex items-center justify-between py-4 shadow bg-inherit dark:shadow-white  ${
         appData?.windowWidth > 768 ? "px-8" : "px-4"
       }`}
     >
@@ -243,6 +229,8 @@ export const Navbar = ({ dir }) => {
           settingOptionRef={settingOptionRef}
           dropdownState={settingsdropdown}
           setDropdownState={setSettingsDropdown}
+          langState={appData.currLang}
+          setLangState={dispatch}
         />
 
         {/* User Profile */}
@@ -265,7 +253,7 @@ export const Navbar = ({ dir }) => {
                 ?.toUpperCase()}`
             )
           ) : (
-            <FaUser />
+            <FaUser className="dark:text-themeBlue" />
           )}
         </button>
         {/* User Profile Dropdown */}

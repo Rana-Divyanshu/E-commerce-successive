@@ -31,7 +31,7 @@ function OrderComplete() {
         {confirmationPageT.description.line2}
       </div>
       <Link href={"/products"}>
-        <button className="bg-themeBlue hover:bg-btnHover text-white w-fit px-6 py-2 rounded-md flex items-center justify-center ease-linear duration-200">
+        <button className="bg-themeBlue hover:bg-btnHover text-white dark:bg-slate-400 w-fit px-6 py-2 rounded-md flex items-center justify-center ease-linear duration-200">
           {confirmationPageT.button}
         </button>
       </Link>

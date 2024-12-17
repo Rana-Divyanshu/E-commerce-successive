@@ -2,7 +2,6 @@
 import React, { useContext, useEffect } from "react";
 import { FaList } from "react-icons/fa";
 import { IoGrid } from "react-icons/io5";
-import { data } from "../../utils/data";
 import { AppContext } from "../../context/AppContext";
 import ProductsGrid from "../../components/ProductsGrid";
 import ProductsList from "../../components/ProductsList";
@@ -15,14 +14,14 @@ const Home = () => {
   const { appData, dispatch } = useContext(AppContext);
 
   const getgrid = () => {
-    const temp = data?.filter((elem) => {
+    const temp = appData?.productData?.filter((elem) => {
       return elem?.tags?.includes("grid");
     });
     dispatch({ type: "productsGrid", payload: temp });
   };
 
   const getlist = () => {
-    const temp = data?.filter((elem) => {
+    const temp = appData?.productData?.filter((elem) => {
       return elem?.tags?.includes("list");
     });
     dispatch({ type: "productsList", payload: temp });
@@ -95,7 +94,7 @@ const Home = () => {
     } else if (appData?.productsView === "list") {
       getlist();
     }
-  }, [appData?.productsView]);
+  }, [appData?.productsView, appData?.productData, appData?.currLang]);
 
   return (
     <div className="shoplist-page py-[4rem] px-[15%]">

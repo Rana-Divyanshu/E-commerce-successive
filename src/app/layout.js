@@ -1,14 +1,14 @@
 "use client";
 import { useEffect, useState } from "react";
 import localFont from "next/font/local";
-import { Navbar } from "../components/Navbar";
-import Footer from "../components/Footer";
+import i18next from "./i18n"; // Assuming your i18n setup is correct
 import { appWithTranslation } from "next-i18next"; // Use appWithTranslation
 import { useTranslation } from "react-i18next";
+import { Navbar } from "../components/Navbar";
+import Footer from "../components/Footer";
 import AppContextProvider from "../context/AppContext";
 import WindowWidthUpdater from "../components/WindowWidthUpdater";
-import { SessionProvider } from "next-auth/react";
-import i18next from "./i18n"; // Assuming your i18n setup is correct
+import PageTitleUpdater from "../components/PageTitleUpdater";
 import "./globals.css";
 
 const geistSans = localFont({
@@ -26,6 +26,7 @@ function RootLayout({ children }) {
   const [dir, setDir] = useState("ltr");
 
   const { i18n } = useTranslation();
+
   useEffect(() => {
     document.body.dir = i18n.dir();
     setDir(i18n.dir());
@@ -52,17 +53,16 @@ function RootLayout({ children }) {
         <meta property="og:image" content="/icon.svg" />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased h-screen w-screen overflow-y-auto overflow-x-hidden bg-[#ffffff] dark:bg-[#171717]`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased h-screen w-screen overflow-y-auto overflow-x-hidden bg-[#ffffff] dark:bg-[#070F2B]`}
       >
         <AppContextProvider>
-          <SessionProvider>
-            <Navbar dir={dir} />
-            <main className="w-full min-h-[calc(100%_-_70px)] pt-[70px] max-w-[1920px] mx-auto">
-              {children}
-            </main>
-            <Footer />
-            <WindowWidthUpdater />
-          </SessionProvider>
+          <WindowWidthUpdater />
+          <PageTitleUpdater />
+          <Navbar dir={dir} />
+          <main className="w-full min-h-[calc(100%_-_70px)] pt-[70px] max-w-[1920px] mx-auto text-[#000000] dark:text-[#535C91]">
+            {children}
+          </main>
+          <Footer />
         </AppContextProvider>
       </body>
     </html>

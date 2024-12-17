@@ -9,7 +9,7 @@ function CwcOffers({ cwcOffer }) {
   return (
     <section className="cwc-offers py-[7rem] px-[15%]">
       <div className="cwc-offer-content flex flex-col items-center gap-8">
-        <h1 className="offer-head text-[2rem] font-medium text-text-themeBlue">
+        <h1 className="offer-head text-4xl dark:text-white font-medium text-text-themeBlue">
           {cwcOffer?.title}
         </h1>
         <div className="offer-cards grid gap-4 grid-cols-4 w-full">

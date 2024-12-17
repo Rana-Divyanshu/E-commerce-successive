@@ -3,8 +3,16 @@ import { IoMdSettings } from "react-icons/io";
 import ThemeToggle from "./ThemeToggle";
 import { useTranslation } from "react-i18next";
 
-function Settings({ settingOptionRef, dropdownState, setDropdownState, dir }) {
-  const [currLang, setCurrLang] = useState("English");
+function Settings({
+  settingOptionRef,
+  dropdownState,
+  setDropdownState,
+  dir,
+  langState,
+  setLangState,
+}) {
+  // const [currLang, setCurrLang] = useState("English");
+
   const { i18n, t } = useTranslation();
   const nav = t("navbar");
 
@@ -37,7 +45,7 @@ function Settings({ settingOptionRef, dropdownState, setDropdownState, dir }) {
   };
 
   const handleLanguageChange = (language, locale) => {
-    setCurrLang(language);
+    setLangState({ type: "lang", payload: language });
     setDropdownState((prevState) => ({
       ...prevState,
       isLanguageOptionsOpen: false, // Close the language options dropdown
@@ -62,20 +70,21 @@ function Settings({ settingOptionRef, dropdownState, setDropdownState, dir }) {
       {dropdownState.isSettingOptionsOpen && (
         <div
           ref={settingOptionRef}
-          className={`absolute w-52 z-10 bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700 top-8 mt-2 ${
+          className={`absolute w-52 z-10 bg-white divide-y divide-gray-100 rounded-lg shadow top-8 mt-2 ${
             dir === "rtl" ? "left-10" : " right-10"
           }`}
         >
           <ul className="py-2 text-sm text-gray-700 dark:text-gray-200">
             <li
-              className="cursor-pointer relative flex items-center justify-between py-2 px-4 hover:bg-slate-200 dark:hover:text-white"
+              className="cursor-pointer relative flex items-center justify-between py-2 px-4"
               onClick={() => toggleDropdown("isLanguageOptionsOpen")}
             >
-              <p>{nav.language}:</p> <p>{currLang}</p>
+              <p className="hover:bg-slate-100">{nav.language}:</p>{" "}
+              <p>{langState}</p>
               {/* Language Options Dropdown */}
               {dropdownState.isLanguageOptionsOpen && (
                 <div
-                  className={`absolute z-10 bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700  top-6  mt-1 ${
+                  className={`absolute z-10 bg-white divide-y divide-gray-100 rounded-lg shadow w-44 top-6  mt-1 ${
                     dir === "rtl"
                       ? "left-[calc(100%_+_4px)]"
                       : " right-[calc(100%_+_4px)]"
@@ -84,7 +93,7 @@ function Settings({ settingOptionRef, dropdownState, setDropdownState, dir }) {
                   <ul className="py-2 text-sm text-gray-700 dark:text-gray-200">
                     {langOptions?.map(({ symbol, language, text }) => (
                       <li
-                        className="cursor-pointer flex items-center justify-between py-2 px-4 hover:bg-slate-200 dark:hover:text-white"
+                        className="cursor-pointer flex items-center justify-between py-2 px-4 hover:bg-slate-100"
                         key={symbol}
                         onClick={(e) => {
                           e.stopPropagation(); // Prevent click from propagating to parent
@@ -98,7 +107,7 @@ function Settings({ settingOptionRef, dropdownState, setDropdownState, dir }) {
                 </div>
               )}
             </li>
-            <li className="flex items-center justify-between py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+            <li className="flex items-center justify-between py-2 px-4 hover:bg-slate-100">
               <p>{nav.theme}:</p> <ThemeToggle />
             </li>
           </ul>

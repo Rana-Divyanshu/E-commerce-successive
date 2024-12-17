@@ -2,7 +2,6 @@
 import { useRouter, useSearchParams } from "next/navigation";
 import { useContext, useEffect, useState } from "react";
 import { IoMdStar } from "react-icons/io";
-import { data } from "../../../utils/data";
 import { AppContext } from "../../../context/AppContext";
 import { BsInstagram, BsTwitter } from "react-icons/bs";
 import { MdFacebook } from "react-icons/md";
@@ -20,14 +19,14 @@ const ProductDetails = () => {
   const detailsT = t("productDetails");
   const searchParams = useSearchParams();
   const { appData, dispatch } = useContext(AppContext);
-  const randomItems = getRandomItems(data, 4);
+  const randomItems = getRandomItems(appData?.productData, 4);
   const [selectedSize, setSelectedSize] = useState("XS");
   const router = useRouter();
 
   const sizes = ["XS", "S", "M", "L", "XL", "XXL", "3XL"];
 
   const getdetails = (id) => {
-    const temp = data?.find((elem) => {
+    const temp = appData?.productData?.find((elem) => {
       return elem?.id == id;
     });
     dispatch({ type: "eachProductDetail", payload: temp });
@@ -71,7 +70,7 @@ const ProductDetails = () => {
   useEffect(() => {
     const id = searchParams.get("id");
     getdetails(id);
-  }, []);
+  }, [appData?.currLang, appData?.productData]);
 
   return (
     <>
@@ -82,60 +81,38 @@ const ProductDetails = () => {
               {[...Array(4)].map((_, index) => (
                 <div
                   key={index}
-                  className="product-details-subimg-container bg-[#ebebeb] flex items-center justify-center h-[130px] w-[135px]"
+                  className="product-details-subimg-container bg-[#ebebeb] dark:bg-slate-300 flex items-center justify-center h-[130px] w-[135px]"
                 >
                   <DynamicImage title={appData?.eachProductDetail?.title} />
                 </div>
               ))}
-              {/* {appData?.eachProductDetail &&
-              Object?.values(appData?.eachProductDetail)?.length !== 0
-                ? appData?.eachProductDetail?.secondaryImages &&
-                  Object?.values(
-                    appData?.eachProductDetail?.secondaryImages
-                  )?.map((elem) => {
-                    return (
-                      <div className="product-details-subimg-container bg-[#ebebeb] flex items-center justify-center h-[130px] w-[135px]">
-                        <Image
-                      src={elem}
-                      alt="product-img"
-                      className="product-details-subimg w-full h-fit"
-                    />
-                      </div>
-                    );
-                  })
-                : null} */}
             </div>
-            <div className="product-details-card-sl-right bg-[#ebebeb] w-[70%] flex items-center justify-center">
-              {/* {Object?.values(appData?.eachProductDetail)?.length !== 0 ? (
-            <img
-              src={appData?.eachProductDetail?.primaryImage}
-              alt="product-img"
-              className="product-details-mainimg w-full h-fit"
-            />
-          ) : null} */}
+            <div className="product-details-card-sl-right bg-[#ebebeb] dark:bg-slate-300 w-[70%] flex items-center justify-center">
               <DynamicImage title={appData?.eachProductDetail?.title} />
             </div>
           </div>
           {Object?.values(appData?.eachProductDetail)?.length !== 0 ? (
             <div className="product-details-card-sr w-1/2 py-12 flex flex-col justify-center gap-4">
-              <div className="product-details-title text-2xl font-semibold tracking-[1px] text-themeBlue">
+              <div className="product-details-title text-2xl font-semibold tracking-[1px] text-themeBlue dark:text-white">
                 {appData?.eachProductDetail?.title}
               </div>
-              <div className="product-details-description text-gray ">
+              <div className="product-details-description text-gray dark:text-slate-300">
                 {appData?.eachProductDetail?.description}
               </div>
               <div className="product-details-price-rating-div flex gap-[1rem]">
                 <div className="product-details-rating flex items-center gap-2 text-secondary font-semibold">
-                  <IoMdStar className="text-[#FFC416]" />
-                  <p>{appData?.eachProductDetail?.rating}</p>
+                  <IoMdStar className="text-[#FFC416] " />
+                  <p className="dark:text-slate-300">
+                    {appData?.eachProductDetail?.rating}
+                  </p>
                 </div>
-                <div className="product-details-price text-xl text-themeBlue font-semibold">
+                <div className="product-details-price text-xl text-themeBlue font-semibold dark:text-white">
                   ₹ {appData?.eachProductDetail?.price}
                 </div>
               </div>
               <div className="product-details-category text-themeBlue font-semibold flex items-center gap-2">
-                <p>{detailsT.tags}</p>
-                {appData?.eachProductDetail?.tags?.map((list) => {
+                <p className="dark:text-slate-300">{detailsT.tags}</p>
+                {appData?.eachProductDetail?.showTags?.map((list) => {
                   return (
                     <li className="text-gray font-medium list-none" key={list}>
                       {list}
@@ -144,22 +121,22 @@ const ProductDetails = () => {
                 })}
               </div>
               <div className="product-details-category text-themeBlue font-semibold flex items-center gap-2">
-                <p>{detailsT.category}:</p>
+                <p className="dark:text-slate-300">{detailsT.category}:</p>
                 <span className="text-gray font-medium">
                   {appData?.eachProductDetail?.category}
                 </span>
               </div>
-              <div className="product-details-size text-themeBlue font-semibold flex items-center gap-2">
-                <p>{detailsT.size}:</p>
-                <ul className="size-blocks list-none flex items-center gap-4 ms-2">
+              <div className="product-details-size text-themeBlue font-semibold flex items-start gap-2">
+                <p className="dark:text-slate-300 mt-1">{detailsT.size}:</p>
+                <ul className="size-blocks list-none flex flex-wrap items-center gap-4 ms-2 ">
                   {sizes &&
                     sizes?.map((size) => {
                       return (
                         <li
                           className={`size-block cursor-pointer outline outline-1 px-4 py-1 rounded-md ${
                             selectedSize === size
-                              ? "text-themeBlue"
-                              : "text-gray"
+                              ? "text-themeBlue outline-themeBlue dark:text-white dark:outline-white"
+                              : "text-gray outline-gray hover:outline-themeBlue dark:hover:outline-white"
                           }`}
                           key={size}
                           onClick={() => {
@@ -173,16 +150,16 @@ const ProductDetails = () => {
                 </ul>
               </div>
               <div className="product-details-share text-themeBlue font-semibold flex items-center gap-2">
-                <p>{detailsT.share}:</p>
+                <p className="dark:text-slate-300">{detailsT.share}:</p>
                 <div className="share-icons flex items-center gap-2 text-secondary font-semibold">
                   <div className="share-icon-div h-[25px] w-[25px] flex items-center justify-center rounded-full shadow shadow-[rgba(213,213,219,0.5)] cursor-pointer">
-                    <BsInstagram className="w-[85%] hover:text-themeBlue" />
+                    <BsInstagram className="w-[85%] hover:text-themeBlue dark:hover:text-white" />
                   </div>
                   <div className="share-icon-div h-[25px] w-[25px] flex items-center justify-center rounded-full shadow shadow-[rgba(213,213,219,0.5)] cursor-pointer">
-                    <MdFacebook className="w-[85%] hover:text-themeBlue" />
+                    <MdFacebook className="w-[85%] hover:text-themeBlue dark:hover:text-white" />
                   </div>
                   <div className="share-icon-div h-[25px] w-[25px] flex items-center justify-center rounded-full shadow shadow-[rgba(213,213,219,0.5)] cursor-pointer">
-                    <BsTwitter className="w-[85%] hover:text-themeBlue" />
+                    <BsTwitter className="w-[85%] hover:text-themeBlue dark:hover:text-white" />
                   </div>
                 </div>
               </div>
@@ -194,7 +171,7 @@ const ProductDetails = () => {
                   {detailsT.add2Cart}
                 </button>
                 <button
-                  className="bg-themeBlue hover:bg-btnHover text-white w-fit px-6 py-2 rounded-md flex items-center justify-center ease-linear duration-200"
+                  className="bg-themeBlue hover:bg-btnHover text-white dark:bg-slate-400 w-fit px-6 py-2 rounded-md flex items-center justify-center ease-linear duration-200"
                   onClick={() => {
                     router.push("/order-complete");
                   }}

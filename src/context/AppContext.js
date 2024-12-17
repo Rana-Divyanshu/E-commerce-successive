@@ -1,12 +1,25 @@
-import { createContext, useReducer } from "react";
+import { createContext, useReducer, useEffect } from "react";
+import { dataArabic, dataEnglish, dataHindi } from "../utils/data";
 export const AppContext = createContext();
 
 const reducer = (state, action) => {
   switch (action.type) {
+    case "lang": {
+      return {
+        ...state,
+        currLang: action.payload,
+      };
+    }
     case "user": {
       return {
         ...state,
         user: action.payload,
+      };
+    }
+    case "productsData": {
+      return {
+        ...state,
+        productData: action.payload,
       };
     }
     case "SET_WINDOW_WIDTH": {
@@ -52,61 +65,8 @@ const reducer = (state, action) => {
 };
 
 const AppContextProvider = ({ children }) => {
-  let tempCart = [
-    {
-      id: 23,
-      title: "Courage the cowardly Dog Funky Black T-shirt",
-      rating: 4.5,
-      price: 999,
-      description:
-        "Give your closet an instant upgrade by opting for the trendy cwc styled or your own Styled T-shirt. It features a distinctive graphic pattern and is designed in a black hue. This T-shirt is made from soft yet durable cotton material and features a crew and half sleeves.",
-      category: "Men's Clothing",
-      subCategory: "",
-      tags: ["list", "cartoon"],
-      size: ["XS", "S", "M", "L", "XL", "XXL", "3XL"],
-      quantity: 1,
-    },
-  ];
-  // {
-  //   id: 24,
-  //   title: "Itachi Uchiha Anime White T-shirt",
-  //   rating: 4.5,
-  //   price: 1299,
-  //   description:
-  //     "Give your closet an instant upgrade by opting for the trendy cwc styled or your own Styled T-shirt. It features a distinctive graphic pattern and is designed in a black hue. This T-shirt is made from soft yet durable cotton material and features a crew and half sleeves.",
-  //   category: "Men's Clothing",
-  //   subCategory: "",
-  //   tags: ["list", "anime"],
-  //   size: ["XS", "S", "M", "L", "XL", "XXL", "3XL"],
-  //   quantity: 1,
-  // },
-  // {
-  //   id: 25,
-  //   title: "Courage the cowardly Dog classic pale green T-shirt",
-  //   rating: 4.5,
-  //   price: 1299,
-  //   description:
-  //     "Give your closet an instant upgrade by opting for the trendy cwc styled or your own Styled T-shirt. It features a distinctive graphic pattern and is designed in a black hue. This T-shirt is made from soft yet durable cotton material and features a crew and half sleeves.",
-  //   category: "Men's Clothing",
-  //   subCategory: "",
-  //   tags: ["list", "cartoon"],
-  //   size: ["XS", "S", "M", "L", "XL", "XXL", "3XL"],
-  //   quantity: 1,
-  // },
-  // {
-  //   id: 26,
-  //   title: "Engineer Girl T-shirt",
-  //   rating: 4.5,
-  //   price: 1199,
-  //   description:
-  //     "Give your closet an instant upgrade by opting for the trendy cwc styled or your own Styled T-shirt. It features a distinctive graphic pattern and is designed in a black hue. This T-shirt is made from soft yet durable cotton material and features a crew and half sleeves.",
-  //   category: "Women's Clothing",
-  //   subCategory: "",
-  //   tags: ["list", "engineering"],
-  //   size: ["XS", "S", "M", "L", "XL", "XXL", "3XL"],
-  //   quantity: 1,
-  // },
   const [appData, dispatch] = useReducer(reducer, {
+    currLang: "English",
     user: null,
     windowWidth: 0,
     productsGrid: null,
@@ -114,8 +74,20 @@ const AppContextProvider = ({ children }) => {
     productsView: "list",
     eachProductDetail: {},
     cartItems: [],
-    // cartItems: tempCart,
+    productData: [],
   });
+
+  useEffect(() => {
+    if (appData.currLang === "English") {
+      dispatch({ type: "productsData", payload: dataEnglish });
+    } else if (appData.currLang === "Hindi") {
+      dispatch({ type: "productsData", payload: dataHindi });
+    } else if (appData.currLang === "Arabic") {
+      dispatch({ type: "productsData", payload: dataArabic });
+    } else {
+      dispatch({ type: "productsData", payload: [] });
+    }
+  }, [appData.currLang]);
 
   return (
     <AppContext.Provider value={{ appData, dispatch }}>

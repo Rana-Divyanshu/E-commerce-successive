@@ -29,7 +29,7 @@ function Login() {
             required
           />
         </div>
-        <button className="mt-6 cursor-pointer bg-themeBlue hover:bg-btnHover text-white w-fit px-6 py-2 rounded-md flex items-center justify-center ease-linear duration-200">
+        <button className="mt-6 cursor-pointer bg-themeBlue hover:bg-btnHover text-white dark:bg-slate-400 w-fit px-6 py-2 rounded-md flex items-center justify-center ease-linear duration-200">
           {loginT.signIn}
         </button>
         <Link href="/auth/signup">
