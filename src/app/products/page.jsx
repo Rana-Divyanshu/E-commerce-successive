@@ -12,6 +12,7 @@ const Home = () => {
   const productT = t("products");
 
   const { appData, dispatch } = useContext(AppContext);
+  const { windowWidth } = appData;
 
   const getgrid = () => {
     const temp = appData?.productData?.filter((elem) => {
@@ -99,13 +100,13 @@ const Home = () => {
   return (
     <div className="shoplist-page py-[4rem] px-[15%]">
       <div className="filter-view-div relative w-full flex items-center justify-between">
-        <p className="text-3xl text-themeBlue font-semibold dark:text-white">
+        <p className="text-xl sm:text-3xl  2xl:text-[2.5rem] leading-tight text-themeBlue font-semibold dark:text-white">
           {appData?.productsView === "list"
-            ? productT.listView
-            : appData?.productsView === "grid" && productT.gridView}
+            ? productT?.listView
+            : appData?.productsView === "grid" && productT?.gridView}
         </p>
         <div className="view-div flex items-center gap-3 text-themeBlue">
-          <p>{productT.view}:</p>
+          <p>{productT?.view}:</p>
           <button
             className={`border-none outline-none ${
               appData?.productsView === "list"
@@ -136,7 +137,11 @@ const Home = () => {
         <ProductsGrid data={appData?.productsGrid} addToCart={addToCart} />
       ) : (
         appData?.productsView === "list" && (
-          <ProductsList data={appData?.productsList} addToCart={addToCart} />
+          <ProductsList
+            data={appData?.productsList}
+            addToCart={addToCart}
+            windowWidth={windowWidth}
+          />
         )
       )}
     </div>

@@ -15,7 +15,7 @@ const AboutUs = () => {
   return (
     <>
       {/* About Us */}
-      <div className="about-us-content py-[4rem] px-[15%] flex items-center gap-8">
+      <section className="about-us-content py-[4rem] px-[15%] flex items-center gap-8">
         <div className="aboutus-left w-1/2">
           <Image
             src={aboutus}
@@ -25,19 +25,19 @@ const AboutUs = () => {
         </div>
         <div className="aboutus-right w-1/2 flex flex-col gap-4">
           <div className="aboutus-title text-4xl text-themeBlue dark:text-white">
-            {aboutUsT.title}
+            {aboutUsT?.title}
           </div>
           <div className="aboutus-content text-gray dark:text-slate-200">
-            {aboutUsT.description}
+            {aboutUsT?.description}
           </div>
           <button
             className="bg-themeBlue hover:bg-btnHover text-white dark:bg-slate-400 w-fit px-6 py-2 rounded-md flex items-center justify-center ease-linear duration-200"
             onClick={() => router.push("/contact-us")}
           >
-            {aboutUsT.contactBtn}
+            {aboutUsT?.contactBtn}
           </button>
         </div>
-      </div>
+      </section>
       {/* cwc-offers */}
       <CwcOffers cwcOffer={cwcOffer} />
     </>

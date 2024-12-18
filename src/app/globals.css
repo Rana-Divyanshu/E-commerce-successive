@@ -92,4 +92,11 @@ h1 {
   }
 }
 
-@import "./responsive.css";
+.swiper {
+  height: 100%;
+}
+.swiper-slide > div,
+.swiper > div:last-of-type {
+  border: none;
+  outline: none;
+}

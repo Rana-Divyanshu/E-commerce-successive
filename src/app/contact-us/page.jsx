@@ -15,10 +15,10 @@ function ContactUs() {
       <section className="contactus-row flex gap-[6rem] px-[15%] py-[3rem]">
         <div className="contact-us-col flex flex-col gap-[1rem] w-1/2">
           <div className="contact-us-title font-medium text-[1.75rem] text-themeBlue dark:text-white">
-            {infoAboutUsT.title}
+            {infoAboutUsT?.title}
           </div>
           <div className="contact-us-content text-gray dark:text-slate-200">
-            {infoAboutUsT.description}
+            {infoAboutUsT?.description}
           </div>
           <div className="color-dots-row flex items-center gap-[0.5rem] mt-[1rem]">
             <div className="color-dots dot-1 h-[18px] w-[18px] rounded-full bg-themeBlue dark:bg-indigo-200"></div>
@@ -29,22 +29,22 @@ function ContactUs() {
         </div>
         <div className="contact-us-col flex flex-col gap-[1rem] w-1/2">
           <div className="contact-us-title font-medium text-[1.75rem] text-themeBlue dark:text-white">
-            {contactWayT.title}
+            {contactWayT?.title}
           </div>
           <div className="contact-us-content text-gray dark:text-slate-200">
             <div className="contact-us-content-row flex mb-[2rem]">
               <div className="contact-us-content-col flex items-center gap-[0.75rem] w-1/2">
                 <div className="contact-us-content-col-dot dot-1  bg-themeBlue dark:bg-indigo-200 h-[30px] w-[30px] rounded-full"></div>
                 <div className="contact-us-content-col-text w-[80%] text-[14px]">
-                  <p>{contactWayT.tel} : 9414-207-871</p>
-                  <p>{contactWayT.email}: shop@store.com</p>
+                  <p>{contactWayT?.tel} : 9414-207-871</p>
+                  <p>{contactWayT?.email}: shop@store.com</p>
                 </div>
               </div>
               <div className="contact-us-content-col flex items-center gap-[0.75rem] w-1/2">
                 <div className="contact-us-content-col-dot dot-2  bg-[#819fde] h-[30px] w-[30px] rounded-full"></div>
                 <div className="contact-us-content-col-text w-[80%] text-[14px]">
-                  <p>{contactWayT.supportForm}</p>
-                  <p>{contactWayT.supportTime}</p>
+                  <p>{contactWayT?.supportForm}</p>
+                  <p>{contactWayT?.supportTime}</p>
                 </div>
               </div>
             </div>
@@ -61,7 +61,7 @@ function ContactUs() {
               <div className="contact-us-content-col flex items-center gap-[0.75rem] w-1/2">
                 <div className="contact-us-content-col-dot dot-4  bg-[#58586e] h-[30px] w-[30px] rounded-full"></div>
                 <div className="contact-us-content-col-text w-[80%] text-[14px]">
-                  <p>{contactWayT.shipping}</p>
+                  <p>{contactWayT?.shipping}</p>
                 </div>
               </div>
             </div>
@@ -71,18 +71,18 @@ function ContactUs() {
       <section className="contactus-row flex gap-[6rem] px-[15%] py-[3rem]">
         <div className="getintouch-form-div w-1/2 flex flex-col gap-[1rem]  ">
           <div className="contact-us-title font-medium text-[1.75rem] text-themeBlue dark:text-white">
-            {getInTouchT.title}
+            {getInTouchT?.title}
           </div>
 
           <div className="contact-us-content text-gray dark:text-slate-200">
-            {getInTouchT.description}
+            {getInTouchT?.description}
           </div>
           <div className="contact-us-form flex flex-col items-start gap-[1.5rem]">
             <div className="form-row flex w-full gap-[1.25rem]">
               <div className="form-col w-1/2">
                 <input
                   type="text"
-                  placeholder={getInTouchT.namePlaceholder}
+                  placeholder={getInTouchT?.namePlaceholder}
                   className="contact-form-input w-full  outline outline-1 outline-secondary focus:outline-themeBlue rounded px-[15px] py-[10px]  transition-all duration-400 placeholder:text-gray"
                   required
                 />
@@ -90,7 +90,7 @@ function ContactUs() {
               <div className="form-col w-1/2">
                 <input
                   type="text"
-                  placeholder={getInTouchT.emailPlaceholder}
+                  placeholder={getInTouchT?.emailPlaceholder}
                   className="contact-form-input w-full  outline outline-1 outline-secondary focus:outline-themeBlue rounded px-[15px] py-[10px]  transition-all duration-400 placeholder:text-gray"
                   required
                 />
@@ -99,7 +99,7 @@ function ContactUs() {
             <div className="form-row flex w-full gap-[1.25rem]">
               <input
                 type="text"
-                placeholder={getInTouchT.subjectPlaceholder}
+                placeholder={getInTouchT?.subjectPlaceholder}
                 className="contact-form-input w-full  outline outline-1 outline-secondary focus:outline-themeBlue rounded px-[15px] py-[10px]  transition-all duration-400 placeholder:text-gray"
                 required
               />
@@ -107,14 +107,14 @@ function ContactUs() {
             <div className="form-row flex w-full gap-[1.25rem]">
               <textarea
                 rows={7}
-                placeholder={getInTouchT.messagePlaceholder}
+                placeholder={getInTouchT?.messagePlaceholder}
                 className="contact-form-input w-full  outline outline-1 outline-secondary focus:outline-themeBlue rounded px-[15px] py-[10px]  transition-all duration-400 placeholder:text-gray textarea resize-none"
                 required
               />
             </div>
             <div className="form-row flex w-full gap-[1.25rem]">
               <button className="bg-themeBlue hover:bg-btnHover text-white dark:bg-slate-400 w-fit px-6 py-2 rounded-md flex items-center justify-center ease-linear duration-200">
-                {getInTouchT.sendMail}
+                {getInTouchT?.sendMail}
               </button>
             </div>
           </div>

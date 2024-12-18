@@ -70,16 +70,16 @@ const Cart = () => {
         <div className="cart-products-list-div flex flex-col items-start w-[65%]">
           <div className="cart-products-list-heads flex w-full text-themeBlue dark:text-white font-semibold pb-8">
             <div className="cart-products-list-head cart-product w-[40%]">
-              {tableHead.product}
+              {tableHead?.product}
             </div>
             <div className="cart-products-list-head cart-Price w-[20%] flex items-center justify-center gap-[3px]">
-              {tableHead.price}
+              {tableHead?.price}
             </div>
             <div className="cart-products-list-head cart-Quantity w-[20%] flex items-center justify-center gap-[3px]">
-              {tableHead.quantity}
+              {tableHead?.quantity}
             </div>
             <div className="cart-products-list-head cart-Total w-[20%] flex items-center justify-center gap-[3px]">
-              {tableHead.total}
+              {tableHead?.total}
             </div>
           </div>
           {appData?.cartItems.length !== 0
@@ -108,7 +108,7 @@ const Cart = () => {
                           {elem.title}
                         </div>
                         <div className="cart-product-desc-size text-gray dark:text-slate-300">
-                          {cart.size}
+                          {cart?.size}
                         </div>
                       </div>
                     </div>
@@ -146,19 +146,19 @@ const Cart = () => {
               className="bg-themeBlue hover:bg-btnHover text-white dark:bg-slate-400 w-fit px-6 py-2 rounded-md flex items-center justify-center ease-linear duration-200"
               onClick={() => clearCart()}
             >
-              {cart.clearCart}
+              {cart?.clearCart}
             </button>
           </div>
         </div>
         <div className="cart-pricing-div w-[35%] flex flex-col items-center">
           <div className="cart-pricing-head text-themeBlue font-semibold pb-8">
-            {pricingSec.carTotals}
+            {pricingSec?.carTotals}
           </div>
           <div className="cart-total-card bg-bgRoute w-[85%] p-[1rem] flex flex-col items-start gap-[2rem]">
             <div className="cart-total-divided w-full flex flex-col gap-4">
               <div className="cart-total-divided-row flex items-center justify-between border-b border-bordercommon pb-[10px]">
                 <div className="cart-total-name text-themeBlue font-semibold">
-                  {pricingSec.subTotal}
+                  {pricingSec?.subTotal}
                 </div>
                 <div className="cart-total-value">
                   ₹ <span>{total}</span>
@@ -166,7 +166,7 @@ const Cart = () => {
               </div>
               <div className="cart-total-divided-row flex items-center justify-between border-b border-bordercommon pb-[10px]">
                 <div className="cart-total-name text-themeBlue font-semibold">
-                  {pricingSec.delivery}
+                  {pricingSec?.delivery}
                 </div>
                 <div className="cart-total-value">
                   ₹ <span>{total == 0 ? "0" : "9.00"}</span>
@@ -174,7 +174,7 @@ const Cart = () => {
               </div>
               <div className="cart-total-divided-row flex items-center justify-between border-b border-bordercommon pb-[10px]">
                 <div className="cart-total-name text-themeBlue font-semibold">
-                  {pricingSec.taxesCharges}
+                  {pricingSec?.taxesCharges}
                 </div>
                 <div className="cart-total-value">
                   ₹ <span>{total == 0 ? "0" : "29.00"}</span>
@@ -183,7 +183,7 @@ const Cart = () => {
             </div>
             <div className="cart-total-final w-full flex items-center justify-between border-b border-bordercommon pb-[10px]">
               <div className="cart-total-name text-themeBlue font-semibold">
-                {pricingSec.total}
+                {pricingSec?.total}
               </div>
               <div className="cart-total-value">
                 ₹ <span>{total == 0 ? "0" : total + 38}</span>
@@ -196,7 +196,7 @@ const Cart = () => {
                 router.push("/order-complete");
               }}
             >
-              {cart.proceed}
+              {cart?.proceed}
             </button>
           </div>
         </div>
@@ -206,12 +206,12 @@ const Cart = () => {
     <section className="min-h-[calc(100vh_-_150px)] w-full flex flex-col  items-center justify-center">
       <Image src={emptyCart} alt="emptyCart" className="w-[400px] -mt-20" />
       <h1 className="text-center text-themeBlue dark:text-white text-3xl font-medium -mt-10">
-        {empty.title} <br />
-        <span className="font-normal text-gray text-xl">{empty.subText}</span>
+        {empty?.title} <br />
+        <span className="font-normal text-gray text-xl">{empty?.subText}</span>
       </h1>
       <Link href={"/products"}>
         <button className="bg-themeBlue hover:bg-btnHover text-white dark:bg-slate-400 w-fit px-6 py-2 rounded-md flex items-center justify-center ease-linear duration-200 mt-5">
-          {empty.shopNow}
+          {empty?.shopNow}
         </button>
       </Link>
     </section>

@@ -68,13 +68,15 @@
     "gridView": "Products grid view"
   },
   "productDetails": {
+    "title": "Product Details",
     "tags": "Tags",
     "category": "Category",
     "size": "Size",
     "share": "Share",
     "add2Cart": "Add to Cart",
     "buy": "Buy Now",
-    "desc": "Product Description"
+    "desc": "Product Description",
+    "related": "Related Products"
   },
   "cart": {
     "tableHeads": {

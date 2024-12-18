@@ -46,7 +46,7 @@ export const Navbar = ({ dir }) => {
 
   const NavLinks = () => {
     return (
-      <ul className="w-full md:w-fit flex flex-col font-medium rounded-lg md:space-x-8 md:flex-row">
+      <ul className="w-full md:w-fit flex font-medium rounded-lg overflow-x-clip">
         <li className="min-h-full flex items-center text-lg">
           <Link
             href="/"
@@ -56,7 +56,7 @@ export const Navbar = ({ dir }) => {
                 : "text-secText dark:text-gray-400 hover:underline"
             }`}
           >
-            {nav.home}
+            {nav?.home}
           </Link>
         </li>
         <li className="min-h-full flex items-center text-lg">
@@ -68,7 +68,7 @@ export const Navbar = ({ dir }) => {
                 : "text-secText dark:text-gray-400 hover:underline"
             }`}
           >
-            {nav.products}
+            {nav?.products}
           </Link>
         </li>
         <li className="min-h-full flex items-center text-lg">
@@ -80,7 +80,7 @@ export const Navbar = ({ dir }) => {
                 : "text-secText dark:text-gray-400 hover:underline"
             }`}
           >
-            {nav.aboutUs}
+            {nav?.aboutUs}
           </Link>
         </li>
         <li className="min-h-full flex items-center text-lg">
@@ -92,7 +92,7 @@ export const Navbar = ({ dir }) => {
                 : "text-secText dark:text-gray-400 hover:underline"
             }`}
           >
-            {nav.contactUs}
+            {nav?.contactUs}
           </Link>
         </li>
       </ul>
@@ -127,7 +127,7 @@ export const Navbar = ({ dir }) => {
                     logoutUser();
                   }}
                 >
-                  {signOutText.signOut}
+                  {signOutText?.signOut}
                   <span>
                     <PiSignOutBold />
                   </span>
@@ -141,7 +141,7 @@ export const Navbar = ({ dir }) => {
                     loginUser();
                   }}
                 >
-                  {signOutText.signin}
+                  {signOutText?.signin}
                   <span>
                     <PiSignInBold />
                   </span>
@@ -266,7 +266,7 @@ export const Navbar = ({ dir }) => {
           className="absolute w-full h-fit top-[70px] left-0 shadow-lg border-t bg-white p-4"
           onClick={() => setEpandedNav(false)}
         >
-          <div className="flex flex-col items-start justify-start w-full h-full">
+          <div className="ham-navlink-container flex flex-col items-start justify-start w-full h-full">
             <NavLinks />
           </div>
         </div>

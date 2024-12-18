@@ -79,7 +79,7 @@ function Settings({
               className="cursor-pointer relative flex items-center justify-between py-2 px-4"
               onClick={() => toggleDropdown("isLanguageOptionsOpen")}
             >
-              <p className="hover:bg-slate-100">{nav.language}:</p>{" "}
+              <p className="hover:bg-slate-100">{nav?.language}:</p>{" "}
               <p>{langState}</p>
               {/* Language Options Dropdown */}
               {dropdownState.isLanguageOptionsOpen && (
@@ -108,7 +108,7 @@ function Settings({
               )}
             </li>
             <li className="flex items-center justify-between py-2 px-4 hover:bg-slate-100">
-              <p>{nav.theme}:</p> <ThemeToggle />
+              <p>{nav?.theme}:</p> <ThemeToggle />
             </li>
           </ul>
         </div>

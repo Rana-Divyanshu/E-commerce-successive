@@ -68,13 +68,15 @@
     "gridView": "عرض شبكة المنتجات"
   },
   "productDetails": {
+    "title": "تفاصيل المنتج",
     "tags": "العلامات",
     "category": "الفئة",
     "size": "الحجم",
     "share": "شارك",
     "add2Cart": "أضف إلى السلة",
     "buy": "اشتر الآن",
-    "desc": "وصف المنتج"
+    "desc": "وصف المنتج",
+    "related": "منتجات ذات صلة"
   },
   "cart": {
     "tableHeads": {

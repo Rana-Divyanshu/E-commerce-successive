@@ -73,23 +73,23 @@ const Home = () => {
     <div className="homepage">
       {/* Hero Banner */}
       <section
-        className={`w-full h-[55vh] max-h-[480px] bg-no-repeat bg-bannertBG flex items-center justify-between bg-cover `}
+        className={`hero w-full h-[55vh] max-h-[480px] bg-no-repeat bg-bannertBG flex items-center justify-between bg-cover `}
         style={{
           backgroundImage: `url(/background/lights.png)`,
           backgroundSize: "22%",
         }}
       >
-        <article
-          className={`h-full flex items-center  px-4 ${
-            windowWidth <= 960 ? "w-full justify-center" : "w-1/2 justify-end"
+        <div
+          className={`hero-left h-full flex items-center  px-4 ${
+            windowWidth < 768 ? "w-full justify-center" : "w-1/2 justify-end"
           }`}
         >
           <div className="h-full flex flex-col gap-4 items-start justify-center text-white">
-            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-5xl 2xl:text-5xl leading-tight">
+            <h1 className="text-3xl sm:text-3xl lg:text-4xl  xl:text-5xl 2xl:text-5xl leading-tight">
               {heroSec?.title?.line1} <br />
               {heroSec?.title?.line2}
             </h1>
-            <p className="text-xs sm:text-sm md:text-md lg:text-lg xl:text-lg 2xl:text-lg">
+            <p className="text-sm sm:text-sm md:text-md lg:text-lg xl:text-lg 2xl:text-lg">
               {heroSec?.description?.line1} <br />
               {heroSec?.description?.line2}
             </p>
@@ -99,10 +99,10 @@ const Home = () => {
               </button>
             </Link>
           </div>
-        </article>
+        </div>
 
-        {windowWidth > 960 && (
-          <div className="w-1/2 h-full flex items-center justify-center px-4">
+        {windowWidth > 767 && (
+          <div className="hero-right w-1/2 h-full flex items-center justify-center px-4">
             <Image
               src={heroBannerImg}
               alt="heroBannerImg"
@@ -135,7 +135,7 @@ const Home = () => {
             }`}
             onClick={() => getlatest()}
           >
-            {latestOptions.newArrival}
+            {latestOptions?.newArrival}
           </button>
           <button
             className={`hover:underline underline-offset-4 ease-in duration-100 ${
@@ -145,7 +145,7 @@ const Home = () => {
             }`}
             onClick={() => getmens()}
           >
-            {latestOptions.mens}
+            {latestOptions?.mens}
           </button>
           <button
             className={`hover:underline underline-offset-4 ease-in duration-100 ${
@@ -155,7 +155,7 @@ const Home = () => {
             }`}
             onClick={() => getwomen()}
           >
-            {latestOptions.womens}
+            {latestOptions?.womens}
           </button>
           <button
             className={`hover:underline underline-offset-4 ease-in duration-100 ${
@@ -165,7 +165,7 @@ const Home = () => {
             }`}
             onClick={() => getspecial()}
           >
-            {latestOptions.special}
+            {latestOptions?.special}
           </button>
         </div>
         <ProductsGrid data={latest} />
@@ -182,7 +182,7 @@ const Home = () => {
         </div>
         <div className="features-right w-[50%] flex flex-col gap-4 text-[#e3e3e3] ">
           <h1 className="features-title text-4xl font-medium dark:text-white">
-            {uniqueSec.title}
+            {uniqueSec?.title}
           </h1>
           <div className="feature-point flex gap-2 items-center text-[14px]">
             <div className="point-dot bg-[#abbce1] h-[12px] w-[12px] rounded-full"></div>
@@ -221,12 +221,12 @@ const Home = () => {
 
       {/* newsletter */}
       <section
-        className="h-[360px] bg-cover bg-center bg-no-repeat flex flex-col items-center justify-center gap-4 text-whiter"
+        className="h-[360px] newsLetter bg-cover bg-center bg-no-repeat flex flex-col items-center justify-center gap-4 text-whiter"
         style={{
           backgroundImage: `url(/background/newsLetter.png)`,
         }}
       >
-        <h1 className="w-2/5 text-center text-4xl text-white">
+        <h1 className="newsLetter-title w-2/5 text-center text-4xl text-white">
           {home?.newsLetter}
         </h1>
         <button className="bg-themeBlue hover:bg-btnHover text-white dark:bg-slate-400 w-fit px-6 py-2 rounded-md flex items-center justify-center ease-linear duration-200">

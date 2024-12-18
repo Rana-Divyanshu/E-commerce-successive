@@ -3,7 +3,7 @@ import React from "react";
 
 const OfferCard = ({ img, title, description }) => {
   return (
-    <div className="offer-card relative w-full h-full flex flex-col items-center gap-4 text-center py-6 px-16 shadow-md dark:shadow dark:shadow-white overflow-hidden">
+    <div className="offer-card relative w-full h-full flex flex-col items-center gap-4 text-center py-6 px-8 shadow-md dark:shadow dark:shadow-white overflow-hidden">
       <div className="offer-card-img">
         <Image src={img} alt="img" className="" />
       </div>

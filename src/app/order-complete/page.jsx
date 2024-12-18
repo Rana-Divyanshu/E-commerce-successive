@@ -24,15 +24,15 @@ function OrderComplete() {
       />
       <Image src={ordercomplete} alt="order" />
       <div className="ordercomplete-title font-medium text-themeBlue dark:text-white text-3xl">
-        {confirmationPageT.title}
+        {confirmationPageT?.title}
       </div>
       <div className="ordercomplete-content text-gray w-3/4 text-lg">
-        {confirmationPageT.description.line1} <br />
-        {confirmationPageT.description.line2}
+        {confirmationPageT?.description?.line1} <br />
+        {confirmationPageT?.description?.line2}
       </div>
       <Link href={"/products"}>
         <button className="bg-themeBlue hover:bg-btnHover text-white dark:bg-slate-400 w-fit px-6 py-2 rounded-md flex items-center justify-center ease-linear duration-200">
-          {confirmationPageT.button}
+          {confirmationPageT?.button}
         </button>
       </Link>
     </section>

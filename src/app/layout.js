@@ -10,6 +10,7 @@ import AppContextProvider from "../context/AppContext";
 import WindowWidthUpdater from "../components/WindowWidthUpdater";
 import PageTitleUpdater from "../components/PageTitleUpdater";
 import "./globals.css";
+import "./responsive.css";
 
 const geistSans = localFont({
   src: "../fonts/GeistVF.woff",
@@ -53,13 +54,14 @@ function RootLayout({ children }) {
         <meta property="og:image" content="/icon.svg" />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased h-screen w-screen overflow-y-auto overflow-x-hidden bg-[#ffffff] dark:bg-[#070F2B]`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased h-screen w-screen overflow-y-auto overflow-x-clip bg-[#ffffff] dark:bg-[#070F2B]`}
       >
         <AppContextProvider>
           <WindowWidthUpdater />
           <PageTitleUpdater />
+          {/* <main className="w-full min-h-[calc(100%_-_70px)] pt-[70px] max-w-[1920px] mx-auto text-[#000000] dark:text-[#535C91]"> */}
           <Navbar dir={dir} />
-          <main className="w-full min-h-[calc(100%_-_70px)] pt-[70px] max-w-[1920px] mx-auto text-[#000000] dark:text-[#535C91]">
+          <main className="w-full min-h-fit pt-[70px] max-w-[1920px] overflow-x-clip mx-auto text-[#000000] dark:text-[#535C91]">
             {children}
           </main>
           <Footer />

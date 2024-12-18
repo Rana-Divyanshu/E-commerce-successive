@@ -78,15 +78,14 @@ const AppContextProvider = ({ children }) => {
   });
 
   useEffect(() => {
-    if (appData.currLang === "English") {
-      dispatch({ type: "productsData", payload: dataEnglish });
-    } else if (appData.currLang === "Hindi") {
-      dispatch({ type: "productsData", payload: dataHindi });
-    } else if (appData.currLang === "Arabic") {
-      dispatch({ type: "productsData", payload: dataArabic });
-    } else {
-      dispatch({ type: "productsData", payload: [] });
-    }
+    const languageData = {
+      English: dataEnglish,
+      Hindi: dataHindi,
+      Arabic: dataArabic,
+    };
+
+    const payload = languageData[appData.currLang] || dataEnglish;
+    dispatch({ type: "productsData", payload });
   }, [appData.currLang]);
 
   return (
