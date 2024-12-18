@@ -27,7 +27,7 @@ const nextConfig = {
   async headers() {
     return [
       {
-        source: "/:path*", // Match all routes
+        source: "/(.*)", // Apply headers to all routes
         headers: [
           {
             key: "Cross-Origin-Opener-Policy",
@@ -44,3 +44,5 @@ const nextConfig = {
 };
 
 export default nextConfig;
+
+// source: "/:path*", // Match all routes

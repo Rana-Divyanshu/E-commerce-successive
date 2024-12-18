@@ -8,8 +8,6 @@ import Link from "next/link";
 import emptyCart from "../../assets/img/empty-cart.png";
 import DynamicImage from "../../components/DynamicImage";
 import { useRouter } from "next/navigation";
-import { loadStripe } from "@stripe/stripe-js";
-import axios from "axios";
 import { useTranslation } from "react-i18next";
 
 const Cart = () => {
@@ -20,7 +18,6 @@ const Cart = () => {
   const pricingSec = t("cart.pricingSection");
   const empty = t("cart.empty");
 
-  const stripePromise = loadStripe(process.env.stripe_public_key);
   const { appData, dispatch } = useContext(AppContext);
   const [total, setTotal] = useState(0);
 
@@ -57,24 +54,6 @@ const Cart = () => {
       (item) => item.id !== id
     );
     dispatch({ type: "cartItems", payload: updatedCartItems });
-  };
-
-  const handleCheckout = async () => {
-    const stripe = await stripePromise;
-    const cartData = appData?.cartItems;
-
-    // creating checkut session
-    if (cartData) {
-      const checkoutSession = await axios.post("api/ ", {
-        items: cartData,
-        email: "divyanshu.rana@successive.tech",
-      });
-
-      const result = await stripe?.redirectToCheckout({
-        sessionId: checkoutSession.data.id,
-      });
-      if (result.error) alert(result.error.message);
-    }
   };
 
   useEffect(() => {

@@ -15,23 +15,23 @@ function CwcOffers({ cwcOffer }) {
         <div className="offer-cards grid gap-4 grid-cols-4 w-full">
           <OfferCard
             img={deliveryImg}
-            title={cwcOffer?.["Fast Delivery"].title}
-            description={cwcOffer?.["Fast Delivery"].description}
+            title={cwcOffer?.["Fast Delivery"]?.title}
+            description={cwcOffer?.["Fast Delivery"]?.description}
           />
           <OfferCard
             img={customizationImg}
-            title={cwcOffer?.["Customization"].title}
-            description={cwcOffer?.["Customization"].description}
+            title={cwcOffer?.["Customization"]?.title}
+            description={cwcOffer?.["Customization"]?.description}
           />
           <OfferCard
             img={qualityImg}
-            title={cwcOffer?.["Premium Quality"].title}
-            description={cwcOffer?.["Premium Quality"].description}
+            title={cwcOffer?.["Premium Quality"]?.title}
+            description={cwcOffer?.["Premium Quality"]?.description}
           />
           <OfferCard
             img={supportImg}
-            title={cwcOffer?.["24/7 Support"].title}
-            description={cwcOffer?.["24/7 Support"].description}
+            title={cwcOffer?.["24/7 Support"]?.title}
+            description={cwcOffer?.["24/7 Support"]?.description}
           />
         </div>
       </div>

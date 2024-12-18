@@ -186,26 +186,26 @@ const Home = () => {
           </h1>
           <div className="feature-point flex gap-2 items-center text-[14px]">
             <div className="point-dot bg-[#abbce1] h-[12px] w-[12px] rounded-full"></div>
-            <div className="point-text w-[calc(100%_-_12px)]">
-              {uniqueSec.list.pointer1}
+            <div className="point-text w-[calc(100%_-_12p`x)]">
+              {uniqueSec?.list?.pointer1}
             </div>
           </div>
           <div className="feature-point flex gap-2 items-center text-[14px]">
             <div className="point-dot bg-[#abbce1] h-[12px] w-[12px] rounded-full"></div>
             <div className="point-text  w-[calc(100%_-_12px)]">
-              {uniqueSec.list.pointer2}
+              {uniqueSec?.list?.pointer2}
             </div>
           </div>
           <div className="feature-point flex gap-2 items-center text-[14px]">
             <div className="point-dot bg-[#abbce1] h-[12px] w-[12px] rounded-full"></div>
             <div className="point-text  w-[calc(100%_-_12px)]">
-              {uniqueSec.list.pointer3}
+              {uniqueSec?.list?.pointer3}
             </div>
           </div>
           <div className="feature-point flex gap-2 items-center text-[14px]">
             <div className="point-dot bg-[#abbce1] h-[12px] w-[12px] rounded-full"></div>
             <div className="point-text  w-[calc(100%_-_12px)]">
-              {uniqueSec.list.pointer4}
+              {uniqueSec?.list?.pointer4}
             </div>
           </div>
           <Link href="/products">
