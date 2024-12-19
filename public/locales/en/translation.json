@@ -132,8 +132,8 @@
   "orderComplete": {
     "title": "Your Order Is Placed!",
     "description": {
-      "line1": "Thank you for placing your order! Your order is currently being processed and will be completed within 3 to 6 hours.",
-      "line2": "You will receive an email confirmation once your order has been completed."
+      "line1": "Thank you for placing your order!",
+      "line2": "Your Payment ID is: ."
     },
     "button": "Continue Shopping"
   },

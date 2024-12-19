@@ -59,6 +59,12 @@ const reducer = (state, action) => {
         cartItems: action.payload,
       };
     }
+    case "payId": {
+      return {
+        ...state,
+        payId: action.payload,
+      };
+    }
     default: {
       return state;
     }
@@ -66,6 +72,50 @@ const reducer = (state, action) => {
 };
 
 const AppContextProvider = ({ children }) => {
+  // const tempCart = [
+  //   {
+  //     id: 23,
+  //     title: "Courage the cowardly Dog Funky Black T-shirt",
+  //     rating: 4.5,
+  //     price: 999,
+  //     description:
+  //       "Give your closet an instant upgrade by opting for the trendy cwc styled or your own Styled T-shirt. It features a distinctive graphic pattern and is designed in a black hue. This T-shirt is made from soft yet durable cotton material and features a crew and half sleeves.",
+  //     category: "Men's Clothing",
+  //     subCategory: "",
+  //     tags: ["list", "cartoon"],
+  //     showTags: ["list", "cartoon"],
+  //     size: ["XS", "S", "M", "L", "XL", "XXL", "3XL"],
+  //     quantity: 1,
+  //   },
+  //   {
+  //     id: 24,
+  //     title: "Itachi Uchiha Anime White T-shirt",
+  //     rating: 4.5,
+  //     price: 1299,
+  //     description:
+  //       "Give your closet an instant upgrade by opting for the trendy cwc styled or your own Styled T-shirt. It features a distinctive graphic pattern and is designed in a black hue. This T-shirt is made from soft yet durable cotton material and features a crew and half sleeves.",
+  //     category: "Men's Clothing",
+  //     subCategory: "",
+  //     tags: ["list", "anime"],
+  //     showTags: ["list", "anime"],
+  //     size: ["XS", "S", "M", "L", "XL", "XXL", "3XL"],
+  //     quantity: 1,
+  //   },
+  //   {
+  //     id: 25,
+  //     title: "Courage the cowardly Dog classic pale green T-shirt",
+  //     rating: 4.5,
+  //     price: 1299,
+  //     description:
+  //       "Give your closet an instant upgrade by opting for the trendy cwc styled or your own Styled T-shirt. It features a distinctive graphic pattern and is designed in a black hue. This T-shirt is made from soft yet durable cotton material and features a crew and half sleeves.",
+  //     category: "Men's Clothing",
+  //     subCategory: "",
+  //     tags: ["list", "cartoon"],
+  //     showTags: ["list", "cartoon"],
+  //     size: ["XS", "S", "M", "L", "XL", "XXL", "3XL"],
+  //     quantity: 1,
+  //   },
+  // ];
   const [appData, dispatch] = useReducer(reducer, {
     currLang: "English",
     loginSignUpLoading: false,
@@ -74,8 +124,10 @@ const AppContextProvider = ({ children }) => {
     productsList: null,
     productsView: "list",
     eachProductDetail: {},
+    // cartItems: tempCart,
     cartItems: [],
     productData: [],
+    payId: null,
   });
 
   useEffect(() => {

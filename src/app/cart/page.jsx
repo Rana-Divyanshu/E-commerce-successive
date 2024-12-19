@@ -7,6 +7,7 @@ import Image from "next/image";
 import Link from "next/link";
 import emptyCart from "../../assets/img/empty-cart.png";
 import DynamicImage from "../../components/DynamicImage";
+import RazorpayCheckoutBtn from "../../components/RazorpayCheckoutBtn";
 import { useRouter } from "next/navigation";
 import { useTranslation } from "react-i18next";
 import toast from "react-hot-toast";
@@ -65,17 +66,7 @@ const Cart = () => {
       (session?.user && Object.entries(session?.user).length > 0) ||
       (localStorage.getItem("userName") && localStorage.getItem("email"))
     ) {
-      toast.dismiss();
-      toast.loading("Please Wait!");
-      setTimeout(() => {
-        toast.dismiss();
-        toast.loading("Placing your order");
-      }, 1500);
-      setTimeout(() => {
-        toast.dismiss();
-        toast.success("Order placed Successfully");
-        router.push("/order-complete");
-      }, 3000);
+      ("If condition");
     } else {
       toast.dismiss();
       toast.error("Please login to checkout");
@@ -215,14 +206,11 @@ const Cart = () => {
                 ₹ <span>{total == 0 ? "0" : total + 38}</span>
               </div>
             </div>
-            <button
-              className="bg-green hover:bg-btnHover text-white w-full py-2 rounded-md flex items-center justify-center ease-linear duration-200"
-              onClick={(e) => {
-                handleCheckout(e);
-              }}
-            >
-              {cart?.proceed}
-            </button>
+            <RazorpayCheckoutBtn
+              text={cart?.proceed}
+              amount={(total + 38) * 100}
+              type={"cart"}
+            />
           </div>
         </div>
       </div>

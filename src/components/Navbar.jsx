@@ -49,7 +49,7 @@ export const Navbar = ({ dir }) => {
 
   const NavLinks = () => {
     return (
-      <ul className="w-full md:w-fit flex font-medium rounded-lg overflow-x-clip">
+      <ul className="w-full md:w-fit flex font-medium rounded-lg overflow-x-clip gap-2">
         <li className="min-h-full flex items-center text-lg">
           <Link
             href="/"
@@ -272,12 +272,11 @@ export const Navbar = ({ dir }) => {
             `${localStorage
               ?.getItem("userName")
               ?.split(" ")[0][0]
-              ?.toUpperCase()}
-              ${localStorage
-                ?.getItem("userName")
-                ?.split(" ")
-                ?.at(-1)[0]
-                ?.toUpperCase()}`
+              ?.toUpperCase()}${localStorage
+              ?.getItem("userName")
+              ?.split(" ")
+              ?.at(-1)[0]
+              ?.toUpperCase()}`
           ) : (
             <FaUser className="dark:text-themeBlue" />
           )}

@@ -5,10 +5,13 @@ import ordercomplete from "../../assets/svg/orderComplete.svg";
 import Image from "next/image";
 import Link from "next/link";
 import { useTranslation } from "react-i18next";
+import { useContext } from "react";
+import { AppContext } from "../../context/AppContext";
 
 function OrderComplete() {
   const { t } = useTranslation();
   const confirmationPageT = t("orderComplete");
+  const { appData } = useContext(AppContext);
 
   return (
     <section className="order-complete-content min-h-[calc(100vh_-_150px)] relative py-16 px-1/4 flex flex-col items-center justify-center gap-4 text-center">
@@ -28,7 +31,7 @@ function OrderComplete() {
       </div>
       <div className="ordercomplete-content text-gray w-3/4 text-lg">
         {confirmationPageT?.description?.line1} <br />
-        {confirmationPageT?.description?.line2}
+        {confirmationPageT?.description?.line2} {appData?.payId}
       </div>
       <Link href={"/products"}>
         <button className="bg-themeBlue hover:bg-btnHover text-white dark:bg-slate-400 w-fit px-6 py-2 rounded-md flex items-center justify-center ease-linear duration-200">

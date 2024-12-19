@@ -11,6 +11,7 @@ import SwiperImages from "../../../components/Swiper";
 import { useTranslation } from "react-i18next";
 import { SwiperSlide } from "swiper/react";
 import { IoArrowBack } from "react-icons/io5";
+import RazorpayCheckoutBtn from "../../../components/RazorpayCheckoutBtn";
 
 const getRandomItems = (data, count) => {
   const shuffled = [...data].sort(() => 0.5 - Math.random());
@@ -79,6 +80,8 @@ const ProductDetails = () => {
     }
   }, [appData?.currLang, appData?.productData]);
 
+  console.log(appData?.eachProductDetail, "appData?.eachProductDetail");
+
   return (
     <>
       <section className="product-details-card-section py-[5rem] px-[15%]">
@@ -120,7 +123,8 @@ const ProductDetails = () => {
               </>
             )}
           </div>
-          {Object?.values(appData?.eachProductDetail)?.length !== 0 ? (
+          {appData?.eachProductDetail &&
+          Object?.values(appData?.eachProductDetail)?.length !== 0 ? (
             <div className="product-details-card-sr w-1/2 py-12 flex flex-col justify-center gap-4">
               <div className="product-details-title text-2xl font-semibold tracking-[1px] text-themeBlue dark:text-white">
                 {appData?.eachProductDetail?.title}
@@ -199,20 +203,18 @@ const ProductDetails = () => {
                 >
                   {detailsT?.add2Cart}
                 </button>
-                <button
-                  className="bg-themeBlue hover:bg-btnHover text-white dark:bg-slate-400 w-fit px-6 py-2 rounded-md flex items-center justify-center ease-linear duration-200"
-                  onClick={() => {
-                    router.push("/order-complete");
-                  }}
-                >
-                  {detailsT?.buy}
-                </button>
+                <RazorpayCheckoutBtn
+                  text={detailsT?.buy}
+                  amount={(appData?.eachProductDetail?.price + 38) * 100}
+                  type={"buy"}
+                />
               </div>
             </div>
           ) : null}
         </div>
       </section>
-      {Object?.values(appData?.eachProductDetail)?.length !== 0 ? (
+      {appData?.eachProductDetail &&
+      Object?.values(appData?.eachProductDetail)?.length !== 0 ? (
         <section className="product-desc-section py-[7rem] px-[15%] bg-bannertBG text-white flex flex-col items-start gap-8">
           <div className="product-desc-section-head text-lg underline underline-offset-8">
             {detailsT?.desc}
