@@ -32,17 +32,18 @@ export const Navbar = ({ dir }) => {
   const nav = t("navbar.navlinks");
   const signOutText = t("navbar");
 
-  const loginUser = () => {
-    const userData = {
-      id: 1,
-      name: "Divyanshu Rana",
-      email: "divyanshu.rana@successive.tech",
-    };
-    dispatch({ type: "user", payload: userData });
-    setShowProfilePopover(false);
-  };
-  const logoutUser = () => {
-    dispatch({ type: "user", payload: null });
+  const handleLogout = () => {
+    if (session?.user) {
+      signOut("google");
+    } else if (
+      localStorage.getItem("userName") &&
+      localStorage.getItem("email")
+    ) {
+      // localStorage.removeItem("userName");
+      localStorage.removeItem("email");
+    } else {
+      return;
+    }
     setShowProfilePopover(false);
   };
 
@@ -101,30 +102,40 @@ export const Navbar = ({ dir }) => {
     );
   };
 
+  //     "userName": "Divyanshu Rana",
+  //     "email": "web.divyanshu25@gmail.com"
   const UserPopover = () => {
     return (
       <div
         id="user-popover"
         ref={userPopoverRef}
-        className={`z-50 absolute top-8 w-fit min-w-40 my-4 text-base list-none bg-white dark:bg-gray-800 divide-y divide-gray-100 dark:divide-gray-700 rounded-lg shadow dark:shadow-gray-600 border border-slate-100 dark:border-gray-600 ${
+        className={`z-50 absolute top-8 w-fit min-w-52 my-4 text-base list-none bg-white dark:bg-gray-800 divide-y divide-gray-100 dark:divide-gray-700 rounded-lg shadow dark:shadow-gray-600 border border-slate-100 dark:border-gray-600 ${
           dir === "rtl" ? "left-[40px]" : " right-9"
         }`}
       >
-        {session?.user && (
+        {((session?.user && Object.entries(session?.user).length > 0) ||
+          (localStorage.getItem("userName") &&
+            localStorage.getItem("email"))) && (
           <div className="px-4 py-3">
-            <p className="block text-sm text-gray-900">{session?.user?.name}</p>
+            <p className="block text-sm text-gray-900">
+              {session?.user?.name
+                ? session?.user?.name
+                : localStorage.getItem("userName")}
+            </p>
             <p className="block text-sm text-gray-500 truncate dark:text-gray-400">
-              {session?.user?.email}
+              {session?.user?.email || localStorage.getItem("email")}
             </p>
           </div>
         )}
         <ul className="py-2">
           <li>
             <div className="block px-4 py-2 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">
-              {session?.user ? (
+              {(session?.user && Object.entries(session?.user).length > 0) ||
+              (localStorage.getItem("userName") &&
+                localStorage.getItem("email")) ? (
                 <button
                   className="inline-flex items-center gap-2"
-                  onClick={() => signOut("google")}
+                  onClick={() => handleLogout()}
                 >
                   {signOutText?.signOut}
                   <span>
@@ -256,6 +267,17 @@ export const Navbar = ({ dir }) => {
                 ?.at(-1)[0]
                 ?.toUpperCase()}`
             )
+          ) : localStorage.getItem("userName") &&
+            localStorage.getItem("email") ? (
+            `${localStorage
+              ?.getItem("userName")
+              ?.split(" ")[0][0]
+              ?.toUpperCase()}
+              ${localStorage
+                ?.getItem("userName")
+                ?.split(" ")
+                ?.at(-1)[0]
+                ?.toUpperCase()}`
           ) : (
             <FaUser className="dark:text-themeBlue" />
           )}

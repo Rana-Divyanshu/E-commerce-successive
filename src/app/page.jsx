@@ -17,7 +17,7 @@ const Home = () => {
   const uniqueSec = t("home.uniqueSection");
   const cwcOffer = t("cwcOffer");
 
-  const { appData } = useContext(AppContext);
+  const { appData, dispatch } = useContext(AppContext);
   const { windowWidth } = appData;
 
   const [featured, setFeatured] = useState([]);
@@ -118,7 +118,7 @@ const Home = () => {
         <div className="feature-products-title  text-themeBlue dark:text-white font-medium text-4xl text-center w-full">
           {home?.feature}
         </div>
-        <ProductsGrid data={featured} />
+        <ProductsGrid hideCart={true} data={featured} />
       </section>
 
       {/* latest-products */}
@@ -168,7 +168,7 @@ const Home = () => {
             {latestOptions?.special}
           </button>
         </div>
-        <ProductsGrid data={latest} />
+        <ProductsGrid hideCart={true} data={latest} />
       </section>
 
       {/* features */}

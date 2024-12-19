@@ -9,8 +9,11 @@ import emptyCart from "../../assets/img/empty-cart.png";
 import DynamicImage from "../../components/DynamicImage";
 import { useRouter } from "next/navigation";
 import { useTranslation } from "react-i18next";
+import toast from "react-hot-toast";
+import { useSession } from "next-auth/react";
 
 const Cart = () => {
+  const { data: session } = useSession();
   const router = useRouter();
   const { t } = useTranslation();
   const cart = t("cart");
@@ -54,6 +57,29 @@ const Cart = () => {
       (item) => item.id !== id
     );
     dispatch({ type: "cartItems", payload: updatedCartItems });
+  };
+
+  const handleCheckout = (e) => {
+    e.preventDefault();
+    if (
+      (session?.user && Object.entries(session?.user).length > 0) ||
+      (localStorage.getItem("userName") && localStorage.getItem("email"))
+    ) {
+      toast.dismiss();
+      toast.loading("Please Wait!");
+      setTimeout(() => {
+        toast.dismiss();
+        toast.loading("Placing your order");
+      }, 1500);
+      setTimeout(() => {
+        toast.dismiss();
+        toast.success("Order placed Successfully");
+        router.push("/order-complete");
+      }, 3000);
+    } else {
+      toast.dismiss();
+      toast.error("Please login to checkout");
+    }
   };
 
   useEffect(() => {
@@ -191,9 +217,8 @@ const Cart = () => {
             </div>
             <button
               className="bg-green hover:bg-btnHover text-white w-full py-2 rounded-md flex items-center justify-center ease-linear duration-200"
-              onClick={() => {
-                // handleCheckout();
-                router.push("/order-complete");
+              onClick={(e) => {
+                handleCheckout(e);
               }}
             >
               {cart?.proceed}

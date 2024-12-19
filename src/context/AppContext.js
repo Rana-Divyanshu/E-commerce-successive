@@ -1,6 +1,5 @@
 import { createContext, useReducer, useEffect } from "react";
 import { dataArabic, dataEnglish, dataHindi } from "../utils/data";
-import { useSession } from "next-auth/react";
 
 export const AppContext = createContext();
 
@@ -12,10 +11,10 @@ const reducer = (state, action) => {
         currLang: action.payload,
       };
     }
-    case "user": {
+    case "loginSignUpLoading": {
       return {
         ...state,
-        user: action.payload,
+        loginSignUpLoading: action.payload,
       };
     }
     case "productsData": {
@@ -67,11 +66,9 @@ const reducer = (state, action) => {
 };
 
 const AppContextProvider = ({ children }) => {
-  const { data: session } = useSession();
-
   const [appData, dispatch] = useReducer(reducer, {
     currLang: "English",
-    user: null,
+    loginSignUpLoading: false,
     windowWidth: 0,
     productsGrid: null,
     productsList: null,
@@ -90,12 +87,6 @@ const AppContextProvider = ({ children }) => {
     const payload = languageData[appData.currLang] || dataEnglish;
     dispatch({ type: "productsData", payload });
   }, [appData.currLang]);
-
-  useEffect(() => {
-    if (!!session?.user) {
-      dispatch({ type: "user", payload: session });
-    }
-  }, [session]);
 
   return (
     <AppContext.Provider value={{ appData, dispatch }}>

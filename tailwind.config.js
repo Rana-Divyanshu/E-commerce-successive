@@ -10,7 +10,7 @@ module.exports = {
     extend: {
       colors: {
         themeBlue: "#0D0E43",
-        primaryText: "0d134e",
+        primaryText: "#0d134e",
         secText: "#8A8FB9",
         bordercommon: "#e7e6ef",
         footerBG: "#F6F5FF",
