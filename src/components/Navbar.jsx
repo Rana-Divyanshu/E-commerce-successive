@@ -1,5 +1,6 @@
 "use client";
 import React, { useContext, useEffect, useRef, useState } from "react";
+import { signOut, useSession } from "next-auth/react";
 import { AppContext } from "../context/AppContext";
 import Image from "next/image";
 import Link from "next/link";
@@ -14,6 +15,7 @@ import { BsCart3 } from "react-icons/bs";
 
 export const Navbar = ({ dir }) => {
   const { appData, dispatch } = useContext(AppContext);
+  const { data: session } = useSession();
 
   const [showProfilePopover, setShowProfilePopover] = useState(false);
   const [settingsdropdown, setSettingsDropdown] = useState({
@@ -108,24 +110,21 @@ export const Navbar = ({ dir }) => {
           dir === "rtl" ? "left-[40px]" : " right-9"
         }`}
       >
-        {appData?.user && (
+        {session?.user && (
           <div className="px-4 py-3">
-            <p className="block text-sm text-gray-900">{appData?.user?.name}</p>
+            <p className="block text-sm text-gray-900">{session?.user?.name}</p>
             <p className="block text-sm text-gray-500 truncate dark:text-gray-400">
-              {appData?.user?.email}
+              {session?.user?.email}
             </p>
           </div>
         )}
         <ul className="py-2">
           <li>
             <div className="block px-4 py-2 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">
-              {appData?.user ? (
-                // <Link href="/auth/signup">
+              {session?.user ? (
                 <button
                   className="inline-flex items-center gap-2"
-                  onClick={() => {
-                    logoutUser();
-                  }}
+                  onClick={() => signOut("google")}
                 >
                   {signOutText?.signOut}
                   <span>
@@ -133,20 +132,14 @@ export const Navbar = ({ dir }) => {
                   </span>
                 </button>
               ) : (
-                // </Link>
-                // <Link href="/auth/login">
-                <button
-                  className="inline-flex items-center gap-2"
-                  onClick={() => {
-                    loginUser();
-                  }}
-                >
-                  {signOutText?.signin}
-                  <span>
-                    <PiSignInBold />
-                  </span>
-                </button>
-                // </Link>
+                <Link href="/auth/login">
+                  <button className="inline-flex items-center gap-2">
+                    {signOutText?.signin}
+                    <span>
+                      <PiSignInBold />
+                    </span>
+                  </button>
+                </Link>
               )}
             </div>
           </li>
@@ -241,13 +234,24 @@ export const Navbar = ({ dir }) => {
           aria-expanded={showProfilePopover}
           aria-controls="user-dropdown"
         >
-          {appData?.user && appData?.user?.name ? (
-            appData?.user?.name?.trim()?.split(" ")?.length === 1 ? (
-              appData?.user?.name[0]?.toUpperCase()
+          {session?.user &&
+          session?.user?.image &&
+          session?.user?.image?.length > 0 ? (
+            <Image
+              src={session?.user?.image}
+              alt="Profile"
+              height={40}
+              width={40}
+              className="rounded-full"
+              priority
+            />
+          ) : session?.user?.name ? (
+            session?.user?.name?.trim()?.split(" ")?.length === 1 ? (
+              session?.user?.name[0]?.toUpperCase()
             ) : (
-              `${appData?.user?.name
+              `${session?.user?.name
                 ?.split(" ")[0][0]
-                ?.toUpperCase()}${appData?.user?.name
+                ?.toUpperCase()}${session?.user?.name
                 ?.split(" ")
                 ?.at(-1)[0]
                 ?.toUpperCase()}`

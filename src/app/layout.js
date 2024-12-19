@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
+import { SessionProvider } from "next-auth/react";
 import localFont from "next/font/local";
 import i18next from "./i18n"; // Assuming your i18n setup is correct
 import { appWithTranslation } from "next-i18next"; // Use appWithTranslation
@@ -23,7 +24,7 @@ const geistMono = localFont({
   weight: "100 900",
 });
 
-function RootLayout({ children }) {
+function RootLayout({ session, children }) {
   const [dir, setDir] = useState("ltr");
 
   const { i18n } = useTranslation();
@@ -56,16 +57,18 @@ function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased h-screen w-screen overflow-y-auto overflow-x-clip bg-[#ffffff] dark:bg-[#070F2B]`}
       >
-        <AppContextProvider>
-          <WindowWidthUpdater />
-          <PageTitleUpdater />
-          {/* <main className="w-full min-h-[calc(100%_-_70px)] pt-[70px] max-w-[1920px] mx-auto text-[#000000] dark:text-[#535C91]"> */}
-          <Navbar dir={dir} />
-          <main className="w-full min-h-fit pt-[70px] max-w-[1920px] overflow-x-clip mx-auto text-[#000000] dark:text-[#535C91]">
-            {children}
-          </main>
-          <Footer />
-        </AppContextProvider>
+        <SessionProvider session={session}>
+          <AppContextProvider>
+            <WindowWidthUpdater />
+            <PageTitleUpdater />
+            {/* <main className="w-full min-h-[calc(100%_-_70px)] pt-[70px] max-w-[1920px] mx-auto text-[#000000] dark:text-[#535C91]"> */}
+            <Navbar dir={dir} />
+            <main className="w-full min-h-fit pt-[70px] max-w-[1920px] overflow-x-clip mx-auto text-[#000000] dark:text-[#535C91]">
+              {children}
+            </main>
+            <Footer />
+          </AppContextProvider>
+        </SessionProvider>
       </body>
     </html>
   );
