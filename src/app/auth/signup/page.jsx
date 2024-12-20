@@ -18,7 +18,6 @@ import { FaCheck } from "react-icons/fa6";
 //   try {
 //     const response = await registerUser(email, password);
 //     // userName, userImg
-//     console.log(response, "registration response in ffunciton");
 //     if (response) {
 //       dispatch({ type: "loginSignUpLoading", payload: false });
 //       localStorage.setItem("userName", userName);
@@ -48,7 +47,7 @@ const SignUp = () => {
     e.preventDefault();
 
     // Validation logic
-    const nameRegex = /^[A-Za-z]+$/; // Name contains only alphabets
+    const nameRegex = /^[A-Za-z\s]+$/; // Name contains alphabets and spaces
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Email format
     const passwordRegex =
       /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*]).{6,}$/; // Password criteria
@@ -87,7 +86,6 @@ const SignUp = () => {
     dispatch({ type: "loginSignUpLoading", payload: true });
     try {
       const response = await registerUser(email, password);
-      console.log(response, "registration response in function");
       if (response) {
         dispatch({ type: "loginSignUpLoading", payload: false });
         localStorage.setItem("userName", userName);
@@ -103,9 +101,7 @@ const SignUp = () => {
   };
 
   // const fetchUserData = async () => {
-  //   console.log("useEff");
   //   const data = await getUserData(auth.currentUser.uid);
-  //   console.log(data, "auth.currentUser");
   //   setUserData(data);
   // };
   // useEffect(() => {

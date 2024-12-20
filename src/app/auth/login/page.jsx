@@ -25,7 +25,6 @@ function Login() {
   //   dispatch({ type: "loginSignUpLoading", payload: true });
   //   try {
   //     const response = await loginUser(email, password);
-  //     console.log(response, "response of function");
   //     if (response) {
   //       localStorage.setItem("email", response.email);
   //       toast.dismiss();
@@ -37,7 +36,6 @@ function Login() {
   //     dispatch({ type: "loginSignUpLoading", payload: false });
   //     toast.dismiss();
   //     toast.error(err.message);
-  //     console.log(err);
   //   }
   // };
   const handleLogin = async (e) => {
@@ -60,7 +58,6 @@ function Login() {
     dispatch({ type: "loginSignUpLoading", payload: true });
     try {
       const response = await loginUser(email, password);
-      console.log(response, "response of function");
       if (response) {
         localStorage.setItem("email", response.email);
         toast.dismiss();
@@ -72,7 +69,6 @@ function Login() {
       dispatch({ type: "loginSignUpLoading", payload: false });
       toast.dismiss();
       toast.error(err.message);
-      console.log(err);
     }
   };
 

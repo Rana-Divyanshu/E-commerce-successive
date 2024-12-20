@@ -28,7 +28,6 @@ import {
 //       photoURL: userImg,
 //     });
 
-//     console.log(user.uid, "user.uid");
 //     // Save additional details in Firestore
 //     await setDoc(doc(db, "users", user.uid), {
 //       email: user.email,

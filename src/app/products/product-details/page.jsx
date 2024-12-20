@@ -80,8 +80,6 @@ const ProductDetails = () => {
     }
   }, [appData?.currLang, appData?.productData]);
 
-  console.log(appData?.eachProductDetail, "appData?.eachProductDetail");
-
   return (
     <>
       <section className="product-details-card-section py-[5rem] px-[15%]">
