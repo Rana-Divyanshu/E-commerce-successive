@@ -46,12 +46,41 @@ function ContactUs() {
     return true;
   };
 
-  const handleSubmit = (e) => {
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   if (validateForm()) {
+  //     toast.success("Query sent");
+  //     setFormData({ name: "", email: "", subject: "", message: "" });
+  //     setCharCount(0);
+  //   }
+  // };
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (validateForm()) {
-      toast.success("Query sent");
-      setFormData({ name: "", email: "", subject: "", message: "" });
-      setCharCount(0);
+      toast.dismiss();
+      toast.loading("Sending...");
+      try {
+        const res = await fetch("/api/contact", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(formData),
+        });
+
+        if (res.ok) {
+          toast.dismiss();
+          toast.success("Message sent successfully!");
+          setFormData({ name: "", email: "", subject: "", message: "" });
+          setCharCount(0);
+        } else {
+          toast.dismiss();
+          toast.error("Failed to send message.");
+        }
+      } catch (error) {
+        console.error("Error:", error);
+        toast.dismiss();
+        toast.error("Some error occurred.");
+      }
     }
   };
 

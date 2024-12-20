@@ -2,6 +2,7 @@ import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import { useContext } from "react";
 import { AppContext } from "../context/AppContext";
+import toast from "react-hot-toast";
 
 export default function RazorpayCheckoutBtn({ text, amount, type }) {
   //   const [loading, setLoading] = useState(false);
