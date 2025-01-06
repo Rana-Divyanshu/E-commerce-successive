@@ -1,6 +1,6 @@
 "use client";
-import React, { useContext, useEffect } from "react";
-import { FaList } from "react-icons/fa";
+import React, { useContext, useEffect, useRef, useState } from "react";
+import { FaList, FaFilter } from "react-icons/fa";
 import { IoGrid } from "react-icons/io5";
 import { AppContext } from "../../context/AppContext";
 import ProductsGrid from "../../components/ProductsGrid";
@@ -13,6 +13,9 @@ const Home = () => {
 
   const { appData, dispatch } = useContext(AppContext);
   const { windowWidth } = appData;
+  const productFilterRef = useRef(null);
+
+  const [showFilter, setShowFilter] = useState(false);
 
   const getgrid = () => {
     const temp = appData?.productData?.filter((elem) => {
@@ -89,6 +92,69 @@ const Home = () => {
     return null;
   };
 
+  const filterOptions = [
+    "Featured",
+    "Latest",
+    "Men's",
+    "Women's",
+    "Special Edition",
+  ];
+
+  const handleToggleFilter = (filterType) => {
+    let filteredData = [];
+    switch (filterType) {
+      case "Featured":
+        filteredData = appData?.productData?.filter((elem) =>
+          elem?.tags?.includes("featured")
+        );
+        break;
+      case "Latest":
+        filteredData = appData?.productData?.filter((elem) =>
+          elem?.tags?.includes("latest")
+        );
+        break;
+      case "Men's":
+        filteredData = appData?.productData?.filter(
+          (elem) =>
+            elem?.tags?.includes("latest") &&
+            elem?.category === "Men's Clothing"
+        );
+        break;
+      case "Women's":
+        filteredData = appData?.productData?.filter(
+          (elem) =>
+            elem?.tags?.includes("latest") &&
+            elem?.category === "Women's Clothing"
+        );
+        break;
+      case "Special Edition":
+        filteredData = appData?.productData?.filter(
+          (elem) =>
+            elem?.tags?.includes("latest") &&
+            elem?.category === "Special Edition"
+        );
+        break;
+      default:
+        filteredData = appData?.productData || [];
+    }
+
+    // Dispatch data based on the current view (grid or list)
+    if (appData?.productsView === "grid") {
+      dispatch({ type: "productsGrid", payload: filteredData });
+    } else if (appData?.productsView === "list") {
+      dispatch({ type: "productsList", payload: filteredData });
+    }
+  };
+
+  const clearFilter = () => {
+    // Reset to original product data and dispatch based on view
+    if (appData?.productsView === "grid") {
+      getgrid();
+    } else if (appData?.productsView === "list") {
+      getlist();
+    }
+  };
+
   useEffect(() => {
     if (appData?.productsView === "grid") {
       getgrid();
@@ -96,6 +162,23 @@ const Home = () => {
       getlist();
     }
   }, [appData?.productsView, appData?.productData, appData?.currLang]);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (
+        productFilterRef.current &&
+        !productFilterRef.current.contains(event.target)
+      ) {
+        setShowFilter(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [productFilterRef]);
 
   return (
     <div className="shoplist-page py-[4rem] px-[15%]">
@@ -130,6 +213,44 @@ const Home = () => {
             }}
           >
             <IoGrid className="pointer" />
+          </button>
+          <button
+            className={`border relative z-50 border-primaryText dark:border-white h-8 w-8 flex items-center justify-center rounded-md outline-none cursor-pointer text-themeBlue dark:text-white`}
+            onClick={() => {
+              setShowFilter(!showFilter);
+            }}
+          >
+            <FaFilter />
+            {showFilter && (
+              <ul
+                className="products-filter-popover absolute right-0 top-8 shadow bg-white w-52 cursor-default list-none"
+                ref={productFilterRef}
+              >
+                {filterOptions &&
+                  filterOptions?.length > 0 &&
+                  filterOptions?.map((item, index) => {
+                    return (
+                      <li
+                        key={index}
+                        className="list-none cursor-pointer whitespace-nowrap flex items-center justify-between py-2 px-4 hover:bg-slate-100"
+                        onClick={() => {
+                          handleToggleFilter(item);
+                        }}
+                      >
+                        {item}
+                      </li>
+                    );
+                  })}
+                <li
+                  className="my-4 cursor-pointer list-none whitespace-nowrap bg-themeBlue hover:bg-btnHover text-white dark:bg-slate-400 w-full px-6 py-2 rounded-md flex items-center justify-center ease-linear duration-200"
+                  onClick={() => {
+                    clearFilter();
+                  }}
+                >
+                  Clear Filter
+                </li>
+              </ul>
+            )}
           </button>
         </div>
       </div>
