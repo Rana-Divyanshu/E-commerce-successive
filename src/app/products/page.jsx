@@ -215,7 +215,7 @@ const Home = () => {
             <IoGrid className="pointer" />
           </button>
           <button
-            className={`border relative z-50 border-primaryText dark:border-white h-8 w-8 flex items-center justify-center rounded-md outline-none cursor-pointer text-themeBlue dark:text-white`}
+            className={`border relative z-40 border-primaryText dark:border-white h-8 w-8 flex items-center justify-center rounded-md outline-none cursor-pointer text-themeBlue dark:text-white`}
             onClick={() => {
               setShowFilter(!showFilter);
             }}

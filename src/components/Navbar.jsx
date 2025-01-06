@@ -12,6 +12,7 @@ import { RxHamburgerMenu } from "react-icons/rx";
 import { PiSignInBold, PiSignOutBold } from "react-icons/pi";
 import { FaUser } from "react-icons/fa";
 import { BsCart3 } from "react-icons/bs";
+import RazorpayCheckoutBtn from "./RazorpayCheckoutBtn";
 
 export const Navbar = ({ dir }) => {
   const { appData, dispatch } = useContext(AppContext);
@@ -23,14 +24,18 @@ export const Navbar = ({ dir }) => {
     isLanguageOptionsOpen: false,
   });
   const [expandedNav, setEpandedNav] = useState(false);
+  const [showCartPopover, setShowCartPopover] = useState(false);
+  const [total, setTotal] = useState(0);
 
   const pathname = usePathname();
   const userPopoverRef = useRef(null);
   const settingOptionRef = useRef(null);
+  const cartPopoverRef = useRef(null);
 
   const { t } = useTranslation();
   const nav = t("navbar.navlinks");
   const signOutText = t("navbar");
+  const cart = t("cart");
 
   const handleLogout = () => {
     if (session?.user) {
@@ -46,6 +51,19 @@ export const Navbar = ({ dir }) => {
     }
     setShowProfilePopover(false);
   };
+
+  const clearCart = () => {
+    dispatch({ type: "cartItems", payload: [] });
+    setShowCartPopover(false);
+  };
+
+  useEffect(() => {
+    let sum = 0;
+    appData?.cartItems.forEach((elem) => {
+      sum += elem.quantity * elem.price;
+    });
+    setTotal(sum);
+  }, [appData?.cartItems]);
 
   const NavLinks = () => {
     return (
@@ -102,8 +120,6 @@ export const Navbar = ({ dir }) => {
     );
   };
 
-  //     "userName": "Divyanshu Rana",
-  //     "email": "web.divyanshu25@gmail.com"
   const UserPopover = () => {
     return (
       <div
@@ -181,6 +197,12 @@ export const Navbar = ({ dir }) => {
           isSettingOptionsOpen: false, // Close the settings options
         }));
       }
+      if (
+        cartPopoverRef.current &&
+        !cartPopoverRef.current.contains(event.target)
+      ) {
+        setShowCartPopover(false);
+      }
     };
 
     document.addEventListener("mousedown", handleClickOutside);
@@ -216,14 +238,81 @@ export const Navbar = ({ dir }) => {
           />
         )}
         {/* cart */}
-        <Link href="/cart" className="relative">
-          <div className="h-10 w-10 flex items-center justify-center -mr-1">
+        <Link
+          href="/cart"
+          className="relative"
+          onMouseEnter={() => {
+            setShowCartPopover(true);
+          }}
+          onMouseLeave={() => {
+            setShowCartPopover(false);
+          }}
+        >
+          <div className="h-10 w-10 flex items-center justify-center -mr-1 relative">
             <BsCart3 className="text-xl text-themeBlue dark:text-white" />
             {appData && appData?.cartItems && appData?.cartItems?.length > 0 ? (
               <p className="absolute bg-themeBlue text-white dark:bg-white dark:text-themeBlue -top-2 -right-2 rounded-full h-5 w-5 flex items-center justify-center text-sm">
                 {appData?.cartItems?.length}
               </p>
             ) : null}
+            {showCartPopover && (
+              <div
+                className="absolute z-50 right-2 top-9 shadow-lg bg-white outline outline-1 outline-bordercommon rounded-md overflow-hidden min-w-80 cursor-default"
+                onClick={(e) => {
+                  e.preventDefault();
+                  e.stopPropagation();
+                }}
+              >
+                <p className="px-4 py-2 border-b border-bordercommon font-medium text-primaryText">
+                  Mini Cart
+                </p>
+                {appData &&
+                appData?.cartItems &&
+                appData?.cartItems?.length > 0 ? (
+                  <>
+                    <ul className="list-none max-h-44 overflow-y-auto">
+                      {appData?.cartItems?.map((item) => {
+                        return (
+                          <li
+                            key={item.id}
+                            className="list-none whitespace-nowrap flex items-center justify-between py-2 px-4 hover:bg-slate-100"
+                            title={item?.title}
+                          >
+                            <p className="w-3/4 text-ellipsis overflow-hidden">
+                              {item?.title}
+                            </p>
+                            <p className="w-1/4 text-right">₹{item?.price}</p>
+                          </li>
+                        );
+                      })}
+                    </ul>
+                    {total && total !== 0 ? (
+                      <p className="px-4 py-2 border-t border-b border-bordercommon font-medium text-primaryText dark:text-white flex items-center justify-between">
+                        <span>Total:</span>
+                        <span>₹{total + 38}</span>
+                      </p>
+                    ) : null}
+                    <div className="flex items-center justify-between w-full">
+                      <button
+                        className="text-sm bg-white outline outline-1 outline-bordercommon text-primaryText w-full py-2.5 rounded-md flex items-center justify-center ease-linear duration-200"
+                        onClick={() => clearCart()}
+                      >
+                        {cart?.clearCart}
+                      </button>
+                      <RazorpayCheckoutBtn
+                        text={cart?.proceed}
+                        amount={(total + 38) * 100}
+                        type={"cart"}
+                      />
+                    </div>
+                  </>
+                ) : (
+                  <div className="w-full py-3 text-center">
+                    Your Cart is empty.
+                  </div>
+                )}
+              </div>
+            )}
           </div>
         </Link>
 
@@ -236,7 +325,6 @@ export const Navbar = ({ dir }) => {
           langState={appData.currLang}
           setLangState={dispatch}
         />
-
         {/* User Profile */}
         <button
           type="button"

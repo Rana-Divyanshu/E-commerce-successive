@@ -8,14 +8,12 @@ import Link from "next/link";
 import emptyCart from "../../assets/img/empty-cart.png";
 import DynamicImage from "../../components/DynamicImage";
 import RazorpayCheckoutBtn from "../../components/RazorpayCheckoutBtn";
-import { useRouter } from "next/navigation";
 import { useTranslation } from "react-i18next";
 import toast from "react-hot-toast";
 import { useSession } from "next-auth/react";
 
 const Cart = () => {
   const { data: session } = useSession();
-  const router = useRouter();
   const { t } = useTranslation();
   const cart = t("cart");
   const tableHead = t("cart.tableHeads");
