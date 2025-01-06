@@ -155,6 +155,40 @@ const Home = () => {
     }
   };
 
+  // Increment quantity
+  const incre = (productId) => {
+    const updatedCart = appData?.cartItems.map((item) => {
+      if (item.id === productId) {
+        return { ...item, quantity: item.quantity + 1 };
+      }
+      return item;
+    });
+    const exists = appData?.cartItems.some((item) => item.id === productId);
+    if (!exists) {
+      const newItem = data.find((product) => product.id === productId);
+      dispatch({
+        type: "cartItems",
+        payload: [...appData.cartItems, { ...newItem, quantity: 1 }],
+      });
+    } else {
+      dispatch({ type: "cartItems", payload: updatedCart });
+    }
+  };
+
+  // Decrement quantity
+  const decre = (productId) => {
+    const updatedCart = appData?.cartItems
+      .map((item) => {
+        if (item.id === productId) {
+          const newQuantity = item.quantity - 1;
+          return newQuantity > 0 ? { ...item, quantity: newQuantity } : null;
+        }
+        return item;
+      })
+      .filter((item) => item !== null); // Remove items with quantity 0
+    dispatch({ type: "cartItems", payload: updatedCart });
+  };
+
   useEffect(() => {
     if (appData?.productsView === "grid") {
       getgrid();
@@ -262,6 +296,9 @@ const Home = () => {
             data={appData?.productsList}
             addToCart={addToCart}
             windowWidth={windowWidth}
+            incre={incre}
+            decre={decre}
+            cartItems={appData?.cartItems}
           />
         )
       )}

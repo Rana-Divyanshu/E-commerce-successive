@@ -150,13 +150,13 @@ export const Navbar = ({ dir }) => {
               (localStorage.getItem("userName") &&
                 localStorage.getItem("email")) ? (
                 <button
-                  className="inline-flex items-center gap-2"
+                  className="inline-flex items-center gap-2 w-full h-full"
                   onClick={() => handleLogout()}
                 >
-                  {signOutText?.signOut}
                   <span>
                     <PiSignOutBold />
                   </span>
+                  {signOutText?.signOut}
                 </button>
               ) : (
                 <Link href="/auth/login">
@@ -278,7 +278,8 @@ export const Navbar = ({ dir }) => {
                             className="list-none whitespace-nowrap flex items-center justify-between py-2 px-4 hover:bg-slate-100"
                             title={item?.title}
                           >
-                            <p className="w-3/4 text-ellipsis overflow-hidden">
+                            <p>{item?.quantity} x </p>
+                            <p className="w-3/4 text-ellipsis overflow-hidden ps-1">
                               {item?.title}
                             </p>
                             <p className="w-1/4 text-right">₹{item?.price}</p>

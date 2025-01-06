@@ -2,13 +2,23 @@ import { useRouter } from "next/navigation";
 import { BsCart3 } from "react-icons/bs";
 import { IoMdStar } from "react-icons/io";
 import DynamicImage from "./DynamicImage";
+import { MdAdd, MdRemove } from "react-icons/md";
 
-function ProductsList({ data, addToCart, windowWidth }) {
+function ProductsList({
+  data,
+  addToCart,
+  windowWidth,
+  incre,
+  decre,
+  cartItems,
+}) {
   const router = useRouter();
   return windowWidth > 768 ? (
     <div className="product-list-cards mt-[3rem] flex flex-col gap-6">
       {data?.length !== 0 ? (
         data?.map((elem) => {
+          const cartItem = cartItems.find((item) => item.id === elem.id);
+          const quantity = cartItem?.quantity || 0;
           return (
             <div
               className="product-list-card h-fit w-full p-4 flex items-center gap-10 rounded-lg border border-bordercommon hover:scale-x-[1.01] ease-linear duration-200 cursor-pointer overflow-hidden"
@@ -36,15 +46,41 @@ function ProductsList({ data, addToCart, windowWidth }) {
                 <div className="product-description w-[80%] text-gray dark:text-slate-200">
                   {elem?.description}
                 </div>
-                <button
-                  className="addtocart pointer h-[40px] w-[40px] rounded-full flex items-center justify-center shadow shadow-themeBlue dark:shadow-none dark:outline dark:outline-1 dark:outline-white"
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    addToCart(elem?.id);
-                  }}
-                >
-                  <BsCart3 className="text-themeBlue dark:text-white" />
-                </button>
+                {quantity > 0 ? (
+                  <div className="quantity-controller flex items-center gap-2">
+                    <button
+                      className="quantity-decrement pointer h-[30px] w-[30px] flex items-center justify-center bg-themeBlue text-white dark:outline dark:outline-1 dark:outline-white rounded-full"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        decre(elem?.id);
+                      }}
+                    >
+                      <MdRemove />
+                    </button>
+                    <div className="quantity-display text-gray dark:text-white font-medium">
+                      {quantity}
+                    </div>
+                    <button
+                      className="quantity-increment pointer h-[30px] w-[30px] flex items-center justify-center bg-themeBlue text-white dark:outline dark:outline-1 dark:outline-white rounded-full"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        incre(elem?.id);
+                      }}
+                    >
+                      <MdAdd />
+                    </button>
+                  </div>
+                ) : (
+                  <button
+                    className="addtocart pointer h-[40px] w-[40px] rounded-full flex items-center justify-center shadow shadow-themeBlue dark:shadow-none dark:outline dark:outline-1 dark:outline-white"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      addToCart(elem?.id);
+                    }}
+                  >
+                    <BsCart3 className="text-themeBlue dark:text-white" />
+                  </button>
+                )}
               </div>
             </div>
           );
