@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import { SessionProvider } from "next-auth/react";
 import localFont from "next/font/local";
+import { Toaster } from "react-hot-toast";
 import i18next from "./i18n"; // Assuming your i18n setup is correct
 import { appWithTranslation } from "next-i18next"; // Use appWithTranslation
 import { useTranslation } from "react-i18next";
@@ -10,9 +11,9 @@ import Footer from "../components/Footer";
 import AppContextProvider from "../context/AppContext";
 import WindowWidthUpdater from "../components/WindowWidthUpdater";
 import PageTitleUpdater from "../components/PageTitleUpdater";
+import RollDicePopup from "../components/RollDicePopup";
 import "./globals.css";
 import "./responsive.css";
-import { Toaster } from "react-hot-toast";
 
 const geistSans = localFont({
   src: "../fonts/GeistVF.woff",
@@ -63,6 +64,7 @@ function RootLayout({ session, children }) {
             <WindowWidthUpdater />
             <PageTitleUpdater />
             <Toaster position="top-center" reverseOrder={false} />
+            <RollDicePopup />
             {/* <main className="w-full min-h-[calc(100%_-_70px)] pt-[70px] max-w-[1920px] mx-auto text-[#000000] dark:text-[#535C91]"> */}
             <Navbar dir={dir} />
             <main className="w-full min-h-fit pt-[70px] max-w-[1920px] overflow-x-clip mx-auto text-[#000000] dark:text-[#535C91]">

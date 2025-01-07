@@ -136,7 +136,6 @@ h1 {
     left: 0;
   }
 }
-
 .swiper {
   height: 100%;
 }
@@ -144,4 +143,10 @@ h1 {
 .swiper > div:last-of-type {
   border: none;
   outline: none;
+}
+
+.gif-animation-img {
+  height: 200px;
+  width: 200px;
+  filter: drop-shadow(0 0 0.5rem gray);
 }

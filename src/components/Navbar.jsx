@@ -12,6 +12,7 @@ import { RxHamburgerMenu } from "react-icons/rx";
 import { PiSignInBold, PiSignOutBold } from "react-icons/pi";
 import { FaUser } from "react-icons/fa";
 import { BsCart3 } from "react-icons/bs";
+import { RiAdminFill } from "react-icons/ri";
 import RazorpayCheckoutBtn from "./RazorpayCheckoutBtn";
 
 export const Navbar = ({ dir }) => {
@@ -144,6 +145,26 @@ export const Navbar = ({ dir }) => {
           </div>
         )}
         <ul className="py-2">
+          {(session?.user && Object.entries(session?.user).length > 0) ||
+            (localStorage.getItem("userName") &&
+              localStorage.getItem("email") && (
+                <li className="w-full h-fit border-b border-bordercommon">
+                  <Link
+                    href="/admin"
+                    className="block w-full px-4 py-2 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700"
+                    onClick={() => {
+                      setShowProfilePopover(false);
+                    }}
+                  >
+                    <button className="inline-flex items-center gap-2 w-full h-full">
+                      <span>
+                        <RiAdminFill />
+                      </span>
+                      Switch to Admin
+                    </button>
+                  </Link>
+                </li>
+              ))}
           <li>
             <div className="block px-4 py-2 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">
               {(session?.user && Object.entries(session?.user).length > 0) ||

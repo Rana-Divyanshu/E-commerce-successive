@@ -7,7 +7,6 @@ export const dataEnglish = [
     description:
       "Give your closet an instant upgrade by opting for the trendy cwc styled or your own Styled T-shirt. It features a distinctive graphic pattern and is designed in a black hue. This T-shirt is made from soft yet durable cotton material and features a crew and half sleeves.",
     category: "Men's Clothing",
-    subCategory: "",
     tags: ["featured", "cartoon"],
     showTags: ["featured", "cartoon"],
     size: ["XS", "S", "M", "L", "XL", "XXL", "3XL"],
@@ -20,7 +19,6 @@ export const dataEnglish = [
     description:
       "Give your closet an instant upgrade by opting for the trendy cwc styled or your own Styled T-shirt. It features a distinctive graphic pattern and is designed in a black hue. This T-shirt is made from soft yet durable cotton material and features a crew and half sleeves.",
     category: "Women's Clothing",
-    subCategory: "",
     tags: ["featured", "quotes"],
     showTags: ["featured", "quote"],
     size: ["XS", "S", "M", "L", "XL", "XXL", "3XL"],
@@ -33,7 +31,6 @@ export const dataEnglish = [
     description:
       "Give your closet an instant upgrade by opting for the trendy cwc styled or your own Styled T-shirt. It features a distinctive graphic pattern and is designed in a black hue. This T-shirt is made from soft yet durable cotton material and features a crew and half sleeves.",
     category: "Men's Clothing",
-    subCategory: "",
     tags: ["featured", "anime"],
     showTags: ["featured", "anime"],
     size: ["XS", "S", "M", "L", "XL", "XXL", "3XL"],
@@ -46,7 +43,6 @@ export const dataEnglish = [
     description:
       "Give your closet an instant upgrade by opting for the trendy cwc styled or your own Styled T-shirt. It features a distinctive graphic pattern and is designed in a black hue. This T-shirt is made from soft yet durable cotton material and features a crew and half sleeves.",
     category: "Men's Clothing",
-    subCategory: "",
     tags: ["featured", "anime"],
     showTags: ["featured", "anime"],
     size: ["XS", "S", "M", "L", "XL", "XXL", "3XL"],
@@ -60,7 +56,6 @@ export const dataEnglish = [
     description:
       "Give your closet an instant upgrade by opting for the trendy cwc styled or your own Styled T-shirt. It features a distinctive graphic pattern and is designed in a black hue. This T-shirt is made from soft yet durable cotton material and features a crew and half sleeves.",
     category: "Men's Clothing",
-    subCategory: "",
     tags: ["latest", "developer"],
     showTags: ["latest", "developer"],
     size: ["XS", "S", "M", "L", "XL", "XXL", "3XL"],
@@ -74,7 +69,6 @@ export const dataEnglish = [
     description:
       "Give your closet an instant upgrade by opting for the trendy cwc styled or your own Styled T-shirt. It features a distinctive graphic pattern and is designed in a black hue. This T-shirt is made from soft yet durable cotton material and features a crew and half sleeves.",
     category: "Women's Clothing",
-    subCategory: "",
     tags: ["latest", "engineering"],
     showTags: ["latest", "engineering"],
     size: ["XS", "S", "M", "L", "XL", "XXL", "3XL"],
@@ -87,7 +81,6 @@ export const dataEnglish = [
     description:
       "Give your closet an instant upgrade by opting for the trendy cwc styled or your own Styled T-shirt. It features a distinctive graphic pattern and is designed in a black hue. This T-shirt is made from soft yet durable cotton material and features a crew and half sleeves.",
     category: "Women's Clothing",
-    subCategory: "",
     tags: ["latest", "quote"],
     showTags: ["latest", "quote"],
     size: ["XS", "S", "M", "L", "XL", "XXL", "3XL"],
@@ -100,7 +93,6 @@ export const dataEnglish = [
     description:
       "Give your closet an instant upgrade by opting for the trendy cwc styled or your own Styled T-shirt. It features a distinctive graphic pattern and is designed in a black hue. This T-shirt is made from soft yet durable cotton material and features a crew and half sleeves.",
     category: "Men's Clothing",
-    subCategory: "",
     tags: ["latest", "quote"],
     showTags: ["latest", "quote"],
     size: ["XS", "S", "M", "L", "XL", "XXL", "3XL"],
@@ -113,7 +105,6 @@ export const dataEnglish = [
     description:
       "Give your closet an instant upgrade by opting for the trendy cwc styled or your own Styled T-shirt. It features a distinctive graphic pattern and is designed in a black hue. This T-shirt is made from soft yet durable cotton material and features a crew and half sleeves.",
     category: "Special Edition",
-    subCategory: "",
     tags: ["latest", "quote"],
     showTags: ["latest", "quote"],
     size: ["XS", "S", "M", "L", "XL", "XXL", "3XL"],
@@ -126,7 +117,6 @@ export const dataEnglish = [
     description:
       "Give your closet an instant upgrade by opting for the trendy cwc styled or your own Styled T-shirt. It features a distinctive graphic pattern and is designed in a black hue. This T-shirt is made from soft yet durable cotton material and features a crew and half sleeves.",
     category: "Special Edition",
-    subCategory: "",
     tags: ["latest", "unisex", "quote"],
     showTags: ["latest", "unisex", "quote"],
     size: ["XS", "S", "M", "L", "XL", "XXL", "3XL"],
@@ -139,7 +129,6 @@ export const dataEnglish = [
     description:
       "Give your closet an instant upgrade by opting for the trendy cwc styled or your own Styled T-shirt. It features a distinctive graphic pattern and is designed in a black hue. This T-shirt is made from soft yet durable cotton material and features a crew and half sleeves.",
     category: "Special Edition",
-    subCategory: "",
     tags: ["grid", "unisex", "quote"],
     showTags: ["grid", "unisex", "quote"],
     size: ["XS", "S", "M", "L", "XL", "XXL", "3XL"],
@@ -152,7 +141,6 @@ export const dataEnglish = [
     description:
       "Give your closet an instant upgrade by opting for the trendy cwc styled or your own Styled T-shirt. It features a distinctive graphic pattern and is designed in a black hue. This T-shirt is made from soft yet durable cotton material and features a crew and half sleeves.",
     category: "Men's Clothing",
-    subCategory: "",
     tags: ["grid", "cartoon"],
     showTags: ["grid", "cartoon"],
     size: ["XS", "S", "M", "L", "XL", "XXL", "3XL"],
@@ -165,7 +153,6 @@ export const dataEnglish = [
     description:
       "Give your closet an instant upgrade by opting for the trendy cwc styled or your own Styled T-shirt. It features a distinctive graphic pattern and is designed in a black hue. This T-shirt is made from soft yet durable cotton material and features a crew and half sleeves.",
     category: "Men's Clothing",
-    subCategory: "",
     tags: ["grid", "quote"],
     showTags: ["grid", "quote"],
     size: ["XS", "S", "M", "L", "XL", "XXL", "3XL"],
@@ -178,7 +165,6 @@ export const dataEnglish = [
     description:
       "Give your closet an instant upgrade by opting for the trendy cwc styled or your own Styled T-shirt. It features a distinctive graphic pattern and is designed in a black hue. This T-shirt is made from soft yet durable cotton material and features a crew and half sleeves.",
     category: "Women's Clothing",
-    subCategory: "",
     tags: ["grid", "quotes"],
     showTags: ["grid", "quotes"],
     size: ["XS", "S", "M", "L", "XL", "XXL", "3XL"],
@@ -192,7 +178,6 @@ export const dataEnglish = [
     description:
       "Give your closet an instant upgrade by opting for the trendy cwc styled or your own Styled T-shirt. It features a distinctive graphic pattern and is designed in a black hue. This T-shirt is made from soft yet durable cotton material and features a crew and half sleeves.",
     category: "Men's Clothing",
-    subCategory: "",
     tags: ["grid", "anime"],
     showTags: ["grid", "developer"],
     size: ["XS", "S", "M", "L", "XL", "XXL", "3XL"],
@@ -206,7 +191,6 @@ export const dataEnglish = [
     description:
       "Give your closet an instant upgrade by opting for the trendy cwc styled or your own Styled T-shirt. It features a distinctive graphic pattern and is designed in a black hue. This T-shirt is made from soft yet durable cotton material and features a crew and half sleeves.",
     category: "Women's Clothing",
-    subCategory: "",
     tags: ["grid", "quote"],
     showTags: ["latest", "developer"],
     size: ["XS", "S", "M", "L", "XL", "XXL", "3XL"],
@@ -220,7 +204,6 @@ export const dataEnglish = [
     description:
       "Give your closet an instant upgrade by opting for the trendy cwc styled or your own Styled T-shirt. It features a distinctive graphic pattern and is designed in a black hue. This T-shirt is made from soft yet durable cotton material and features a crew and half sleeves.",
     category: "Men's Clothing",
-    subCategory: "",
     tags: ["grid", "funky"],
     showTags: ["technology", "developer"],
     size: ["XS", "S", "M", "L", "XL", "XXL", "3XL"],
@@ -233,7 +216,6 @@ export const dataEnglish = [
     description:
       "Give your closet an instant upgrade by opting for the trendy cwc styled or your own Styled T-shirt. It features a distinctive graphic pattern and is designed in a black hue. This T-shirt is made from soft yet durable cotton material and features a crew and half sleeves.",
     category: "Men's Clothing",
-    subCategory: "",
     tags: ["grid", "funky", "quote"],
     showTags: ["humor", "developer"],
     size: ["XS", "S", "M", "L", "XL", "XXL", "3XL"],
@@ -246,7 +228,6 @@ export const dataEnglish = [
     description:
       "Give your closet an instant upgrade by opting for the trendy cwc styled or your own Styled T-shirt. It features a distinctive graphic pattern and is designed in a black hue. This T-shirt is made from soft yet durable cotton material and features a crew and half sleeves.",
     category: "Men's Clothing",
-    subCategory: "",
     tags: ["grid", "cartoon"],
     showTags: ["developer", "coding"],
     size: ["XS", "S", "M", "L", "XL", "XXL", "3XL"],
@@ -259,7 +240,6 @@ export const dataEnglish = [
     description:
       "Give your closet an instant upgrade by opting for the trendy cwc styled or your own Styled T-shirt. It features a distinctive graphic pattern and is designed in a black hue. This T-shirt is made from soft yet durable cotton material and features a crew and half sleeves.",
     category: "Men's Clothing",
-    subCategory: "",
     tags: ["grid", "quote"],
     showTags: ["developer", "fullstack"],
     size: ["XS", "S", "M", "L", "XL", "XXL", "3XL"],
@@ -272,7 +252,6 @@ export const dataEnglish = [
     description:
       "Give your closet an instant upgrade by opting for the trendy cwc styled or your own Styled T-shirt. It features a distinctive graphic pattern and is designed in a black hue. This T-shirt is made from soft yet durable cotton material and features a crew and half sleeves.",
     category: "Men's Clothing",
-    subCategory: "",
     tags: ["grid", "quote"],
     showTags: ["grid", "quote"],
     size: ["XS", "S", "M", "L", "XL", "XXL", "3XL"],
@@ -285,7 +264,6 @@ export const dataEnglish = [
     description:
       "Give your closet an instant upgrade by opting for the trendy cwc styled or your own Styled T-shirt. It features a distinctive graphic pattern and is designed in a black hue. This T-shirt is made from soft yet durable cotton material and features a crew and half sleeves.",
     category: "Men's Clothing",
-    subCategory: "",
     tags: ["grid", "developer"],
     showTags: ["grid", "developer"],
     size: ["XS", "S", "M", "L", "XL", "XXL", "3XL"],
@@ -299,7 +277,6 @@ export const dataEnglish = [
     description:
       "Give your closet an instant upgrade by opting for the trendy cwc styled or your own Styled T-shirt. It features a distinctive graphic pattern and is designed in a black hue. This T-shirt is made from soft yet durable cotton material and features a crew and half sleeves.",
     category: "Men's Clothing",
-    subCategory: "",
     tags: ["list", "cartoon"],
     showTags: ["list", "cartoon"],
     size: ["XS", "S", "M", "L", "XL", "XXL", "3XL"],
@@ -313,7 +290,6 @@ export const dataEnglish = [
     description:
       "Give your closet an instant upgrade by opting for the trendy cwc styled or your own Styled T-shirt. It features a distinctive graphic pattern and is designed in a black hue. This T-shirt is made from soft yet durable cotton material and features a crew and half sleeves.",
     category: "Men's Clothing",
-    subCategory: "",
     tags: ["list", "anime"],
     showTags: ["list", "anime"],
     size: ["XS", "S", "M", "L", "XL", "XXL", "3XL"],
@@ -326,7 +302,6 @@ export const dataEnglish = [
     description:
       "Give your closet an instant upgrade by opting for the trendy cwc styled or your own Styled T-shirt. It features a distinctive graphic pattern and is designed in a black hue. This T-shirt is made from soft yet durable cotton material and features a crew and half sleeves.",
     category: "Men's Clothing",
-    subCategory: "",
     tags: ["list", "cartoon"],
     showTags: ["list", "cartoon"],
     size: ["XS", "S", "M", "L", "XL", "XXL", "3XL"],
@@ -340,7 +315,6 @@ export const dataEnglish = [
     description:
       "Give your closet an instant upgrade by opting for the trendy cwc styled or your own Styled T-shirt. It features a distinctive graphic pattern and is designed in a black hue. This T-shirt is made from soft yet durable cotton material and features a crew and half sleeves.",
     category: "Women's Clothing",
-    subCategory: "",
     tags: ["list", "engineering"],
     showTags: ["list", "engineering"],
     size: ["XS", "S", "M", "L", "XL", "XXL", "3XL"],
@@ -353,7 +327,6 @@ export const dataEnglish = [
     description:
       "Give your closet an instant upgrade by opting for the trendy cwc styled or your own Styled T-shirt. It features a distinctive graphic pattern and is designed in a black hue. This T-shirt is made from soft yet durable cotton material and features a crew and half sleeves.",
     category: "Men's Clothing",
-    subCategory: "",
     tags: ["list", "funky"],
     showTags: ["list", "funky"],
     size: ["XS", "S", "M", "L", "XL", "XXL", "3XL"],
@@ -366,7 +339,6 @@ export const dataEnglish = [
     description:
       "Give your closet an instant upgrade by opting for the trendy cwc styled or your own Styled T-shirt. It features a distinctive graphic pattern and is designed in a black hue. This T-shirt is made from soft yet durable cotton material and features a crew and half sleeves.",
     category: "Men's Clothing",
-    subCategory: "",
     tags: ["list", "quote"],
     showTags: ["list", "quote"],
     size: ["XS", "S", "M", "L", "XL", "XXL", "3XL"],
@@ -379,7 +351,6 @@ export const dataEnglish = [
     description:
       "Give your closet an instant upgrade by opting for the trendy cwc styled or your own Styled T-shirt. It features a distinctive graphic pattern and is designed in a black hue. This T-shirt is made from soft yet durable cotton material and features a crew and half sleeves.",
     category: "Men's Clothing",
-    subCategory: "",
     tags: ["list", "quote"],
     showTags: ["list", "quote"],
     size: ["XS", "S", "M", "L", "XL", "XXL", "3XL"],
@@ -395,7 +366,6 @@ export const dataHindi = [
     description:
       "अपने अलमारी को तुरंत अपडेट करें और ट्रेंडी CWC स्टाइल या अपनी स्टाइल की टी-शर्ट चुनें। इसमें एक विशिष्ट ग्राफिक पैटर्न है और यह काले रंग में डिज़ाइन की गई है। यह टी-शर्ट मुलायम लेकिन मजबूत कॉटन सामग्री से बनी है और इसमें क्रू और आधी बांहें हैं।",
     category: "पुरुषों के कपड़े",
-    subCategory: "",
     tags: ["featured", "cartoon"],
     showTags: ["विशेष रुप से प्रदर्शित", "कार्टून"],
     size: ["XS", "S", "M", "L", "XL", "XXL", "3XL"],
@@ -408,7 +378,6 @@ export const dataHindi = [
     description:
       "अपने अलमारी को तुरंत अपडेट करें और ट्रेंडी CWC स्टाइल या अपनी स्टाइल की टी-शर्ट चुनें। इसमें एक विशिष्ट ग्राफिक पैटर्न है और यह काले रंग में डिज़ाइन की गई है। यह टी-शर्ट मुलायम लेकिन मजबूत कॉटन सामग्री से बनी है और इसमें क्रू और आधी बांहें हैं।",
     category: "महिलाओं के कपड़े",
-    subCategory: "",
     tags: ["featured", "quotes"],
     showTags: ["विशेष रुप से प्रदर्शित", "उद्धरण"],
     size: ["XS", "S", "M", "L", "XL", "XXL", "3XL"],
@@ -421,7 +390,6 @@ export const dataHindi = [
     description:
       "अपने अलमारी को तुरंत अपडेट करें और ट्रेंडी CWC स्टाइल या अपनी स्टाइल की टी-शर्ट चुनें। इसमें एक विशिष्ट ग्राफिक पैटर्न है और यह काले रंग में डिज़ाइन की गई है। यह टी-शर्ट मुलायम लेकिन मजबूत कॉटन सामग्री से बनी है और इसमें क्रू और आधी बांहें हैं।",
     category: "पुरुषों के कपड़े",
-    subCategory: "",
     tags: ["featured", "anime"],
     showTags: ["विशेष रुप से प्रदर्शित", "एनीमे"],
     size: ["XS", "S", "M", "L", "XL", "XXL", "3XL"],
@@ -434,7 +402,6 @@ export const dataHindi = [
     description:
       "अपने अलमारी को तुरंत अपडेट करें और ट्रेंडी CWC स्टाइल या अपनी स्टाइल की टी-शर्ट चुनें। इसमें एक विशिष्ट ग्राफिक पैटर्न है और यह काले रंग में डिज़ाइन की गई है। यह टी-शर्ट मुलायम लेकिन मजबूत कॉटन सामग्री से बनी है और इसमें क्रू और आधी बांहें हैं।",
     category: "पुरुषों के कपड़े",
-    subCategory: "",
     tags: ["featured", "anime"],
     showTags: ["विशेष रुप से प्रदर्शित", "एनीमे"],
     size: ["XS", "S", "M", "L", "XL", "XXL", "3XL"],
@@ -447,7 +414,6 @@ export const dataHindi = [
     description:
       "अपने अलमारी को तुरंत अपडेट करें और ट्रेंडी CWC स्टाइल या अपनी स्टाइल की टी-शर्ट चुनें। इसमें एक विशिष्ट ग्राफिक पैटर्न है और यह काले रंग में डिज़ाइन की गई है। यह टी-शर्ट मुलायम लेकिन मजबूत कॉटन सामग्री से बनी है और इसमें क्रू और आधी बांहें हैं।",
     category: "पुरुषों के कपड़े",
-    subCategory: "",
     tags: ["latest", "developer"],
     showTags: ["नवीनतम", "विकासकर्ता"],
     size: ["XS", "S", "M", "L", "XL", "XXL", "3XL"],
@@ -460,7 +426,6 @@ export const dataHindi = [
     description:
       "अपने अलमारी को तुरंत अपडेट करें और ट्रेंडी CWC स्टाइल या अपनी स्टाइल की टी-शर्ट चुनें। इसमें एक विशिष्ट ग्राफिक पैटर्न है और यह काले रंग में डिज़ाइन की गई है। यह टी-शर्ट मुलायम लेकिन मजबूत कॉटन सामग्री से बनी है और इसमें क्रू और आधी बांहें हैं।",
     category: "महिलाओं के कपड़े",
-    subCategory: "",
     tags: ["latest", "engineering"],
     showTags: ["नवीनतम", "इंजीनियरिंग"],
     size: ["XS", "S", "M", "L", "XL", "XXL", "3XL"],
@@ -473,7 +438,6 @@ export const dataHindi = [
     description:
       "अपने अलमारी को तुरंत अपडेट करें और ट्रेंडी CWC स्टाइल या अपनी स्टाइल की टी-शर्ट चुनें। इसमें एक विशिष्ट ग्राफिक पैटर्न है और यह काले रंग में डिज़ाइन की गई है। यह टी-शर्ट मुलायम लेकिन मजबूत कॉटन सामग्री से बनी है और इसमें क्रू और आधी बांहें हैं।",
     category: "महिलाओं के कपड़े",
-    subCategory: "",
     tags: ["latest", "quote"],
     showTags: ["नवीनतम", "उद्धरण"],
     size: ["XS", "S", "M", "L", "XL", "XXL", "3XL"],
@@ -486,7 +450,6 @@ export const dataHindi = [
     description:
       "अपने अलमारी को तुरंत अपडेट करें और ट्रेंडी CWC स्टाइल या अपनी स्टाइल की टी-शर्ट चुनें। इसमें एक विशिष्ट ग्राफिक पैटर्न है और यह काले रंग में डिज़ाइन की गई है। यह टी-शर्ट मुलायम लेकिन मजबूत कॉटन सामग्री से बनी है और इसमें क्रू और आधी बांहें हैं।",
     category: "पुरुषों के कपड़े",
-    subCategory: "",
     tags: ["latest", "quote"],
     showTags: ["नवीनतम", "उद्धरण"],
     size: ["XS", "S", "M", "L", "XL", "XXL", "3XL"],
@@ -499,7 +462,6 @@ export const dataHindi = [
     description:
       "अपने अलमारी को तुरंत अपडेट करें और ट्रेंडी CWC स्टाइल या अपनी स्टाइल की टी-शर्ट चुनें। इसमें एक विशिष्ट ग्राफिक पैटर्न है और यह काले रंग में डिज़ाइन की गई है। यह टी-शर्ट मुलायम लेकिन मजबूत कॉटन सामग्री से बनी है और इसमें क्रू और आधी बांहें हैं।",
     category: "विशेष संस्करण",
-    subCategory: "",
     tags: ["latest", "quote"],
     showTags: ["नवीनतम", "उद्धरण"],
     size: ["XS", "S", "M", "L", "XL", "XXL", "3XL"],
@@ -512,7 +474,6 @@ export const dataHindi = [
     description:
       "अपने अलमारी को तुरंत अपडेट करें और ट्रेंडी CWC स्टाइल या अपनी स्टाइल की टी-शर्ट चुनें। इसमें एक विशिष्ट ग्राफिक पैटर्न है और यह काले रंग में डिज़ाइन की गई है। यह टी-शर्ट मुलायम लेकिन मजबूत कॉटन सामग्री से बनी है और इसमें क्रू और आधी बांहें हैं।",
     category: "विशेष संस्करण",
-    subCategory: "",
     tags: ["latest", "unisex", "quote"],
     showTags: ["नवीनतम", "यूनिसेक्स", "उद्धरण"],
     size: ["XS", "S", "M", "L", "XL", "XXL", "3XL"],
@@ -525,7 +486,6 @@ export const dataHindi = [
     description:
       "अपने अलमारी को तुरंत अपडेट करें और ट्रेंडी CWC स्टाइल या अपनी स्टाइल की टी-शर्ट चुनें। इसमें एक विशिष्ट ग्राफिक पैटर्न है और यह काले रंग में डिज़ाइन की गई है। यह टी-शर्ट मुलायम लेकिन मजबूत कॉटन सामग्री से बनी है और इसमें क्रू और आधी बांहें हैं।",
     category: "विशेष संस्करण",
-    subCategory: "",
     tags: ["grid", "unisex", "quote"],
     showTags: ["ग्रिड", "यूनिसेक्स", "उद्धरण"],
     size: ["XS", "S", "M", "L", "XL", "XXL", "3XL"],
@@ -538,7 +498,6 @@ export const dataHindi = [
     description:
       "अपने अलमारी को तुरंत अपडेट करें और ट्रेंडी CWC स्टाइल या अपनी स्टाइल की टी-शर्ट चुनें। इसमें एक विशिष्ट ग्राफिक पैटर्न है और यह काले रंग में डिज़ाइन की गई है। यह टी-शर्ट मुलायम लेकिन मजबूत कॉटन सामग्री से बनी है और इसमें क्रू और आधी बांहें हैं।",
     category: "पुरुषों के कपड़े",
-    subCategory: "",
     tags: ["grid", "cartoon"],
     showTags: ["ग्रिड", "कार्टून"],
     size: ["XS", "S", "M", "L", "XL", "XXL", "3XL"],
@@ -551,7 +510,6 @@ export const dataHindi = [
     description:
       "अपने अलमारी को तुरंत अपडेट करें और ट्रेंडी CWC स्टाइल या अपनी स्टाइल की टी-शर्ट चुनें। इसमें एक विशिष्ट ग्राफिक पैटर्न है और यह काले रंग में डिज़ाइन की गई है। यह टी-शर्ट मुलायम लेकिन मजबूत कॉटन सामग्री से बनी है और इसमें क्रू और आधी बांहें हैं।",
     category: "पुरुषों के कपड़े",
-    subCategory: "",
     tags: ["grid", "quote"],
     showTags: ["ग्रिड", "उद्धरण"],
     size: ["XS", "S", "M", "L", "XL", "XXL", "3XL"],
@@ -564,7 +522,6 @@ export const dataHindi = [
     description:
       "अपने अलमारी को तुरंत अपडेट करें और ट्रेंडी CWC स्टाइल या अपनी स्टाइल की टी-शर्ट चुनें। इसमें एक विशिष्ट ग्राफिक पैटर्न है और यह काले रंग में डिज़ाइन की गई है। यह टी-शर्ट मुलायम लेकिन मजबूत कॉटन सामग्री से बनी है और इसमें क्रू और आधी बांहें हैं।",
     category: "महिलाओं के कपड़े",
-    subCategory: "",
     tags: ["grid", "quotes"],
     showTags: ["ग्रिड", "उद्धरण"],
     size: ["XS", "S", "M", "L", "XL", "XXL", "3XL"],
@@ -577,7 +534,6 @@ export const dataHindi = [
     description:
       "अपने अलमारी को तुरंत अपडेट करें और ट्रेंडी CWC स्टाइल या अपनी स्टाइल की टी-शर्ट चुनें। इसमें एक विशिष्ट ग्राफिक पैटर्न है और यह काले रंग में डिज़ाइन की गई है। यह टी-शर्ट मुलायम लेकिन मजबूत कॉटन सामग्री से बनी है और इसमें क्रू और आधी बांहें हैं।",
     category: "विशेष संस्करण",
-    subCategory: "",
     tags: ["grid", "developer"],
     showTags: ["ग्रिड", "विकासकर्ता"],
     size: ["XS", "S", "M", "L", "XL", "XXL", "3XL"],
@@ -590,7 +546,6 @@ export const dataHindi = [
     description:
       "आपके कार्यक्षेत्र या कॉलेज के लिए आदर्श मशीन लर्निंग टी-शर्ट। इसकी सुंदरता में इसका डिज़ाइन और शांत संदेश है जो यह सुनिश्चित करता है कि आपकी पूरी टीम इसके साथ मेल खाती है। इसका विशेष डिजाइन इसे ध्यान आकर्षित करने वाला बनाता है।",
     category: "पुरुषों के कपड़े",
-    subCategory: "",
     tags: ["latest", "developer"],
     showTags: ["नवीनतम", "विकासकर्ता"],
     size: ["XS", "S", "M", "L", "XL", "XXL", "3XL"],
@@ -603,7 +558,6 @@ export const dataHindi = [
     description:
       "एक पेशेवर कोडर के लिए आदर्श टी-शर्ट, जो तकनीकी परिधान और प्रैक्टिकल डिज़ाइन दोनों को महत्व देता है। यह टी-शर्ट सॉफ्ट कॉटन से बनी है और इसे लंबे समय तक पहनने के लिए डिज़ाइन किया गया है। यह प्रौद्योगिकी के प्रेमियों के लिए उपयुक्त है।",
     category: "पुरुषों के कपड़े",
-    subCategory: "",
     tags: ["technology", "developer"],
     showTags: ["प्रौद्योगिकी", "विकासकर्ता"],
     size: ["XS", "S", "M", "L", "XL", "XXL", "3XL"],
@@ -616,7 +570,6 @@ export const dataHindi = [
     description:
       "आपके प्रिय प्रोग्रामिंग जोक्स के साथ यह येलो टी-शर्ट निश्चित रूप से किसी भी डेवलपर के दिन को रोशन करेगी। यह हल्के कपड़े से बनी है और बहुत आरामदायक है।",
     category: "पुरुषों के कपड़े",
-    subCategory: "",
     tags: ["humor", "developer"],
     showTags: ["हास्य", "विकासकर्ता"],
     size: ["XS", "S", "M", "L", "XL", "XXL", "3XL"],
@@ -629,7 +582,6 @@ export const dataHindi = [
     description:
       "सी++ प्रेमियों के लिए आदर्श टी-शर्ट। इसका हल्का ग्रे रंग और सिंपल डिज़ाइन इसे किसी भी अवसर पर पहना जा सकता है। यह प्रोग्रामर की हर अलमारी का हिस्सा बन सकता है।",
     category: "पुरुषों के कपड़े",
-    subCategory: "",
     tags: ["developer", "coding"],
     showTags: ["विकासकर्ता", "कोडिंग"],
     size: ["XS", "S", "M", "L", "XL", "XXL", "3XL"],
@@ -642,7 +594,6 @@ export const dataHindi = [
     description:
       "फुल स्टैक डेवलपर्स के लिए यह ग्रीन टी-शर्ट एक आदर्श विकल्प है। इसका साधारण और आकर्षक डिज़ाइन एक कोडर की विशेषज्ञता को दर्शाता है। यह टी-शर्ट आपको हर मंच पर फिट होने का अहसास दिलाएगी।",
     category: "पुरुषों के कपड़े",
-    subCategory: "",
     tags: ["developer", "fullstack"],
     showTags: ["विकासकर्ता", "फुलस्टैक"],
     size: ["XS", "S", "M", "L", "XL", "XXL", "3XL"],
@@ -655,7 +606,6 @@ export const dataHindi = [
     description:
       "अपनी अलमारी को एक ताजगी देने के लिए ट्रेंडी CWC स्टाइल या अपनी खुद की स्टाइल वाली टी-शर्ट चुनें। इसमें एक विशिष्ट ग्राफिक पैटर्न है और यह काले रंग में डिज़ाइन की गई है। यह टी-शर्ट मुलायम और टिकाऊ कपास सामग्री से बनी है और इसमें क्रू और आधी बाँहें हैं।",
     category: "पुरुषों का वस्त्र",
-    subCategory: "",
     tags: ["grid", "quote"],
     showTags: ["ग्रिड", "उद्धरण"],
     size: ["XS", "S", "M", "L", "XL", "XXL", "3XL"],
@@ -668,7 +618,6 @@ export const dataHindi = [
     description:
       "अपनी अलमारी को एक ताजगी देने के लिए ट्रेंडी CWC स्टाइल या अपनी खुद की स्टाइल वाली टी-शर्ट चुनें। इसमें एक विशिष्ट ग्राफिक पैटर्न है और यह काले रंग में डिज़ाइन की गई है। यह टी-शर्ट मुलायम और टिकाऊ कपास सामग्री से बनी है और इसमें क्रू और आधी बाँहें हैं।",
     category: "पुरुषों का वस्त्र",
-    subCategory: "",
     tags: ["grid", "developer"],
     showTags: ["ग्रिड", "विकासकर्ता"],
     size: ["XS", "S", "M", "L", "XL", "XXL", "3XL"],
@@ -681,7 +630,6 @@ export const dataHindi = [
     description:
       "अपनी अलमारी को एक ताजगी देने के लिए ट्रेंडी CWC स्टाइल या अपनी खुद की स्टाइल वाली टी-शर्ट चुनें। इसमें एक विशिष्ट ग्राफिक पैटर्न है और यह काले रंग में डिज़ाइन की गई है। यह टी-शर्ट मुलायम और टिकाऊ कपास सामग्री से बनी है और इसमें क्रू और आधी बाँहें हैं।",
     category: "पुरुषों का वस्त्र",
-    subCategory: "",
     tags: ["list", "cartoon"],
     showTags: ["सूची", "कार्टून"],
     size: ["XS", "S", "M", "L", "XL", "XXL", "3XL"],
@@ -694,7 +642,6 @@ export const dataHindi = [
     description:
       "अपनी अलमारी को एक ताजगी देने के लिए ट्रेंडी CWC स्टाइल या अपनी खुद की स्टाइल वाली टी-शर्ट चुनें। इसमें एक विशिष्ट ग्राफिक पैटर्न है और यह काले रंग में डिज़ाइन की गई है। यह टी-शर्ट मुलायम और टिकाऊ कपास सामग्री से बनी है और इसमें क्रू और आधी बाँहें हैं।",
     category: "पुरुषों का वस्त्र",
-    subCategory: "",
     tags: ["list", "anime"],
     showTags: ["सूची", "एनीमे"],
     size: ["XS", "S", "M", "L", "XL", "XXL", "3XL"],
@@ -707,7 +654,6 @@ export const dataHindi = [
     description:
       "अपनी अलमारी को एक ताजगी देने के लिए ट्रेंडी CWC स्टाइल या अपनी खुद की स्टाइल वाली टी-शर्ट चुनें। इसमें एक विशिष्ट ग्राफिक पैटर्न है और यह काले रंग में डिज़ाइन की गई है। यह टी-शर्ट मुलायम और टिकाऊ कपास सामग्री से बनी है और इसमें क्रू और आधी बाँहें हैं।",
     category: "पुरुषों का वस्त्र",
-    subCategory: "",
     tags: ["list", "cartoon"],
     showTags: ["सूची", "कार्टून"],
     size: ["XS", "S", "M", "L", "XL", "XXL", "3XL"],
@@ -720,7 +666,6 @@ export const dataHindi = [
     description:
       "अपनी अलमारी को एक ताजगी देने के लिए ट्रेंडी CWC स्टाइल या अपनी खुद की स्टाइल वाली टी-शर्ट चुनें। इसमें एक विशिष्ट ग्राफिक पैटर्न है और यह काले रंग में डिज़ाइन की गई है। यह टी-शर्ट मुलायम और टिकाऊ कपास सामग्री से बनी है और इसमें क्रू और आधी बाँहें हैं।",
     category: "महिलाओं का वस्त्र",
-    subCategory: "",
     tags: ["list", "engineering"],
     showTags: ["सूची", "इंजीनियरिंग"],
     size: ["XS", "S", "M", "L", "XL", "XXL", "3XL"],
@@ -733,7 +678,6 @@ export const dataHindi = [
     description:
       "अपनी अलमारी को एक ताजगी देने के लिए ट्रेंडी CWC स्टाइल या अपनी खुद की स्टाइल वाली टी-शर्ट चुनें। इसमें एक विशिष्ट ग्राफिक पैटर्न है और यह काले रंग में डिज़ाइन की गई है। यह टी-शर्ट मुलायम और टिकाऊ कपास सामग्री से बनी है और इसमें क्रू और आधी बाँहें हैं।",
     category: "पुरुषों का वस्त्र",
-    subCategory: "",
     tags: ["list", "funky"],
     showTags: ["सूची", "फंकी"],
     size: ["XS", "S", "M", "L", "XL", "XXL", "3XL"],
@@ -746,7 +690,6 @@ export const dataHindi = [
     description:
       "अपनी अलमारी को एक ताजगी देने के लिए ट्रेंडी CWC स्टाइल या अपनी खुद की स्टाइल वाली टी-शर्ट चुनें। इसमें एक विशिष्ट ग्राफिक पैटर्न है और यह काले रंग में डिज़ाइन की गई है। यह टी-शर्ट मुलायम और टिकाऊ कपास सामग्री से बनी है और इसमें क्रू और आधी बाँहें हैं।",
     category: "पुरुषों का वस्त्र",
-    subCategory: "",
     tags: ["list", "quote"],
     showTags: ["सूची", "उद्धरण"],
     size: ["XS", "S", "M", "L", "XL", "XXL", "3XL"],
@@ -759,7 +702,6 @@ export const dataHindi = [
     description:
       "अपनी अलमारी को एक ताजगी देने के लिए ट्रेंडी CWC स्टाइल या अपनी खुद की स्टाइल वाली टी-शर्ट चुनें। इसमें एक विशिष्ट ग्राफिक पैटर्न है और यह काले रंग में डिज़ाइन की गई है। यह टी-शर्ट मुलायम और टिकाऊ कपास सामग्री से बनी है और इसमें क्रू और आधी बाँहें हैं।",
     category: "पुरुषों का वस्त्र",
-    subCategory: "",
     tags: ["list", "quote"],
     showTags: ["सूची", "उद्धरण"],
     size: ["XS", "S", "M", "L", "XL", "XXL", "3XL"],
@@ -775,7 +717,6 @@ export const dataArabic = [
     description:
       "امنح خزانتك ترقية فورية باختيار تي شيرت عصري بتصميم CWC أو تصميمك الخاص. يتميز بنمط رسومي مميز ويأتي باللون الأسود. هذا التي شيرت مصنوع من قطن ناعم ودائم ويتميز بياقة دائرية وأكمام نصفية.",
     category: "ملابس رجالية",
-    subCategory: "",
     tags: ["featured", "cartoon"],
     showTags: ["مميز", "كرتون"],
     size: ["XS", "S", "M", "L", "XL", "XXL", "3XL"],
@@ -788,7 +729,6 @@ export const dataArabic = [
     description:
       "امنح خزانتك ترقية فورية باختيار تي شيرت عصري بتصميم CWC أو تصميمك الخاص. يتميز بنمط رسومي مميز ويأتي باللون الأسود. هذا التي شيرت مصنوع من قطن ناعم ودائم ويتميز بياقة دائرية وأكمام نصفية.",
     category: "ملابس نسائية",
-    subCategory: "",
     tags: ["featured", "quotes"],
     showTags: ["مميز", "اقتباس"],
     size: ["XS", "S", "M", "L", "XL", "XXL", "3XL"],
@@ -801,7 +741,6 @@ export const dataArabic = [
     description:
       "امنح خزانتك ترقية فورية باختيار تي شيرت عصري بتصميم CWC أو تصميمك الخاص. يتميز بنمط رسومي مميز ويأتي باللون الأسود. هذا التي شيرت مصنوع من قطن ناعم ودائم ويتميز بياقة دائرية وأكمام نصفية.",
     category: "ملابس رجالية",
-    subCategory: "",
     tags: ["featured", "anime"],
     showTags: ["مميز", "أنمي"],
     size: ["XS", "S", "M", "L", "XL", "XXL", "3XL"],
@@ -814,7 +753,6 @@ export const dataArabic = [
     description:
       "امنح خزانتك ترقية فورية باختيار تي شيرت عصري بتصميم CWC أو تصميمك الخاص. يتميز بنمط رسومي مميز ويأتي باللون الأسود. هذا التي شيرت مصنوع من قطن ناعم ودائم ويتميز بياقة دائرية وأكمام نصفية.",
     category: "ملابس رجالية",
-    subCategory: "",
     tags: ["featured", "anime"],
     showTags: ["مميز", "أنمي"],
     size: ["XS", "S", "M", "L", "XL", "XXL", "3XL"],
@@ -827,7 +765,6 @@ export const dataArabic = [
     description:
       "امنح خزانتك ترقية فورية باختيار تي شيرت عصري بتصميم CWC أو تصميمك الخاص. يتميز بنمط رسومي مميز ويأتي باللون الأسود. هذا التي شيرت مصنوع من قطن ناعم ودائم ويتميز بياقة دائرية وأكمام نصفية.",
     category: "ملابس رجالية",
-    subCategory: "",
     tags: ["latest", "developer"],
     showTags: ["أحدث", "مطور"],
     size: ["XS", "S", "M", "L", "XL", "XXL", "3XL"],
@@ -840,7 +777,6 @@ export const dataArabic = [
     description:
       "امنح خزانتك ترقية فورية باختيار تي شيرت عصري بتصميم CWC أو تصميمك الخاص. يتميز بنمط رسومي مميز ويأتي باللون الأسود. هذا التي شيرت مصنوع من قطن ناعم ودائم ويتميز بياقة دائرية وأكمام نصفية.",
     category: "ملابس نسائية",
-    subCategory: "",
     tags: ["latest", "engineering"],
     showTags: ["أحدث", "هندسة"],
     size: ["XS", "S", "M", "L", "XL", "XXL", "3XL"],
@@ -853,7 +789,6 @@ export const dataArabic = [
     description:
       "امنح خزانتك ترقية فورية باختيار تي شيرت عصري بتصميم CWC أو تصميمك الخاص. يتميز بنمط رسومي مميز ويأتي باللون الأسود. هذا التي شيرت مصنوع من قطن ناعم ودائم ويتميز بياقة دائرية وأكمام نصفية.",
     category: "ملابس نسائية",
-    subCategory: "",
     tags: ["latest", "quote"],
     showTags: ["أحدث", "اقتباس"],
     size: ["XS", "S", "M", "L", "XL", "XXL", "3XL"],
@@ -866,7 +801,6 @@ export const dataArabic = [
     description:
       "امنح خزانتك ترقية فورية باختيار تي شيرت عصري بتصميم CWC أو تصميمك الخاص. يتميز بنمط رسومي مميز ويأتي باللون الأسود. هذا التي شيرت مصنوع من قطن ناعم ودائم ويتميز بياقة دائرية وأكمام نصفية.",
     category: "ملابس رجالية",
-    subCategory: "",
     tags: ["latest", "quote"],
     showTags: ["أحدث", "اقتباس"],
     size: ["XS", "S", "M", "L", "XL", "XXL", "3XL"],
@@ -879,7 +813,6 @@ export const dataArabic = [
     description:
       "امنح خزانتك ترقية فورية باختيار تي شيرت عصري بتصميم CWC أو تصميمك الخاص. يتميز بنمط رسومي مميز ويأتي باللون الأسود. هذا التي شيرت مصنوع من قطن ناعم ودائم ويتميز بياقة دائرية وأكمام نصفية.",
     category: "إصدار خاص",
-    subCategory: "",
     tags: ["latest", "quote"],
     showTags: ["أحدث", "اقتباس"],
     size: ["XS", "S", "M", "L", "XL", "XXL", "3XL"],
@@ -892,7 +825,6 @@ export const dataArabic = [
     description:
       "امنح خزانتك ترقية فورية باختيار تي شيرت عصري بتصميم CWC أو تصميمك الخاص. يتميز بنمط رسومي مميز ويأتي باللون الأسود. هذا التي شيرت مصنوع من قطن ناعم ودائم ويتميز بياقة دائرية وأكمام نصفية.",
     category: "إصدار خاص",
-    subCategory: "",
     tags: ["latest", "unisex", "quote"],
     showTags: ["أحدث", "يونيكس", "اقتباس"],
     size: ["XS", "S", "M", "L", "XL", "XXL", "3XL"],
@@ -905,7 +837,6 @@ export const dataArabic = [
     description:
       "امنحي خزانة ملابسك ترقية فورية عن طريق اختيار تي شيرت مميز بتصميم cwc أو تصميمك الخاص. يحتوي على نمط رسومي مميز ويأتي باللون الأسود. هذا التي شيرت مصنوع من قطن ناعم ولكنه قوي، ويتميز بأكمام قصيرة وأكمام نصفية.",
     category: "إصدار خاص",
-    subCategory: "",
     tags: ["grid", "unisex", "quote"],
     showTags: ["شبكة", "يونيكس", "اقتباس"],
     size: ["XS", "S", "M", "L", "XL", "XXL", "3XL"],
@@ -918,7 +849,6 @@ export const dataArabic = [
     description:
       "امنحي خزانة ملابسك ترقية فورية عن طريق اختيار تي شيرت مميز بتصميم cwc أو تصميمك الخاص. يحتوي على نمط رسومي مميز ويأتي باللون الأسود. هذا التي شيرت مصنوع من قطن ناعم ولكنه قوي، ويتميز بأكمام قصيرة وأكمام نصفية.",
     category: "ملابس رجالية",
-    subCategory: "",
     tags: ["grid", "cartoon"],
     showTags: ["شبكة", "كرتون"],
     size: ["XS", "S", "M", "L", "XL", "XXL", "3XL"],
@@ -931,7 +861,6 @@ export const dataArabic = [
     description:
       "امنحي خزانة ملابسك ترقية فورية عن طريق اختيار تي شيرت مميز بتصميم cwc أو تصميمك الخاص. يحتوي على نمط رسومي مميز ويأتي باللون الأسود. هذا التي شيرت مصنوع من قطن ناعم ولكنه قوي، ويتميز بأكمام قصيرة وأكمام نصفية.",
     category: "ملابس رجالية",
-    subCategory: "",
     tags: ["grid", "quote"],
     showTags: ["شبكة", "اقتباس"],
     size: ["XS", "S", "M", "L", "XL", "XXL", "3XL"],
@@ -944,7 +873,6 @@ export const dataArabic = [
     description:
       "امنحي خزانة ملابسك ترقية فورية عن طريق اختيار تي شيرت مميز بتصميم cwc أو تصميمك الخاص. يحتوي على نمط رسومي مميز ويأتي باللون الأسود. هذا التي شيرت مصنوع من قطن ناعم ولكنه قوي، ويتميز بأكمام قصيرة وأكمام نصفية.",
     category: "ملابس نسائية",
-    subCategory: "",
     tags: ["grid", "quotes"],
     showTags: ["شبكة", "اقتباس"],
     size: ["XS", "S", "M", "L", "XL", "XXL", "3XL"],
@@ -957,7 +885,6 @@ export const dataArabic = [
     description:
       "امنحي خزانة ملابسك ترقية فورية عن طريق اختيار تي شيرت مميز بتصميم cwc أو تصميمك الخاص. يحتوي على نمط رسومي مميز ويأتي باللون الأسود. هذا التي شيرت مصنوع من قطن ناعم ولكنه قوي، ويتميز بأكمام قصيرة وأكمام نصفية.",
     category: "ملابس رجالية",
-    subCategory: "",
     tags: ["grid", "developer"],
     showTags: ["شبكة", "مطور"],
     size: ["XS", "S", "M", "L", "XL", "XXL", "3XL"],
@@ -970,7 +897,6 @@ export const dataArabic = [
     description:
       "امنحي خزانة ملابسك ترقية فورية عن طريق اختيار تي شيرت مميز بتصميم cwc أو تصميمك الخاص. يحتوي على نمط رسومي مميز ويأتي باللون الأسود. هذا التي شيرت مصنوع من قطن ناعم ولكنه قوي، ويتميز بأكمام قصيرة وأكمام نصفية.",
     category: "ملابس نسائية",
-    subCategory: "",
     tags: ["latest", "developer"],
     showTags: ["أحدث", "مطور"],
     size: ["XS", "S", "M", "L", "XL", "XXL", "3XL"],
@@ -983,7 +909,6 @@ export const dataArabic = [
     description:
       "امنحي خزانة ملابسك ترقية فورية عن طريق اختيار تي شيرت مميز بتصميم cwc أو تصميمك الخاص. يحتوي على نمط رسومي مميز ويأتي باللون الأسود. هذا التي شيرت مصنوع من قطن ناعم ولكنه قوي، ويتميز بأكمام قصيرة وأكمام نصفية.",
     category: "ملابس رجالية",
-    subCategory: "",
     tags: ["technology", "developer"],
     showTags: ["تقنية", "مطور"],
     size: ["XS", "S", "M", "L", "XL", "XXL", "3XL"],
@@ -996,7 +921,6 @@ export const dataArabic = [
     description:
       "امنحي خزانة ملابسك ترقية فورية عن طريق اختيار تي شيرت مميز بتصميم cwc أو تصميمك الخاص. يحتوي على نمط رسومي مميز ويأتي باللون الأسود. هذا التي شيرت مصنوع من قطن ناعم ولكنه قوي، ويتميز بأكمام قصيرة وأكمام نصفية.",
     category: "ملابس رجالية",
-    subCategory: "",
     tags: ["humor", "developer"],
     showTags: ["فكاهي", "مطور"],
     size: ["XS", "S", "M", "L", "XL", "XXL", "3XL"],
@@ -1009,7 +933,6 @@ export const dataArabic = [
     description:
       "امنحي خزانة ملابسك ترقية فورية عن طريق اختيار تي شيرت مميز بتصميم cwc أو تصميمك الخاص. يحتوي على نمط رسومي مميز ويأتي باللون الأسود. هذا التي شيرت مصنوع من قطن ناعم ولكنه قوي، ويتميز بأكمام قصيرة وأكمام نصفية.",
     category: "ملابس رجالية",
-    subCategory: "",
     tags: ["developer", "coding"],
     showTags: ["مطور", "برمجة"],
     size: ["XS", "S", "M", "L", "XL", "XXL", "3XL"],
@@ -1022,7 +945,6 @@ export const dataArabic = [
     description:
       "امنحي خزانة ملابسك ترقية فورية عن طريق اختيار تي شيرت مميز بتصميم cwc أو تصميمك الخاص. يحتوي على نمط رسومي مميز ويأتي باللون الأسود. هذا التي شيرت مصنوع من قطن ناعم ولكنه قوي، ويتميز بأكمام قصيرة وأكمام نصفية.",
     category: "ملابس رجالية",
-    subCategory: "",
     tags: ["developer", "fullstack"],
     showTags: ["مطور", "فولستاك"],
     size: ["XS", "S", "M", "L", "XL", "XXL", "3XL"],
@@ -1035,7 +957,6 @@ export const dataArabic = [
     description:
       "امنح خزانة ملابسك ترقية فورية عن طريق اختيار تي شيرت مميز بتصميم cwc أو تصميمك الخاص. يحتوي على نمط رسومي مميز ويأتي باللون الأسود. هذا التي شيرت مصنوع من قطن ناعم ولكنه قوي، ويتميز بأكمام قصيرة وأكمام نصفية.",
     category: "ملابس رجالية",
-    subCategory: "",
     tags: ["grid", "quote"],
     showTags: ["شبكة", "اقتباس"],
     size: ["XS", "S", "M", "L", "XL", "XXL", "3XL"],
@@ -1048,7 +969,6 @@ export const dataArabic = [
     description:
       "امنح خزانة ملابسك ترقية فورية عن طريق اختيار تي شيرت مميز بتصميم cwc أو تصميمك الخاص. يحتوي على نمط رسومي مميز ويأتي باللون الأسود. هذا التي شيرت مصنوع من قطن ناعم ولكنه قوي، ويتميز بأكمام قصيرة وأكمام نصفية.",
     category: "ملابس رجالية",
-    subCategory: "",
     tags: ["grid", "developer"],
     showTags: ["شبكة", "مطور"],
     size: ["XS", "S", "M", "L", "XL", "XXL", "3XL"],
@@ -1061,7 +981,6 @@ export const dataArabic = [
     description:
       "امنح خزانة ملابسك ترقية فورية عن طريق اختيار تي شيرت مميز بتصميم cwc أو تصميمك الخاص. يحتوي على نمط رسومي مميز ويأتي باللون الأسود. هذا التي شيرت مصنوع من قطن ناعم ولكنه قوي، ويتميز بأكمام قصيرة وأكمام نصفية.",
     category: "ملابس رجالية",
-    subCategory: "",
     tags: ["list", "cartoon"],
     showTags: ["قائمة", "كرتون"],
     size: ["XS", "S", "M", "L", "XL", "XXL", "3XL"],
@@ -1074,7 +993,6 @@ export const dataArabic = [
     description:
       "امنح خزانة ملابسك ترقية فورية عن طريق اختيار تي شيرت مميز بتصميم cwc أو تصميمك الخاص. يحتوي على نمط رسومي مميز ويأتي باللون الأسود. هذا التي شيرت مصنوع من قطن ناعم ولكنه قوي، ويتميز بأكمام قصيرة وأكمام نصفية.",
     category: "ملابس رجالية",
-    subCategory: "",
     tags: ["list", "anime"],
     showTags: ["قائمة", "أنمي"],
     size: ["XS", "S", "M", "L", "XL", "XXL", "3XL"],
@@ -1087,7 +1005,6 @@ export const dataArabic = [
     description:
       "امنح خزانة ملابسك ترقية فورية عن طريق اختيار تي شيرت مميز بتصميم cwc أو تصميمك الخاص. يحتوي على نمط رسومي مميز ويأتي باللون الأسود. هذا التي شيرت مصنوع من قطن ناعم ولكنه قوي، ويتميز بأكمام قصيرة وأكمام نصفية.",
     category: "ملابس رجالية",
-    subCategory: "",
     tags: ["list", "cartoon"],
     showTags: ["قائمة", "كرتون"],
     size: ["XS", "S", "M", "L", "XL", "XXL", "3XL"],
@@ -1100,7 +1017,6 @@ export const dataArabic = [
     description:
       "امنح خزانة ملابسك ترقية فورية عن طريق اختيار تي شيرت مميز بتصميم cwc أو تصميمك الخاص. يحتوي على نمط رسومي مميز ويأتي باللون الأسود. هذا التي شيرت مصنوع من قطن ناعم ولكنه قوي، ويتميز بأكمام قصيرة وأكمام نصفية.",
     category: "ملابس نسائية",
-    subCategory: "",
     tags: ["list", "engineering"],
     showTags: ["قائمة", "هندسة"],
     size: ["XS", "S", "M", "L", "XL", "XXL", "3XL"],
@@ -1113,7 +1029,6 @@ export const dataArabic = [
     description:
       "امنح خزانة ملابسك ترقية فورية عن طريق اختيار تي شيرت مميز بتصميم cwc أو تصميمك الخاص. يحتوي على نمط رسومي مميز ويأتي باللون الأسود. هذا التي شيرت مصنوع من قطن ناعم ولكنه قوي، ويتميز بأكمام قصيرة وأكمام نصفية.",
     category: "ملابس رجالية",
-    subCategory: "",
     tags: ["list", "funky"],
     showTags: ["قائمة", "فانكي"],
     size: ["XS", "S", "M", "L", "XL", "XXL", "3XL"],
@@ -1126,7 +1041,6 @@ export const dataArabic = [
     description:
       "امنح خزانة ملابسك ترقية فورية عن طريق اختيار تي شيرت مميز بتصميم cwc أو تصميمك الخاص. يحتوي على نمط رسومي مميز ويأتي باللون الأسود. هذا التي شيرت مصنوع من قطن ناعم ولكنه قوي، ويتميز بأكمام قصيرة وأكمام نصفية.",
     category: "ملابس رجالية",
-    subCategory: "",
     tags: ["list", "quote"],
     showTags: ["قائمة", "اقتباس"],
     size: ["XS", "S", "M", "L", "XL", "XXL", "3XL"],
@@ -1139,7 +1053,6 @@ export const dataArabic = [
     description:
       "امنح خزانة ملابسك ترقية فورية عن طريق اختيار تي شيرت مميز بتصميم cwc أو تصميمك الخاص. يحتوي على نمط رسومي مميز ويأتي باللون الأسود. هذا التي شيرت مصنوع من قطن ناعم ولكنه قوي، ويتميز بأكمام قصيرة وأكمام نصفية.",
     category: "ملابس رجالية",
-    subCategory: "",
     tags: ["list", "quote"],
     showTags: ["قائمة", "اقتباس"],
     size: ["XS", "S", "M", "L", "XL", "XXL", "3XL"],
